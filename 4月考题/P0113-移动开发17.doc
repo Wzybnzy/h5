@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0113-移动开发17</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、（网站）为 &lt;form&gt; 元素添加（）类可使其内容左对齐并且表现为 inline-block 级别的控件。来源:网络</pre></h3>
+					<p>A:.form-group</p>
+					<p>B:.form-inline</p>
+					<p>C:.form-control</p>
+					<p>D:.form-horizontal</p>
+			
+				<h3><pre>2、（网站）为任意 &lt;table&gt; 标签添加( )类可以为其赋予基本的样式.来源:网络</pre></h3>
+					<p>A:.tab</p>
+					<p>B:.table</p>
+					<p>C:.btn</p>
+					<p>D:.table-cont</p>
+			
+				<h3><pre>3、（网站）通过( )类可以给 &lt;tbody&gt; 之内的每一行增加斑马条纹样式来源:网络</pre></h3>
+					<p>A:.table-hover</p>
+					<p>B:.table-condensed</p>
+					<p>C:.table-striped</p>
+					<p>D:.table-responsive</p>
+			
+				<h3><pre>4、（网站）通过为父元素添加( ) 类可以很容易地清除浮动（float）。来源:网络</pre></h3>
+					<p>A:.clearboth</p>
+					<p>B:.clear</p>
+					<p>C:.clearfix</p>
+					<p>D:以上不都是</p>
+			
+				<h3><pre>5、（网站）（ ）类可以强制任意元素隐藏。来源:网络</pre></h3>
+					<p>A:.hidden</p>
+					<p>B:.hide</p>
+					<p>C:.invisible</p>
+					<p>D:.display</p>
+			
+				<h3><pre>6、（网站）在超小屏幕下隐藏添加（）类。来源:网络</pre></h3>
+					<p>A:.hidden-md</p>
+					<p>B:.hidden-sm</p>
+					<p>C:.hidden-lg</p>
+					<p>D:.hidden-xs</p>
+			多选题  每道题（5分）
+				<h3><pre>7、（网站）以下哪些属于bootstrap的容器类名？来源:网络</pre></h3>
+					<p>A:.container</p>
+					<p>B:.container-fluid</p>
+					<p>C:.parent</p>
+					<p>D:.wrapper</p>
+			
+				<h3><pre>8、（网站）以下哪些是按钮有关的状态类？来源:网络</pre></h3>
+					<p>A:default</p>
+					<p>B:primary</p>
+					<p>C:success</p>
+					<p>D:info</p>
+			
+				<h3><pre>9、（网站）栅格布局有哪些断点？来源:网络</pre></h3>
+					<p>A:lg</p>
+					<p>B:md</p>
+					<p>C:xs</p>
+					<p>D:sm</p>
+			判断题  每道题（5分）
+				<h3><pre>10、（网站）animate.css是一个专门用于实现动画的框架，基于CSS3。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、（网站）js已经可以制作所有的动画了，不需要CSS动画。多此一举。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、（网站）$.getJSON（）函数正常使用，可以最少输入两个参数，地址和回调函数。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、（网站）Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发（）布局、移动设备优先的 WEB 项目。来源:网络</pre></h3>
+			
+			
+				<h3><pre>14、（网站）Bootstrap 中创建带边框的表格需要添加（）类名。来源:网络</pre></h3>
+			
+			
+				<h3><pre>15、（网站）Bootstrap 中创建成功状态的按钮需要需要添加（）类名。来源:网络</pre></h3>
+			
+			
+				<h3><pre>16、（网站）Bootstrap 中创建最大的按钮需要需要添加（）类名。来源:网络</pre></h3>
+			
+			
+				<h3><pre>17、（网站）Bootstrap 中创建最小的按钮需要需要添加（）类名。来源:网络</pre></h3>
+			
+			
+				<h3><pre>18、（网站）Bootstrap 中栅格布局分（）列。来源:网络</pre></h3>
+			
+			
+				<h3><pre>19、（网站）Bootstrap 中栅格布局分（）个断点来区分屏幕大小。来源:网络</pre></h3>
+			
+			
+				<h3><pre>20、（网站）Bootstrap 中创建响应式容器需要添加（）类名。来源:网络</pre></h3>
+			
+</div>
+</body>
+</html>

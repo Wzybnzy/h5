@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0021-移动开发3周</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（2分）
+				<h3><pre>1、（网站）ajax是一种（）?来源：历史题</pre></h3>
+					<p>A:语言</p>
+					<p>B:请求数据的方式</p>
+					<p>C:技术</p>
+					<p>D:数据格式</p>
+			
+				<h3><pre>2、（网站）（    ）规定应当对请求进行异步（true）或同步（false）处理？来源：历史题</pre></h3>
+					<p>A:url</p>
+					<p>B:send</p>
+					<p>C:method</p>
+					<p>D:async</p>
+			
+				<h3><pre>3、（网站）查看http请求的状态及结果，需在浏览器控制台中的（   ）上进行查看。来源：历史题</pre></h3>
+					<p>A:Console</p>
+					<p>B:Network中的XHR</p>
+					<p>C:Elements</p>
+					<p>D:Sources</p>
+			
+				<h3><pre>4、（网站）JSON是一种（）？来源：历史题</pre></h3>
+					<p>A:技术</p>
+					<p>B:数据格式</p>
+					<p>C:语言</p>
+					<p>D:请求数据的方式</p>
+			
+				<h3><pre>5、（网站）关于justify-content属性说法正确的是？来源：历史题</pre></h3>
+					<p>A:设置子元素沿侧轴方向的对齐方式</p>
+					<p>B:当属性值为start是指从开始位置处对齐</p>
+					<p>C:设置子元素沿主轴方向的对齐方式</p>
+					<p>D:center值为它的默认值</p>
+			
+				<h3><pre>6、（网站）想要实现多行弹性盒布局，可以加（）属性？来源：历史题</pre></h3>
+					<p>A:flex-wrap:all;</p>
+					<p>B:flex-wrap:wrap;</p>
+					<p>C:flex-wrap:nowrap;</p>
+					<p>D:flex-wrap:oridinal;</p>
+			
+				<h3><pre>7、（网站）#demo{transition:width 2s 3s;}其中的（）时间用来设置transition-delay的时间？来源：历史题</pre></h3>
+					<p>A:2s</p>
+					<p>B:3s</p>
+					<p>C:1s</p>
+					<p>D:以上说法都不正确</p>
+			
+				<h3><pre>8、（网站）transform:rotate3d(  )括号中的第几个参数用来指定旋转的角度？来源：历史题</pre></h3>
+					<p>A:4</p>
+					<p>B:2</p>
+					<p>C:1</p>
+					<p>D:3</p>
+			
+				<h3><pre>9、(网站）模块化开发的最大优势？来源：历史题</pre></h3>
+					<p>A:书写方便</p>
+					<p>B:命名冲突</p>
+					<p>C:便于维护</p>
+					<p>D:提高复用性</p>
+			
+				<h3><pre>10、(网站）以下哪种是正确的书写模块的语法？来源：历史题</pre></h3>
+					<p>A:(function () {
+   function check(dom) {dom.checked = true};   
+})()</p>
+					<p>B:(function mod() {
+   function check(dom) {dom.checked = true};
+   return {
+     check:check
+   }
+})</p>
+					<p>C:(function () {
+   function check(dom) {dom.checked = true};
+   return {
+     check:check
+   }
+})()</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>11、(网站）(function(){
+        a=5;
+        alert(window.a);
+        var a=10;
+        alert(a);
+    })()
+    两个alert输出的结果是什么？来源：网络</pre></h3>
+					<p>A:5,10</p>
+					<p>B:undefined,10</p>
+					<p>C:10,10</p>
+					<p>D:5,5</p>
+			
+				<h3><pre>12、（网站）如下程序输出什么________？
+function Foo() {
+  var i = 2;
+  return function() {
+    console.log(i++);
+  }
+}
+var f1 = Foo(),
+var f2 = Foo();
+f1();
+f1();
+f2();来源：日考历史题</pre></h3>
+					<p>A:2 3 2</p>
+					<p>B:0 1 0</p>
+					<p>C:1 2 1</p>
+					<p>D:3 4 3</p>
+			
+				<h3><pre>13、（网站）如下程序输出什么？
+var add = function (n1, n2) {
+    return n1 + n2;
+}
+var add2 = add;
+add = function (n1, n2) {
+    return n2 - n1;
+};
+console.log(add(1, 2));
+console.log(add2(1, 2));来源：自出</pre></h3>
+					<p>A:3 1</p>
+					<p>B:1 3</p>
+					<p>C:1 1</p>
+					<p>D:3 3</p>
+			
+				<h3><pre>14、（网站）（）运算符可以用来调用构造函数，最终返回一个对象字面量。来源：自出</pre></h3>
+					<p>A:instanceof</p>
+					<p>B:indexOf</p>
+					<p>C:new</p>
+					<p>D:eval()</p>
+			
+				<h3><pre>15、（网站）$.fn等同于以下哪项？来源：日考历史题</pre></h3>
+					<p>A:$.extend()</p>
+					<p>B:$.prototype</p>
+					<p>C:$.getProperty()</p>
+					<p>D:以上都不对</p>
+			多选题  每道题（3分）
+				<h3><pre>16、（网站）以下选项中哪些是可以通过$.each()来遍历的（   ）？来源：日考历史题</pre></h3>
+					<p>A:[{name:&quot;marry&quot;,email:&quot;marry@sohu.com&quot;},{name:&quot;lili&quot;,email:&quot;lili@sohu.com&quot;}]</p>
+					<p>B:$(&quot;#list&gt;li&quot;)</p>
+					<p>C:{&quot;id&quot;:&quot;5&quot;,&quot;name&quot;:&quot;marry&quot;,&quot;email&quot;:&quot;marry@sohu.com&quot;,&quot;address&quot;:&quot;北京市海淀区&quot;}</p>
+					<p>D:$(&quot;p&quot;)</p>
+			
+				<h3><pre>17、（网站）在jquery中以下哪些方法可以用于ajax请求？来源：日考历史题</pre></h3>
+					<p>A:$.ajax()</p>
+					<p>B:$.get()</p>
+					<p>C:$.post()</p>
+					<p>D:$.getJSON()</p>
+			
+				<h3><pre>18、（网站）
+在#demo元素前添加一个动态创建的p标签(平级关系），正确的实现方式有哪些？来源：日考历史题</pre></h3>
+					<p>A:$(&quot;#demo&quot;).before(&quot;&lt;p&gt;&lt;/p&gt;&quot;)</p>
+					<p>B:$(&quot;#demo&quot;).append(&quot;&lt;p&gt;&lt;/p&gt;&quot;)</p>
+					<p>C:$(&quot;&lt;p&gt;&lt;/p&gt;&quot;).insertBefore(&quot;&quot;#demo&quot;&quot;)</p>
+					<p>D:$(&quot;&lt;p&gt;&lt;/p&gt;&quot;).before(&quot;&quot;#demo&quot;&quot;)</p>
+			
+				<h3><pre>19、（网站）
+var User={
+               count:1,
+               getCount:function(){
+                   return this.count;
+               }
+        }
+    console.log(User.getCount());
+    var func=User.getCount;
+console.log(func()); 以上代码的打印结果是_________和___________？
+来源：日考历史题</pre></h3>
+					<p>A:报错</p>
+					<p>B:number</p>
+					<p>C:1</p>
+					<p>D:undefined</p>
+			
+				<h3><pre>20、（网站）function fn(){
+   var name = “john”;
+   alert(this);
+   alert(this.name)
+}
+fn();正确的弹出结果分别是（      ）和（         ）？来源：自出</pre></h3>
+					<p>A:john</p>
+					<p>B:window</p>
+					<p>C:undefined</p>
+					<p>D:fn(){}</p>
+			判断题  每道题（2分）
+				<h3><pre>21、（网站）refresh方法用于重新计算 better-scroll，当 DOM 结构发生变化的时候务必要调用，确保滚动的效果正常。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>22、（网站）better-scroll默认滚动方向是水平滚动方向。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>23、（网站）better-scroll的滚动条是通过div来模拟出来的。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>24、（网站）swiper不能实现无缝轮播。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>25、（网站）scrollToElement用来修改滚动条滚动到当前dom节点的位置。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（3分）
+				<h3><pre>26、（网站）bootstrap栅格布局分为（）列。来源：网络</pre></h3>
+			
+			
+				<h3><pre>27、（网站）实例化swiper的第一个参数是？来源：网络</pre></h3>
+			
+			
+				<h3><pre>28、（网站）有时候我们需要知道滚动的位置,需要设置（）属性，如果不设置则不派发 scroll 事件？来源：网络</pre></h3>
+			
+			
+				<h3><pre>29、（网站）better-scroll封装了（）事件当滚动条发生变化时触发？来源：网络</pre></h3>
+			
+			
+				<h3><pre>30、（网站）better-scroll是基于（）框架编写的？来源：网络</pre></h3>
+			
+			
+				<h3><pre>31、（网站）当probeType的值大于（）的时候触发scroll事件？来源：网络</pre></h3>
+			
+			
+				<h3><pre>32、（网站）canvas中给绘制图形填充颜色使用（）属性?来源：历史题</pre></h3>
+			
+			
+				<h3><pre>33、（网站）canvas中绘制圆形，需要使用（）方法?来源：历史题</pre></h3>
+			
+			
+				<h3><pre>34、（网站）清除画布的方法是（）。来源：历史题</pre></h3>
+			
+			
+				<h3><pre>35、（网站）fillText()第一个从参数是？来源：网络</pre></h3>
+			
+			
+				<h3><pre>36、(网站）（）方法可以将json对象转换成字符串。来源：历史题</pre></h3>
+			
+			
+				<h3><pre>37、(网站）swiper中设置分页器使用（）组件？来源：历史题</pre></h3>
+			
+			
+				<h3><pre>38、(网站）rem相对于（）元素计算？来源：历史题</pre></h3>
+			
+			
+				<h3><pre>39、(网站）jquery里（）方法可以便利对象或数组？来源：历史题</pre></h3>
+			
+			
+				<h3><pre>40、(网站）HTML5中新增的（）标签用于书写导航。来源：历史题</pre></h3>
+			
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+1、save()  //保存当前环境的状态
+restore()   // 解除保存的状态
+2、阴影
+shadowColor  = '颜色'；
+shadowBlur = num   // 设置阴影的模糊级别
+shadowOffsetX = 值  // 正直右边  负值 左边
+shadowOffsetY = 值  //正值在下边 负值在上边
+
+
+3、渐变
+创建一个渐变的对象
+var grd = ctx.createLinearGradient(x1,y1,x2,y2);  //线性渐变  开始点的坐标和结束点的坐标
+var grd = ctx.createRadialGradient(x1,y1,r1,x2,y2,r2); // 放射性渐变   开始圆的x1,y1,和开始圆的一个半径   ,结束圆的坐标（x2,y2）和半径
+
+渐变颜色
+grd.addColorStop(num,color);  num(0-1的一个值)
+
+ctx.fillStyle = grd;
+
+4、
+drawImage(img,x,y);  //必填的参数
+
+裁切
+drawImage(img,x,y,sx,sy,w,h);

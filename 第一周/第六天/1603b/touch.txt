@@ -1,0 +1,31 @@
+touch事件
+手指在屏幕上移动的时候的事件
+对应pc端的事件
+touchstart --------------------  mousedown
+touchmove --------------------  mousemove
+touchend --------------------  mouseup
+
+touchcancel
+
+
+手指的信息
+touches[]  //数组  存放的是所有手指的信息
+e.touches[0]  //取得第一个手指的信息
+
+
+clientX  距离视口左边的距离
+clientY  距离视口上边的距离
+
+
+pageX  距离页面左边的距离
+pageY  距离页面上边的距离
+
+ 
+screenX  距离屏幕左边的距离
+screenY  距离屏幕上边的距离
+
+win键+r   小黑板
+输入 cmd
+ipconfig    找本地id地址   ipv4
+把localhost  换成本地ip地址   
+找到草料二维码  ---------  把地址复制粘贴进去  --- 点击生产二维码   （前提：手机和电脑在一个网络下）

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text"> <button id="btn">搜索</button>
+    <ul class="list" id="list">
+    </ul>
+</body>
+<script src="jquery.js"></script>
+<script>
+    var text = document.getElementById('text');
+    var btn = document.getElementById('btn');
+    var arr = [];
+    var local = window.localStorage;
+    var html = '';
+    if (local.getItem('name')) {
+        var list = JSON.parse(local.getItem('name') || []);
+        arr = list;
+        for (var i = 0; i < arr.length; i++) {
+            html += '<li>' + arr[i] + '</li>';
+        }
+        $(html).appendTo($('#list'));
+    }
+
+
+    console.log(list);
+    btn.onclick = function() {
+        if ($.inArray(text.value, arr) == -1) {
+            arr.push(text.value);
+            console.log(arr);
+            local.setItem('name', JSON.stringify(arr));
+        }
+
+
+    }
+</script>
+
+</html>

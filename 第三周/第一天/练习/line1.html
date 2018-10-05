@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>折线图</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000;"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var offsetX = 50, offsetY = 50;
+    var ydata = [60,70,80,90,100];
+    var arr = [70, 95, 80,98,70];
+    //  x轴
+    ctx.beginPath();
+    
+    ctx.moveTo(100, 500);
+    ctx.lineTo(500, 500);
+
+    // y轴
+    ctx.moveTo(100, 500);
+    ctx.lineTo(100, 100);
+
+    // y轴箭头
+    ctx.moveTo(90, 110);
+    ctx.lineTo(100, 100);
+    ctx.moveTo(100, 100);
+    ctx.lineTo(110, 110);
+
+
+    //x轴箭头
+    ctx.moveTo(490,490);
+    ctx.lineTo(500,500);
+    ctx.moveTo(500,500);
+    ctx.lineTo(490,510);
+
+
+    ctx.closePath();
+    ctx.stroke();
+
+    ctx.beginPath();
+    // ctx.moveTo(100, 500); 100 + 50 * 0
+    // ctx.lineTo(100, 510);
+    // ctx.moveTo(150, 500); 100 + 50 * 1
+    // ctx.lineTo(150, 510);
+    // ctx.moveTo(200, 500);100 + 50 * 2
+    // ctx.lineTo(200, 510);
+
+    // x轴的刻度
+    for (var i = 0; i < 5; i++) {
+        ctx.moveTo(100 + offsetX * i, 500);
+        ctx.lineTo(100 + offsetX * i, 510);
+        ctx.fillText((i+1), 100 + offsetX * i -2, 520);
+    }
+    ctx.closePath();
+    ctx.stroke();
+
+
+    // y轴的刻度
+    ctx.beginPath();
+    // ctx.moveTo(100, 500);  500 - offsetY * 0
+    // ctx.lineTo(90, 500);
+    // ctx.moveTo(100, 450); 500 - offsetY * 1
+    // ctx.lineTo(90, 450);
+    // ctx.moveTo(100, 400); 500 - offsetY * 2
+    // ctx.lineTo(90, 400);
+
+    ydata.map(function(v,i,arr){
+        ctx.moveTo(100, 500 - offsetY * i);
+        ctx.lineTo(90, 500 - offsetY * i);
+        ctx.fillText(v, 70, 500 - offsetY * i);
+    });
+
+    ctx.closePath();
+    ctx.stroke();
+
+
+    //折线
+
+    ctx.beginPath();
+    // ctx.moveTo(100, 500 - offsetY / 10 * (70 - 60));
+    // ctx.lineTo(150, 500 - offsetY / 10 * (95 - 60));
+    arr.map(function(v,i,arr){
+        if (i === 0) {
+            ctx.moveTo(100 + offsetX * i, 500 - offsetY / 10 * (v - 60 ));
+        } else {
+            ctx.lineTo(100 + offsetX * i, 500 - offsetY / 10 * (v - 60 ));
+        }
+    });
+
+    ctx.stroke();
+    ctx.closePath();
+
+</script>
+</html>

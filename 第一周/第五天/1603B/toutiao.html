@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .wrap {
+        height: 100%;
+        width: 100%;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    @media only screen and (orientation: landscape) {
+        /* 横屏代码 */
+        .box {
+            display: none;
+        }
+        .content {
+            display: block;
+        }
+        .list {
+            height: 85px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .list li {
+            float: left;
+            height: 80px;
+            width: 60px;
+            opacity: 0;
+        }
+        .list li:nth-child(1) {
+            background: url(../img/jin.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear forwards;
+        }
+        .list li:nth-child(2) {
+            background: url(../img/tian.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 0.5s forwards;
+        }
+        .list li:nth-child(3) {
+            background: url(../img/lao.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 1s forwards;
+        }
+        .list li:nth-child(4) {
+            background: url(../img/shi.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 1.5s forwards;
+        }
+        @keyframes move1 {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+    
+    @media only screen and (orientation: portrait) {
+        /* 竖屏代码 */
+        .content {
+            display: none;
+        }
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #999;
+        }
+        .box {
+            transform: rotate(90deg);
+            /* margin-top: 100px; */
+        }
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="box">
+            <img src="../img/pingmu.png" alt="">
+            <img src="../img/wenzi.png" alt="">
+        </div>
+        <div class="content">
+            <!-- 横屏结构 -->
+            <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html

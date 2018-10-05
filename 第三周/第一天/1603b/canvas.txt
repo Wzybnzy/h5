@@ -1,0 +1,40 @@
+1、
+canvas  标签
+取上下文  getContext('2d);
+2、画线
+
+ctx.beginPath();
+
+ctx.moveTo(x,y);
+ctx.lineTo(x,y);
+ctx.strokeStyle = '样式';
+ctx.stroke();  
+ctx.closePath();
+
+填充
+ctx.fillStyle = '样式';
+ctx.fill();
+
+3、矩形
+
+rect(x,y,w,h);
+fillRect(x,y,w,h);
+strokeRect(x,y,w,h);
+clearRect(x,y,w,h);
+
+4、角度转化成弧度
+degrees*Math.PI/180
+
+ctx.rotate(ang);
+
+
+5、translate(0,0);  位移
+
+6、文本
+fillText(text,x,y,maxwidth);
+strokeText(text,x,y,maxwidth);
+
+7、设置文本样式
+ctx.font = '40px normal';
+ctx.textAlign = 'center';  strat  left   center   end  right
+ctx.textBaseline = 'middle';

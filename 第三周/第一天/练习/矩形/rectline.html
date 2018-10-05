@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>柱状图</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1200" height="600" style="border:1px solid #000;"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var offsetY = 40, w = 30, offsetX = 20;
+    var arr = [60,90,150,130,170,190,125,175,155,165,155,145]; 
+    // 两个竖线
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80);
+    // ctx.lineTo(300, 480);
+    
+    // ctx.moveTo(900, 80);
+    // ctx.lineTo(900, 480);
+
+    // ctx.closePath();
+    // ctx.stroke();
+
+    function line (ax,ay,bx,by) {
+        ctx.beginPath();
+        ctx.moveTo(ax,ay);
+        ctx.lineTo(bx,by);
+        ctx.closePath();
+        ctx.stroke();
+    }
+    line(300,80,300,480);
+    line(900,80,900,480);
+
+    //画横线
+    // line(300,80, 900, 80);
+    // line(300,80 + 40, 900, 80 + 40);
+    // line(300,80 + 40 + 40, 900, 80 + 40 + 40);
+
+    
+    for (var i = 0; i < 11; i++) {
+        line(300, 80 + offsetY * i, 900, 80 + offsetY * i);
+        write(200 - i*20, 280, 80 + offsetY * i); // y轴刻度
+    }
+
+    // x轴
+
+    // write('1月', 310, 490);
+    // write('2月', 310 + 30 + 20, 490);
+    // write('3月', 310 + 30 * 2 + 20 * 2, 490);
+
+    // write('60',310 + 10, 480 - 60*2);
+    // write('90',310 + 30 + 20 + 10, 480 - 90*2);
+
+    function wanrect () {
+        for (var j = 0; j < arr.length; j++) {
+            var x = 310 + w*j + offsetX*j,
+                h = arr[j]*2,
+                y = 480 - h;
+            write((j+1)+'月', 310 + w*j + offsetX*j, 490);
+            write(arr[j], 310 + w*j + offsetX*j + 10, y-5);
+            Rect(x,y,w,h);
+        }
+    }
+    wanrect();
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#abcdef';
+    // ctx.fillRect(310,480-60*2,30,60*2); 
+    // ctx.fillRect(310 + 30 + 20,480-90*2,30,90*2); 
+
+    function Rect (x,y,w,h) {
+        ctx.beginPath();
+        ctx.fillStyle = '#abcdef';
+        ctx.fillRect(x,y,w,h);
+    }
+    
+    // ctx.beginPath();
+    // ctx.fillText(200, 280, 80); // 200 280 80
+    // ctx.closePath();
+
+    // ctx.beginPath();
+    // ctx.fillText(180, 280, 80 + 40); // 200 - 20 280 80 + 40 * 1
+    // ctx.closePath();
+
+    // ctx.beginPath();
+    // ctx.fillText(160, 280, 80 + 40 + 40); // 200 - 20 -20   280   80 + 40 * 2
+    // ctx.closePath();
+
+    //添加文字
+    function write(text,x,y){
+        ctx.beginPath();
+        ctx.fillText(text,x,y);
+        ctx.closePath();
+    }
+
+</script>
+
+</html>

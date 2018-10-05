@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .swiper-container {
+        height: 300px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .swiper-slide {
+        height: 300px;
+        width: 100%;
+    }
+    
+    .page-pagination {
+        height: 44px;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 19;
+        line-height: 44px;
+        color: #fff;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+    
+    .page-pagination div {
+        float: right;
+    }
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:red;"></div>
+            <div class="swiper-slide" style="background:blue;"></div>
+            <div class="swiper-slide" style="background:pink;"></div>
+        </div>
+        <div class="page-pagination">
+            <div>
+                <span class="num">1</span>
+                <span>/</span>
+                <span class="sum">3</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="./js/swiper-4.1.6.min.js"></script>
+<script>
+    var num = document.querySelector('.num');
+    var sum = document.querySelector('.sum');
+    var swiper = new Swiper('.swiper-container', {
+        on: {
+            slideChange: function() {
+                console.log(this.activeIndex);
+                num.innerHTML = this.activeIndex + 1;
+            }
+        }
+    });
+    console.log(swiper.slides.length);
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rotate</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    var deg = Math.PI / 180;
+
+    ctx.translate(200,200);
+    ctx.beginPath();
+    ctx.rotate(72 * deg);
+    ctx.moveTo(0, -40);
+    ctx.lineTo(20, 0);
+    ctx.lineTo(-20, 0);
+    ctx.lineTo(0, -40);
+    ctx.fill();
+    ctx.closePath();
+
+
+    ctx.beginPath();
+    ctx.rotate(72 * deg);
+    ctx.moveTo(0, -40);
+    ctx.lineTo(20, 0);
+    ctx.lineTo(-20, 0);
+    ctx.lineTo(0, -40);
+    ctx.fill();
+    ctx.closePath();
+
+
+    ctx.beginPath();
+    ctx.rotate(72 * deg);
+    ctx.moveTo(0, -40);
+    ctx.lineTo(20, 0);
+    ctx.lineTo(-20, 0);
+    ctx.lineTo(0, -40);
+    ctx.fill();
+    ctx.closePath();
+
+
+    ctx.beginPath();
+    ctx.rotate(72 * deg);
+    ctx.moveTo(0, -40);
+    ctx.lineTo(20, 0);
+    ctx.lineTo(-20, 0);
+    ctx.lineTo(0, -40);
+    ctx.fill();
+    ctx.closePath();
+
+
+    ctx.beginPath();
+    ctx.rotate(72 * deg);
+    ctx.moveTo(0, -40);
+    ctx.lineTo(20, 0);
+    ctx.lineTo(-20, 0);
+    ctx.lineTo(0, -40);
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.translate(100,100);
+    ctx.beginPath();
+    ctx.fillStyle = 'red';
+    ctx.arc(0,0,100,0, 60 * deg);
+    ctx.lineTo(0,0);
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'blue';
+    ctx.arc(0,0,100,60 * deg, 170 * deg);
+    ctx.lineTo(0,0);
+    ctx.fill();
+    ctx.closePath();
+    
+
+    ctx.beginPath();
+    ctx.fillStyle = 'yellow';
+    ctx.arc(0,0,100,170 * deg, 360 * deg);
+    ctx.lineTo(0,0);
+    ctx.fill();
+    ctx.closePath();
+    
+</script>
+</html>

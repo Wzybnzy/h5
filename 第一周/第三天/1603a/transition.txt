@@ -1,0 +1,8 @@
+tranform:
+translate(x,y) translate3d----x\y\z 位移
+scale(x,y)  scale3d -----x\y\z  缩放
+rotate(ang)  rotaet3d----x\y\z、ang 旋转
+skew(angx.angy)  倾斜
+
+
+transition: name(要过度的属性名)、duration(动画执行时间)、timeing(动画曲线类型) ----- （linear、ease、ease-in、ease-out、ease-in-out、自定义）、delay

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style=" border:1px solid #ccc;"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var deg = Math.PI / 180;
+    var arr = [{
+        color: 'red',
+        ang: 30,
+        title: '今天'
+    }, {
+        color: 'blue',
+        ang: 80,
+        title: '昨天'
+    }, {
+        color: 'pink',
+        ang: 100,
+        title: '明天'
+    }, {
+        color: 'yellow',
+        ang: 70,
+        title: '后天'
+    }, {
+        color: '#abcdef',
+        ang: 80,
+        title: '前天'
+    }];
+
+    // ctx.beginPath();
+    // ctx.arc(300, 300, 100, 0, 360);
+    // ctx.fillStyle = 'pink';
+    // ctx.fill();
+
+    var start = 0,
+        rundeg = 0;
+    end = 0;
+    setAngle = [];
+    sum = 0;
+    ctx.translate(300, 300);
+    arr.map(function(v, i) {
+        sum += v.ang;
+        setAngle.push(sum);
+
+    });
+    console.log(setAngle);
+    var timer = setInterval(function() {
+        end += 2;
+        if (rundeg >= 360) {
+            clearInterval(timer);
+        }
+
+        // draw(start, end, 'red');
+        for (var i = 0; i <= setAngle.length; i++) {
+            if (setAngle[i + 1] && end >= setAngle[i] && end <= setAngle[i + 1]) {
+
+                draw(start, end, arr[i].color);
+                console.log(start, end, arr[i].color)
+            }
+
+        }
+        start = end;
+
+    }, 50);
+
+    function draw(start, end, color) {
+        ctx.beginPath();
+        ctx.arc(0, 0, 100, start * deg, end * deg);
+        ctx.lineTo(0, 0);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+    // arr.map(function(v, i) {
+    //     end = start + v.ang; // 结束角度  = 起始角度  + 当前角度   
+    //     ctx.beginPath();
+    //     ctx.arc(0, 0, 100, start * deg, end * deg);
+    //     ctx.lineTo(0, 0);
+    //     ctx.fillStyle = v.color;
+    //     ctx.fill();
+
+    //     var c_deg = start + v.ang / 2; // 15   30 + 40    
+    //     var x = Math.cos(c_deg * deg) * 60;
+    //     var y = Math.sin(c_deg * deg) * 60;
+    //     ctx.fillStyle = '#fff';
+    //     ctx.fillText(v.title, x, y);
+    //     start = end; // 起始角度 = 结束角度  
+    // });
+
+    // ctx.translate(300, 300);
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, 0, 30 * deg);
+    // // 0 v.ang
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'red';
+    // ctx.fill();
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, 30 * deg, (30 + 80) * deg);
+    // //  start start + v.ang
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'blue';
+    // ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, (30 + 80) * deg, (30 + 80 + 100) * deg); //  start  start + v.ang
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'pink';
+    // ctx.fill();
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, (30 + 80 + 100) * deg, (30 + 80 + 100 + 70) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'yellow';
+    // ctx.fill();
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, (30 + 80 + 100 + 70) * deg, (30 + 80 + 100 + 70 + 80) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = '#abcdef';
+    // ctx.fill();
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="300" height="300" style="border:1px solid #000;"></canvas>
+    <script>
+        var ctx = document.querySelector('canvas').getContext('2d'),
+            deg = Math.PI / 180;
+        var data = [];
+        var getRandom = function(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+        var len = getRandom(5, 8); //5-8 
+        var str = ["李享", "刘学思", "杨凯旋", "司振雷", "李阔", "赵天鸽", "韩英超", "单思佳"];
+        for (var i = 0; i < len; i++) {
+            data.push({
+                radius: getRandom(100, 300),
+                color: `rgb(${getRandom(0,255)},${getRandom(0,255)},${getRandom(0,255)})`,
+                name: str[i]
+            })
+        };
+        console.log(data);
+        var sum = data.map(function(v) {
+            return v.radius;
+        }).reduce(function(a, b) {
+            return a + b;
+        });
+        var start = -90;
+        ctx.textAlign = "left";
+        ctx.font = "10px normal";
+        ctx.textBaseline = "top";
+        data.map(function(v, i) {
+            var end = start + v.radius / sum * 360; //start+radius = end
+            ctx.beginPath();
+            ctx.moveTo(150, 150);
+            ctx.arc(150, 150, 80, start * deg, end * deg);
+            ctx.fillStyle = v.color;
+            ctx.fill();
+            start = end; // start = 上一个扇形的结束弧度
+
+            ctx.beginPath();
+            ctx.fillRect(10, 12 * i + 10, 20, 10);
+            ctx.fillText(v.name, 35, 12 * i + 10);
+        });
+
+        ctx.beginPath();
+        ctx.arc(150, 150, 60, 0, 360 * deg);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+    </script>
+</body>
+
+</html>

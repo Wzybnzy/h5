@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>linear</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="600" height="600" style="border:1px solid #000"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('mycanvas').getContext('2d');
+    // var grd = ctx.createLinearGradient(0,0, 0,300);
+    //     grd.addColorStop(0,'black');
+    //     grd.addColorStop(0.3,'magenta');
+    //     grd.addColorStop(0.5,'green');
+    //     grd.addColorStop(0.8,'blue');
+    //     grd.addColorStop(1,'yellow');
+
+    //     ctx.fillStyle = grd;
+    //     ctx.fillRect(10,10,300,300);
+
+    var grd = ctx.createLinearGradient(0,0, 300,0);
+        grd.addColorStop(0,'black');
+        grd.addColorStop(0.3,'magenta');
+        grd.addColorStop(0.5,'green');
+        grd.addColorStop(0.8,'blue');
+        grd.addColorStop(1,'yellow');
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,300,300);
+</script>
+</html>

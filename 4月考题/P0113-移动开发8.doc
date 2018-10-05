@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0113-移动开发8</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、（）用于获得用户的地理位置？</pre></h3>
+					<p>A:HTML5 Geolocation</p>
+					<p>B:HTML5 Address</p>
+					<p>C:HTML5 Location</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>2、var fun = (function(){})();console.log(fun)的结果为？</pre></h3>
+					<p>A:undefined</p>
+					<p>B:function(){}</p>
+					<p>C:报错</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>3、在sass中定义一个占位符的正确格式是？</pre></h3>
+					<p>A:% name {}</p>
+					<p>B:$ name {}</p>
+					<p>C:@ name {}</p>
+					<p>D:@ mixin name {}</p>
+			
+				<h3><pre>4、以下宽度在500px到780px的写法正确的是？</pre></h3>
+					<p>A:@media screen and (min-width:500px) and (max-width:780px）</p>
+					<p>B:@media screen and (min-width:500px) (max-width:780px）</p>
+					<p>C:@media screen (max-width:500px) and (min-width:780px)</p>
+					<p>D:@media (max-width:500px) and (min-width:780px)</p>
+			
+				<h3><pre>5、页面中一定加载了jquery，以下touch事件绑定正确的是?</pre></h3>
+					<p>A:$(document).on(&quot;touchstart&quot;,function(){})</p>
+					<p>B:document.touchstart=function(){}</p>
+					<p>C:$(document).touchstart=function(){}</p>
+					<p>D:$(document).ontouchstart=function(){}</p>
+			
+				<h3><pre>6、以下不属于JS源生事件，需要第三方函数库支持的是?</pre></h3>
+					<p>A:touchmove</p>
+					<p>B:touchstart</p>
+					<p>C:swipe</p>
+					<p>D:touchend</p>
+			多选题  每道题（5分）
+				<h3><pre>7、以下哪些方法支持合并对象？</pre></h3>
+					<p>A:$.extend()</p>
+					<p>B:Object.assign()</p>
+					<p>C:Object.create()</p>
+					<p>D:Object.clone()</p>
+			
+				<h3><pre>8、可用于弹性盒布局的CSS3属性有哪些？</pre></h3>
+					<p>A:flex-flow</p>
+					<p>B:flex-direction</p>
+					<p>C:display:flex;</p>
+					<p>D:flex-wrap</p>
+			
+				<h3><pre>9、下面哪些css颜色值是正确的？</pre></h3>
+					<p>A:rgb</p>
+					<p>B:rgba</p>
+					<p>C:hsl</p>
+					<p>D:hsla</p>
+			判断题  每道题（5分）
+				<h3><pre>10、cookie用于本地存储一个会话中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、localhost用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、webStorage只能存储一种类型的数据，那就是对象，所以任何格式存储的时候都会被自动转为对象</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、想要拖放某个元素，必须设置该元素的 draggable 属性为 （）</pre></h3>
+			
+			
+				<h3><pre>14、 （） 元素和 a 元素都默认设置了 draggable 属性为 true</pre></h3>
+			
+			
+				<h3><pre>15、被拖放的元素称为源对象（）事件监听开始拖放</pre></h3>
+			
+			
+				<h3><pre>16、被拖放的元素称为源对象（）事件监听拖放过程</pre></h3>
+			
+			
+				<h3><pre>17、（）事件监听源对象被拖放到目标对象内</pre></h3>
+			
+			
+				<h3><pre>18、（）事件监听源对象在过程对象范围内移动。</pre></h3>
+			
+			
+				<h3><pre>19、在所有拖放事件中提供了一个数据传递对象 （），用于在源对象和目标对象间传递数据</pre></h3>
+			
+			
+				<h3><pre>20、（）方法向 dataTransfer 对象中存入数据</pre></h3>
+			
+</div>
+</body>
+</html>

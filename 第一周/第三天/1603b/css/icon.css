@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 44px;
+    width: 100%;
+    background: red;
+}
+
+section {
+    flex: 1;
+    width: 100%;
+    background: paleturquoise;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section div {
+    height: 200px;
+    width: 200px;
+    background: red;
+}
+
+footer {
+    height: 44px;
+    width: 100%;
+    background: #fff;
+}
+
+footer ul {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+footer ul li {
+    flex: 1;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li:nth-child(1) i {
+    color: red;
+}
+
+footer ul li:nth-child(2) i {
+    color: blueviolet;
+}

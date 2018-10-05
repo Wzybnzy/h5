@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        height: 300px;
+        width: 300px;
+        background: red;
+        margin: 100px;
+        position: relative;
+    }
+    
+    .person {
+        position: absolute;
+        left: 80px;
+        top: 59px;
+    }
+    
+    .header {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .header:after {
+        content: "";
+        position: absolute;
+        left: -3px;
+        top: 0;
+        height: 3px;
+        width: 35px;
+        background: #fff;
+        border-radius: 100%;
+    }
+    
+    .header:before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: -10px;
+        height: 13px;
+        width: 15px;
+        background: #fff;
+        border-radius: 50%;
+    }
+    
+    .todo {
+        height: 60px;
+        border: 1px solid #fff;
+        position: absolute;
+        left: 15px;
+        top: 46px;
+    }
+    
+    .arm {
+        height: 49px;
+        width: 35px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        left: 15px;
+        top: 46px;
+        transform-origin: 0% 0%;
+    }
+    
+    .arm.one {
+        transform: rotateZ(-90deg);
+    }
+    
+    .arm.two {
+        transform: rotateZ(-90deg);
+        animation-delay: 0.2s;
+    }
+    
+    .leg {
+        height: 57px;
+        width: 60px;
+        border-right: 1px solid #fff;
+        border-top: 1px solid #fff;
+        position: absolute;
+        left: 15px;
+        top: 106px;
+        transform-origin: 0% 0%;
+    }
+    
+    .leg.one {
+        transform: rotateZ(90deg);
+    }
+    
+    .leg.two {
+        transform: rotateZ(80deg);
+        animation-delay: 0.3s;
+    }
+</style>
+
+<body style="background:#000;">
+    <div class="container">
+        <div class="person">
+            <div class="header"></div>
+            <div class="arm one"></div>
+            <div class="arm two"></div>
+            <div class="todo"></div>
+            <div class="leg one"></div>
+            <div class="leg two"></div>
+        </div>
+    </div>
+</body>
+
+</html>

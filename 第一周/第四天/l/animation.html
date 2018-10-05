@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .wrap {
+        height: 100%;
+        width: 100%;
+        background: red;
+    }
+    
+    .loading {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+        display: none;
+    }
+    
+    .left {
+        height: 100%;
+        width: 200px;
+        transform: translateX(-100%);
+        background: pink;
+        transition: all 0.8s;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 999;
+    }
+    
+    .active {
+        transform: translateX(0);
+    }
+</style>
+<script src="zepto.js"></script>
+
+<body>
+    <div class="wrap">
+        <section>
+            <div id="btn">点击</div>
+            <p>
+                和飞洒地方还和进口附加税的看法恢复精神康复科速度阿富汗就开始大幅是
+            </p>
+        </section>
+
+        <div class="loading" id="loading"></div>
+        <div class="left" id="left"></div>
+    </div>
+</body>
+<script>
+    $('#btn').click(function() {
+        $('#left').addClass('active');
+        $('#loading').show();
+    });
+    $("#loading").click(function() {
+        $('#left').removeClass('active');
+        $('#loading').hide();
+    });
+</script>
+
+</html>

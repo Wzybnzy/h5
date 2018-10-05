@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .wrap {
+        height: 100%;
+        width: 100%;
+    }
+    
+    section {
+        height: 100%;
+        width: 100%;
+        background: red;
+        position: relative;
+    }
+    
+    section .btn {
+        height: 44px;
+        width: 100px;
+        border: 1px solid #000;
+        line-height: 44px;
+        text-align: center;
+    }
+    
+    .mark {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        display: none;
+    }
+    
+    .left {
+        width: 200px;
+        height: 100%;
+        background: pink;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 23;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+    
+    .active {
+        transform: translateX(0);
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <section>
+            <div class="btn" id="btn">点击</div>
+        </section>
+        <div class="mark" id="mark"></div>
+        <div class="left" id="left"></div>
+    </div>
+</body>
+<script src="./zepto.js"></script>
+<script>
+    $('#btn').on('tap', function() {
+        $('#mark').show();
+        $('#left').addClass('active');
+    });
+    $("#mark").on('tap', function() {
+        $('#mark').hide();
+        $('#left').removeClass('active');
+    });
+</script>
+
+</html>

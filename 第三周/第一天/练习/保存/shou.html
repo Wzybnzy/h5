@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .active{
+        background: red;
+    }
+</style>
+<body>
+    <input type="color" id="CanvasColor">
+    <button onclick="clearCanvas()">清除</button>
+    <button onclick="saveCanvas()">保存</button>
+    <button onclick="Canva()" id="reset">橡皮擦</button>
+    <canvas id="myCanvas" width="600" height="600" style="background:#fff;border:1px solid #000;"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var CanvasColor = document.getElementById('CanvasColor');
+    resetBtn =  document.getElementById('reset');
+    var color = 'red';
+    canvas.onmousedown = function (e) {
+        ctx.beginPath();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = color;
+        ctx.moveTo(e.offsetX,e.offsetY);
+        canvas.onmousemove = function (e) {
+            ctx.lineTo(e.offsetX,e.offsetY);
+            ctx.stroke();
+        }
+    }
+    canvas.onmouseup = function () {
+        canvas.onmousemove = null;
+    }
+
+    function clearCanvas() {
+        ctx.clearRect(0,0,600,600);
+    }
+
+    function saveCanvas() {
+        var url = canvas.toDataURL();
+        var img = new Image();
+            img.src = url;
+        document.body.appendChild(img);
+            console.log(url);
+    }
+
+    CanvasColor.onchange = function () {
+        color = this.value;
+    }
+
+    // var flag = false;
+    function Canva () {
+        resetBtn.classList.toggle('active');
+        if (resetBtn.classList.contains('active')) {
+            //在绘制的线条会把之前绘制的东西变成透明的
+            ctx.globalCompositeOperation = 'destination-out';
+        } else {
+            ctx.globalCompositeOperation = 'source-over';
+        }
+    }
+
+</script>
+</html>

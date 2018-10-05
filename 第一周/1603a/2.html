@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .box {
+        height: 500px;
+        background: url(./images/pc.jpg) no-repeat 0 0;
+    }
+    
+    @media (min-width: 640px) and (max-width: 980px) {
+        .box {
+            background: url(./images/pad.jpg) no-repeat 0 0;
+        }
+    }
+    
+    @media screen and (max-width: 640px) {
+        .box {
+            background: url(./images/phone.jpg) no-repeat 0 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

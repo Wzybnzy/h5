@@ -1,0 +1,152 @@
+1、布局容器
+.container   用于宽度固定的响应式
+.container-fluid  类用于宽度100%
+
+2、栅格系统  12列  超过12列，自动到下一行
+.row  必须包含在.container/ container-fluid    //行
+.col  必须包含在.row里面    //列  只有列数可以作为.row的直接子元素
+
+
+3、栅格参数
+响应式的几种格式
+
+手机                   平板                     3、中等屏幕                    超大屏幕 
+<768px           768<= w < 992px               992px <=w < 1200px           >= 1200px
+.container的宽度
+自动              750px                       970px                         1170px
+
+
+列的类名
+.col-xs-            .col-sm-                   .col-md-                      .col-lg-
+
+
+4、列偏移
+.col-md-offset-*   .col-列类名-offset-num    向右偏移num    相当于margin-left
+
+
+5、排版
+
+h1-h6             对应的类名  .h1-.h6      字体大小  36px   30px  24px   ------- 12px 
+small   副标题
+p.lead  让段落凸显出来
+
+
+6、删除文本   <del></del>
+
+7、文本对齐
+.text-left .text-center  .text-right  .text-justify   .text-nowrap
+
+8、改变大小写
+.text-lowercase   //小写   .text-uppercase  //大写   .text-capitalize  //首字母大写
+
+9、代码片段
+
+<pre>  //多行代码片段的时候
+    <code class="html">
+       // 代码片段
+
+       &lt; //<
+          ul
+        &gt;  //>
+    </code>
+</pre>
+
+10、表格
+<table  class="table"></tale>
+
+给table加的类名
+
+基础类名   .table
+条纹状    .table-striped
+带边框的  .table-bordered
+鼠标悬停  .table-hover
+紧缩表格   .table-condensed
+
+
+
+状态类  给行或者列
+
+.active
+.success
+.info
+.warning
+.danger
+
+
+响应式表格
+
+把任何table元素放在类名为table-responsive元素中
+
+11、表单
+form
+每一行的类名
+form-group  
+
+默认设置了form-control类的input、textarea、select的宽度100% 
+
+设置内联表单  form-inline  (给from加的类)
+
+设置水平排列的表单   form-horizontal
+
+
+内联多选  checkbox-inline    内联单选 radio-inline
+
+
+12、按钮
+可作为按钮的标签   a  input    button
+
+按钮样式7种
+默认样式  btn-default
+首选项   btn-primary
+成功   btn-success
+一般信息   btn-info
+警告   btn-warning
+危险   btn-danger
+链接  btn-link
+
+
+按钮大小
+btn-lg  //超大按钮
+默认按钮
+btn-sm  //小按钮
+btn-xs  //超小按钮
+
+
+选中状态 .active
+禁用状态  设置属性disabled = disabled
+
+13、图片
+设置.img-responsive  支持响应式布局
+
+3种样式
+1、圆角的
+img-rounded
+2、圆形
+img-circle
+3、带边框的
+img-thumbnail
+
+
+14、辅助类
+文本类
+1、text-muted
+2、text-primary
+3、text-success
+4、text-info
+5、text-warning
+6、text-danger
+
+背景类
+1、bg-primary
+2、bg-success
+3、bg-info
+4、bg-warning
+5、bg-danger
+
+15、关闭按钮
+class="close" aria-label="Close"
+
+16、下三角   类名caret
+
+    
+  

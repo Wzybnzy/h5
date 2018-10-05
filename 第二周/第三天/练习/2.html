@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: #2b2938;
+    }
+    
+    .btn-audio {
+        margin: 90px auto;
+        width: 186px;
+        height: 186px;
+        background: url(img/btnPlay.png) no-repeat center bottom;
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div class="btn-audio">
+        <audio id="mp3Btn"><source src="mp3.mp3" type="audio/mpeg" /></audio>
+    </div>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.10.0/jquery.min.js"></script>
+</body>
+<script type="text/javascript">
+    $(function() {
+        //播放完毕
+        $('#mp3Btn').on('ended', function() {
+                console.log("音频已播放完成");
+                $('.btn-audio').css({
+                    'background': 'url(img/btnPlay.png) no-repeat center bottom',
+                    'background-size': 'cover'
+                });
+            })
+            //播放器控制
+        var audio = document.getElementById('mp3Btn');
+        audio.volume = .3;
+        $('.btn-audio').click(function() {
+            event.stopPropagation(); //防止冒泡
+            if (audio.paused) { //如果当前是暂停状态
+                $('.btn-audio').css({
+                    'background': 'url(img/btnPause.png) no-repeat center bottom',
+                    'background-size': 'cover'
+                });
+                audio.play(); //播放
+                return;
+            } else { //当前是播放状态
+                $('.btn-audio').css({
+                    'background': 'url(img/btnPlay.png) no-repeat center bottom',
+                    'background-size': 'cover'
+                });
+                audio.pause(); //暂停
+            }
+        });
+    })
+</script>
+
+</html>

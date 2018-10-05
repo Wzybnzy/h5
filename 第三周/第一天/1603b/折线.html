@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style="border:1px solid #ccc;"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var offsetX = offsetY = 100;
+    var ydata = [30, 40, 50, 60, 70, 80];
+
+    var data = [42, 48, 50, 36, 55, 59];
+
+    ctx.beginPath();
+    ctx.moveTo(50, 20);
+    ctx.lineTo(50, 550);
+    ctx.lineTo(580, 550);
+    ctx.stroke();
+
+
+    //箭头
+    ctx.beginPath();
+    ctx.moveTo(570, 540);
+    ctx.lineTo(580, 550);
+    ctx.lineTo(570, 560);
+    ctx.stroke();
+
+
+    ctx.beginPath();
+    ctx.moveTo(40, 30);
+    ctx.lineTo(50, 20);
+    ctx.lineTo(60, 30);
+    ctx.stroke();
+
+
+    //x轴刻度
+    // ctx.beginPath();
+    // ctx.moveTo(50, 550);
+    // ctx.lineTo(50, 560);
+    // ctx.stroke();
+
+
+    // ctx.beginPath();
+    // ctx.moveTo(150, 550);
+    // ctx.lineTo(150, 560);
+    // ctx.stroke();
+
+
+    for (var i = 0; i < 6; i++) {
+        ctx.beginPath();
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText((i + 1), 50 + offsetX * i, 580);
+        ctx.moveTo(50 + offsetX * i, 550);
+        ctx.lineTo(50 + offsetX * i, 560);
+        ctx.stroke();
+    }
+
+    // ctx.beginPath();
+    // ctx.moveTo(50, 550);
+    // ctx.lineTo(40, 550);
+    // ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.moveTo(50, 450);
+    // 550 - offsetY * i
+    // ctx.lineTo(40, 450);
+    // ctx.stroke();
+
+
+    //y轴刻度
+    ydata.map(function(v, i) {
+        ctx.beginPath();
+        ctx.fillText(v, 30, 550 - offsetY * i);
+        ctx.moveTo(50, 550 - offsetY * i);
+        ctx.lineTo(40, 550 - offsetY * i);
+        ctx.stroke();
+    });
+
+    // ctx.beginPath();
+    // ctx.moveTo(50, 550);
+    // ctx.lineTo(150, 550 - offsetY / 10 * (42 - 30));
+    // ctx.lineTo(250, 550 - offsetY / 10 * (48 - 30));
+    // ctx.stroke();
+
+    ctx.beginPath();
+    data.map(function(v, i) {
+        if (i == 0) {
+            ctx.moveTo(50 + offsetX * i, 550 - offsetY / 10 * (v - 30));
+        } else {
+            ctx.lineTo(50 + offsetX * i, 550 - offsetY / 10 * (v - 30));
+        }
+        // ctx.lineTo(250, 550 - offsetY / 10 * (48 - 30));
+    });
+    ctx.stroke();
+</script>
+
+</html>

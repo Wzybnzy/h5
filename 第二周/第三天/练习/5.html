@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .wrap {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .shadow {
+        height: 100%;
+        width: 100%;
+        background: url(./img/talk_share_bg.png) no-repeat center center;
+        background-size: cover;
+        filter: blur(30px);
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    .content {
+        height: 460px;
+        width: 460px;
+        background: rgba(255, 255, 255, 0.34);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -230px;
+        margin-top: -230px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        animation: rotate 5s linear infinite paused;
+    }
+    
+    .play {
+        animation-play-state: running;
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .bg-content {
+        height: 410px;
+        width: 410px;
+        background: url(./img/talk_share_bg.png) no-repeat center center;
+        background-size: cover;
+        border-radius: 100%;
+    }
+    
+    .btn-audio {
+        height: 196px;
+        width: 196px;
+        background: url(./img/btnPlay.png) no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -98px;
+        margin-top: -98px;
+        z-index: 16;
+    }
+    
+    .active {
+        background: url(./img/btnPause.png) no-repeat center center;
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="shadow"></div>
+        <div class="main">
+            <div class="content">
+                <div class="bg-content"></div>
+            </div>
+            <div class="btn-audio">
+                <audio src="./bg.mp3"></audio>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var main = document.querySelector('.main');
+    var btnAudio = document.querySelector('.btn-audio');
+    var content = document.querySelector('.content');
+    var Audio = document.querySelector('audio');
+    Audio.onended = function() {
+        // Audio.loop = true;
+        Audio.play();
+    }
+    main.onclick = function() {
+        if (Audio.paused) {
+            content.classList.add('play');
+            btnAudio.classList.add('active');
+            Audio.play();
+        } else {
+            btnAudio.classList.remove('active');
+            content.classList.remove('play');
+            Audio.pause();
+        }
+
+    }
+</script>
+
+</html>

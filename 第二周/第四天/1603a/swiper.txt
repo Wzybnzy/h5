@@ -1,0 +1,50 @@
+swiper
+1、使用swiper之前，要引入swiper.min.css、swiper.min.js
+
+2、结构：
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+</div>
+
+修改样式的时候，最好自己再命名一个类名（当页面有多个swiper）
+3、new Swiper('.swiper-container');  (dom结构加载完之后再实例化)
+4、initialSlide  初始化的时候slide的索引。（页面一进来的时候要显示哪个slide）
+5、direction  设置滚动的一个方向  默认是水平（horizontal） 、垂直（vertical）
+6、speed    切换slide的速度
+7、on:{ //写在配置项里面
+    //注册事件
+    事件名称:function(){
+
+    }
+}
+8、init  是否立即初始化swiper  布尔值   默认是true   false
+设置false之后，在满足条件之后，mySwiper.init();
+9、loop 设置循环切换
+10、slideChangeTransitionStart  设置一个slide开始过度到另一个slide的时候触发这个函数
+    slideChangeTransitionEnd   设置一个slide过度完成到另一个slide的时候触发这个函数
+    slideChange  切换slide的时候触发
+11、mySwiper.activeIndex   //当前活动块的索引
+12、mySwiper.slideTo(index,speed,runCallbacks);
+13、autoplay  设置自动切换
+14、delay   切换的时间间隔 单位ms
+
+15、分页器
+pagination  位置：跟wrapper是同级
+
+ pagination: {
+            el: '.swiper-pagination' // 是放分页器的容器
+            clickable:false, //点击分页器的时候，自动切换swiper ，布尔值  默认是false 
+            type:bullets(圆点)、fraction（分式）、progressbar（进度条）、自定义,
+            renderBullet:function(index,classname){}
+        }
+
+16前进后退的按钮
+
+navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },

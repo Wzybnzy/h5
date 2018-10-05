@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .box {
+        height: 180px;
+        width: 200px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box li {
+        height: 60px;
+        width: 100%;
+        display: flex;
+    }
+    
+    .box li:nth-child(1) {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .box li:nth-child(2) {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box li:nth-child(3) {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .box li span {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background: #000;
+        display: block;
+    }
+</style>
+
+<body>
+    <ul class="box">
+        <li>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+        </li>
+    </ul>
+</body>
+
+</html>

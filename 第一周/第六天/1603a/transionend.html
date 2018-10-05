@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    div {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        transition: all 0.7s linear;
+    }
+    
+    .box1 {
+        background: red;
+        left: 0;
+    }
+    
+    .box2 {
+        background: blue;
+        left: 500px;
+    }
+</style>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+<script>
+    var box1 = document.querySelector('.box1');
+    var box2 = document.querySelector('.box2');
+    box1.onclick = function() {
+        this.style.left = 400 + 'px';
+    }
+    box1.addEventListener('transitionend', function() {
+        if (this.offsetLeft == 400) {
+            box2.style.left = 800 + 'px';
+        } else if (this.offsetLeft == 0) {
+            this.style.left = 400 + 'px';
+        }
+
+    }, false);
+    box2.addEventListener('transitionend', function() {
+        if (this.offsetLeft == 800) {
+            // console.log(a);
+            this.style.left = 500 + 'px';
+        } else if (this.offsetLeft == 500) {
+            box1.style.left = 0
+        }
+
+    }, false);
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+<link rel="stylesheet" href="./css/tab.css">
+<script src="./js/flexible.js"></script>
+
+<body>
+    <div class="swiper-container tab-container">
+        <div class="swiper-wrapper tab-wrapper">
+            <div class="swiper-slide">slide1</div>
+            <div class="swiper-slide">slide1</div>
+            <div class="swiper-slide">slide1</div>
+        </div>
+        <div class="swiper-pagination tab-pagination">
+
+        </div>
+    </div>
+</body>
+<script src="./js/swiper-4.1.6.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+    });
+</script>
+
+</html>

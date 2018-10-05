@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .swiper-slide {
+        height: 100%;
+        width: 100%;
+        background: #000;
+        padding-top: 100px;
+        box-sizing: border-box;
+    }
+    
+    .content {
+        color: #fff;
+        display: none;
+    }
+    
+    .content div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        height: 44px;
+        line-height: 44px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .content div h1 {
+        font-size: 14px;
+    }
+    
+    .content div span {
+        font-size: 16px;
+    }
+    
+    .content div:nth-child(2) {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .look {
+        height: 30px;
+        width: 100px;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="wrapper">
+            <div class="swiper-slide">
+                <div class="bg-img" style="height:300px;width:100%;background:red;">
+
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>军营集体发生的就疯狂的事</h2>
+                        <span>1/3</span>
+                    </div>
+                    <div>
+                        就发生打架角度来说附件附件的历史发的时间考虑开飞机的释放速度加快上登陆方式绝对是龙卷风,就发生打架角度来说附件附件的历史发的时间考虑开飞机的释放速度加快上登陆方式绝对是龙卷风
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-img" style="height:300px;width:100%;background:blue;">
+
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>军营集体发生的就疯狂的事1</h2>
+                        <span>1/3</span>
+                    </div>
+                    <div>
+                        就发生打架角度来说附件附件的历史发的时间考虑开飞机的释放速度加快上登陆方式绝对是龙卷风,就发生打架角度来说附件附件的历史发的时间考虑开飞机的释放速度加快上登陆方式绝对是龙卷风
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-img" style="height:300px;width:100%;background:pink;">
+
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>军营集体发生的就疯狂的事2</h2>
+                        <span>1/3</span>
+                    </div>
+                    <div>
+                        就发生打架角度来说附件附件的历史发的时间考虑开飞机的释放速度加快上登陆方式绝对是龙卷风,就发生打架角度来说附件附件的历史发的时间考虑开飞机的释放速度加快上登陆方式绝对是龙卷风
+                    </div>
+                </div>
+                <a class="look" target="_blank" href="http://www.baidu.com">查看大图</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/zepto.js"></script>
+<script src="./js/swiper-4.1.6.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        on: {
+            slideChange: function() {
+                $('span').html(this.activeIndex + 1 + '/3');
+                console.log(this.activeIndex);
+            }
+        }
+    });
+    $('#wrapper').on('click', '.swiper-slide', function() {
+        // $(this).addClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).find('.content').hide();
+        } else {
+            $(this).addClass('active');
+            $(this).find('.content').show();
+        }
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+布局结构：
+ <div class="container">
+        <div class="person">
+            <div class="header"></div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="todo"></div>
+            <div class="leg one"></div>
+            <div class="leg two"></div>
+        </div>
+    </div>
+
+1、给container设置宽高（300px）、相对定位
+2、给person设置绝对定位，定整个小人的位置(left:80px,top:59px)。这个位置可以自己设置。
+
+
+3、设置头部样式（30px）,相对定位，（left:0,top:0）
+4、设置头部样式1： 帽檐 （3px、35px）相对定位
+5、设置头部样式2： 帽顶  （13px、15px）相对定位
+
+
+
+6、设置身体样式（60px 0）相对定位
+
+
+7、设置胳膊样式（h：49，w:35）,设置左边、底部两边的样式，相对定位，origin:0% 0%;移动原点
+8、设置左边胳膊的角度  rotateZ(-90deg) 右边旋转rotateZ(-90deg),加延时
+
+
+
+9、设置腿的样式（h:57px w:60px） 相对定位 设置右边、顶部边的样式，移动原点 
+
+
+10、设置左边，rotateZ(90deg) 右边样式 rotateZ(80deg) 延时
+
+
+设置胳膊的动画：
+rotateZ(80、-70、80)
+设置腿的动画
+
+rotateZ（-5、150、-5）

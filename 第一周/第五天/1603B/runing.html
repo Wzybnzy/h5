@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box {
+        height: 300px;
+        width: 180px;
+        border: 1px solid #000;
+        margin: 50px auto;
+        background: url(../img/charector.png) no-repeat center center;
+        animation: runing 1s infinite step-start;
+    }
+    
+    .fase-runing {
+        animation: runing 200ms infinite step-start;
+    }
+    
+    .fast {
+        animation: runing 500ms infinite step-start;
+    }
+    
+    .normal {
+        animation: runing 1s infinite step-start;
+    }
+    
+    .low {
+        animation: runing 1.5s infinite step-start;
+    }
+    
+    .paused {
+        animation-play-state: paused;
+    }
+    
+    @keyframes runing {
+        0% {
+            background-position: 0 0;
+        }
+        14.3% {
+            background-position: -180px 0;
+        }
+        28.6% {
+            background-position: -360px 0;
+        }
+        42.9% {
+            background-position: -540px 0;
+        }
+        57.2% {
+            background-position: -720px 0;
+        }
+        71.5% {
+            background-position: -900px 0;
+        }
+        85.8% {
+            background-position: -1080px 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+    
+    .btns {
+        width: 80%;
+        height: 30px;
+        margin: 0 auto;
+    }
+    
+    a,
+    button {
+        height: 30px;
+        width: 100px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+    }
+</style>
+
+<body>
+    <div class="box" id="box"></div>
+    <div class="btns">
+        <a href="javascript:" class="fase-runing">最快</a>
+        <a href="javascript:" class="fast">快</a>
+        <a href="javascript:" class="normal">正常</a>
+        <a href="javascript:" class="low">慢</a>
+        <button class="paused" id="pause">暂停</button>
+    </div>
+</body>
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script>
+    $('a').on('click', function() {
+        // $('#box')
+        var cls = $(this).attr('class');
+        $('#box').removeClass().addClass('box ' + cls);
+        console.log(cls);
+    });
+    $('#pause').on('click', function() {
+        var cls = $(this).attr('class');
+        $('#box').removeClass().addClass('box ' + cls);
+    });
+</script>
+
+</html>

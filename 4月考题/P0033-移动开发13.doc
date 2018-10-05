@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0033-移动开发13</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、（网站）canvas绘制线条路径的方式是？来源：历史题</pre></h3>
+					<p>A:stroke()</p>
+					<p>B:fill()</p>
+					<p>C:rect()</p>
+					<p>D:fillRect()</p>
+			
+				<h3><pre>2、（网站）以下canvas方法中哪个是用来设置线段的终点的?来源：历史题</pre></h3>
+					<p>A:moveTo()</p>
+					<p>B:lineTo()</p>
+					<p>C:start()</p>
+					<p>D:beginParth()</p>
+			
+				<h3><pre>3、（网站）canvas获取绘图对象的方法是?来源：历史题</pre></h3>
+					<p>A:getContext('1d')</p>
+					<p>B:getContext('3d')</p>
+					<p>C:getContext('2d')</p>
+					<p>D:getContext('4d')</p>
+			
+				<h3><pre>4、（网站）canvas中绘制圆形，需要以下哪个方法?来源：历史题</pre></h3>
+					<p>A:stroke（）</p>
+					<p>B:fillRect（）</p>
+					<p>C:drawImage（）</p>
+					<p>D:arc（）</p>
+			
+				<h3><pre>5、（网站）canvas中给绘制图形填充颜色使用哪个属性?来源：历史题</pre></h3>
+					<p>A:lineWidth</p>
+					<p>B:fillStyle</p>
+					<p>C:shadowColor</p>
+					<p>D:shadowBlur</p>
+			
+				<h3><pre>6、（网站）transform-origin的作用是?来源：历史题</pre></h3>
+					<p>A:缩放</p>
+					<p>B:移动</p>
+					<p>C:旋转</p>
+					<p>D:变形原点</p>
+			多选题  每道题（5分）
+				<h3><pre>7、（网站）以下哪些方法可以获取浏览器窗口宽？来源：历史题</pre></h3>
+					<p>A:window.innerWidth</p>
+					<p>B:document.documentElement.clientWidth</p>
+					<p>C:document.body.clientWidth</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>8、（网站）以下哪些方法可以绘制矩形？来源：历史题</pre></h3>
+					<p>A:rect（）</p>
+					<p>B:fillRect（）</p>
+					<p>C:strokeRect()</p>
+					<p>D:arc（）</p>
+			
+				<h3><pre>9、（网站）以下哪些属性可以设置文字对齐方式？来源：历史题</pre></h3>
+					<p>A:textAlign</p>
+					<p>B:textBaseline</p>
+					<p>C:textLine</p>
+					<p>D:textBase</p>
+			判断题  每道题（5分）
+				<h3><pre>10、（网站）cxt.arc(70,18,15,0,Math.PI*2,true);中的最后一个属性是决定圆形是否延顺时针方向绘制。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、（网站）fill（）方法用于给绘制的路径填充颜色。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、（网站）event.target是用于返回触发事件的元素。来源：历史题</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、（网站）（）方法可以代替bind方法添加事件？来源：历史题</pre></h3>
+			
+			
+				<h3><pre>14、（网站）绘制切角圆形时，需要将绘制路径的起始点和结束点都设定在（）上。来源：历史题</pre></h3>
+			
+			
+				<h3><pre>15、（网站）CSS中transition的作用是（）。来源：历史题</pre></h3>
+			
+			
+				<h3><pre>16、（网站）（）选择器哪个是用来选择父元素下的最后一个子元素的。来源：历史题</pre></h3>
+			
+			
+				<h3><pre>17、（网站）fillText()第一个从参数是？来源：网络</pre></h3>
+			
+			
+				<h3><pre>18、（网站）animation的作用是设置（）动画。来源：历史题</pre></h3>
+			
+			
+				<h3><pre>19、（网站）通过（）方法可以重置原点。来源：历史题</pre></h3>
+			
+			
+				<h3><pre>20、（网站）清除画布的方法是（）。来源：历史题</pre></h3>
+			
+</div>
+</body>
+</html>

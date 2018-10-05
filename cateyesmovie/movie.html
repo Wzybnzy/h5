@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="fonts2/iconfont.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span><i>北京</i><i class="icon iconfont icon-angle-down"></i></span>
+            <label for=""><i class="icon iconfont icon-fangdajing"></i><input type="text" placeholder="找电视剧、影院、演出"></label>
+        </header>
+        <div class="auto">
+            <div class="auto-container swiper-container">
+                <div class="auto-wrapper swiper-wrapper">
+                    <div class="auto-slide swiper-slide"><img src="img/tit.jpg" alt=""></div>
+                    <div class="auto-slide swiper-slide"><img src="img/tit1.jpg" alt=""></div>
+                    <div class="auto-slide swiper-slide"><img src="img/tit.jpg" alt=""></div>
+                    <div class="auto-slideswiper-slide"><img src="img/tit1.jpg" alt=""></div>
+                </div>
+                <div class="auto-pagination swiper-pagination"></div>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="type">
+                <!-- <li class="active">电影</li>
+                <li>电视剧</li>
+                <li>综艺</li>
+                <li>书籍</li> -->
+            </ul>
+        </nav>
+        <main>
+            <div class="all">
+                <div class="all-container swiper-container">
+                    <div class="all-wrapper swiper-wrapper">
+                        <div class="all-slide swiper-slide">
+                            <div class="slide-all">
+                                <div class="slide-list">
+                                    <h1><span>正在热播</span><span>全部（90）</span></h1>
+                                    <div class="all-dl">
+                                        <div class="all-dl-list">
+                                            <dl>
+                                                <dt><img src="img/1.jpg" alt=""></dt>
+                                                <dd>
+                                                    <h2>后来的我们</h2>
+                                                    <h3>购票</h3>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><img src="img/1.jpg" alt=""></dt>
+                                                <dd>
+                                                    <h2>后来的我们</h2>
+                                                    <h3>购票</h3>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><img src="img/1.jpg" alt=""></dt>
+                                                <dd>
+                                                    <h2>后来的我们</h2>
+                                                    <h3>购票</h3>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><img src="img/1.jpg" alt=""></dt>
+                                                <dd>
+                                                    <h2>后来的我们</h2>
+                                                    <h3>购票</h3>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><img src="img/1.jpg" alt=""></dt>
+                                                <dd>
+                                                    <h2>后来的我们</h2>
+                                                    <h3>购票</h3>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="all-slide swiper-slide">sds</div>
+                        <div class="all-slide swiper-slide">sdsd</div>
+                        <div class="all-slide swiper-slide">sdsds</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="js/bscroll.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/swiper-4.1.6.min.js"></script>
+    <script>
+        var dls = $('.all-dl-list dl');
+        var num = 0;
+        var mySwiper = new Swiper('.auto-container', {
+            autoplay: true,
+            pagination: {
+                el: ".auto-pagination"
+            }
+        })
+
+        var SecondSwiper = new Swiper('.all-container', {
+            // touchMoveStopPropagation: false,
+            passiveListeners: false,
+            on: {
+                slideChangeTransitionStart: function() {
+                    var i = this.activeIndex;
+                    $('.type li').eq(i).addClass('active').siblings().removeClass('active');
+                }
+            }
+        });
+
+        $.each(dls, function(i, v) {
+            num += $(v).innerWidth();
+        })
+        $('.all-dl-list').width(num);
+        var myBScroll = new BScroll('.all-dl', {
+            scrollX: true
+        })
+
+        $.ajax({
+            url: "data/data.json",
+            success: function(data) {
+                init(data)
+            }
+        })
+
+        function init(data) {
+            var content = Object.keys(data);
+            var navtext = "";
+            var dltext = "";
+            var imgs = "";
+            $.each(content, function(i, v) {
+                navtext += `<li>${v}</li>`;
+            })
+
+            console.log($('.type').children('li').eq(0))
+            $('.type').append(navtext);
+            $('.type').children('li').eq(0).addClass('active');
+            $('.type li').on('click', function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                SecondSwiper.slideTo($(this).index());
+            });
+            $.each(data, function(i, v) {
+
+                $.each(v, function(i, v) {
+                    dltext += ` <h1><span>${v.now}</span><span${v.num}</span></h1>`;
+                    $.each(v.img, function(i, v) {
+                        imgs += `<dl>
+                                    <dt><img src="${v.img1}" alt=""></dt>
+                                    <dd>
+                                        <h2>后来的我们</h2>
+                                        <h3>购票</h3>
+                                    </dd>
+                                </dl>`;
+                    })
+
+                })
+
+            })
+            $('.slide-list').append(dltext);
+            $('.slide-list').append(imgs)
+
+        }
+    </script>
+</body>
+
+</html>

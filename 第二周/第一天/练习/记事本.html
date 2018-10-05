@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="text" id="text" cols="60" rows="10"></textarea>
+    <button>提交</button>
+</body>
+<script>
+    var btn = document.querySelector('button'),
+        textarea = document.querySelector('textarea'),
+        local = window.localStorage;
+    window.onload = function() {
+        var con = local.getItem('content');
+        if (con) {
+            console.log(local.key(1)); // 表示获取第i个数据的key；
+            console.log(local.length); // 表示本地存储数据的总量；
+            local.removeItem('');
+            textarea.value = con;
+        }
+    }
+    btn.onclick = function() {
+        local.setItem('content', textarea.value);
+        textarea.value = '';
+        console.log(textarea);
+    }
+</script>
+
+</html>

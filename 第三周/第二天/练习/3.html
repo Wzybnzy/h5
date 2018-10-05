@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style="border:1px solid #ccc;"></canvas>
+    <input type="file">
+    <input type="text" id="text">
+    <button onclick="sure()">点击</button>
+    <!-- <img src="4.jpg" alt="" id="imgs"> -->
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d');
+    var input = document.querySelector('input[type=file]');
+    var text = document.getElementById('text');
+    var imgs = document.getElementById('imgs');
+    // ctx.drawImage(imgs, 100, 100);
+
+    input.onchange = function() {
+        var file = this.files[0];
+        console.log(this.files);
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+        fileReader.onload = function() {
+            // console.log(this.result);
+            var img = new Image();
+            img.src = this.result;
+            img.onload = function() {
+                    ctx.drawImage(img, 10, 10, 400, 300);
+                }
+                // $(img).appendTo($('body'));
+        }
+    }
+
+    text.onchange = function() {
+        ctx.font = '36px normal';
+        ctx.fillStyle = '#abcdef';
+        ctx.fillText(this.value, 60, 60);
+        console.log(this.value);
+    }
+
+
+    function sure() {
+        console.log(myCanvas.toDataURL());
+        var img = new Image();
+        img.src = myCanvas.toDataURL();
+        document.body.appendChild(img);
+    }
+</script>
+
+</html>

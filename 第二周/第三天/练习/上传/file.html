@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片上传</title>
+</head>
+<script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
+
+<body>
+    <input type="file" id="file">
+</body>
+<script src="./js/jquery.js"></script>
+<!-- <script src="./js/upload.js"></script> -->
+<script>
+    var type = ["jpeg", "jpg", "png", "gif", "bmp", "svg"];
+    var size = 3;
+
+    function timestamp() {
+        var time = new Date();
+        var y = time.getFullYear();
+        var m = time.getMonth() + 1;
+        var d = time.getDate();
+        var h = time.getHours();
+        var mm = time.getMinutes();
+        var s = time.getSeconds();
+
+        console.log(y);
+
+        return "" + y + add0(m) + add0(d) + add0(h) + add0(mm) + add0(s);
+    }
+
+    function add0(m) {
+        return m < 10 ? '0' + m : m;
+    }
+
+    $('#file').on('change', function() {
+        console.log(this.files);
+        var file = this.files[0];
+        var filetype = file.type.split('/')[1];
+        var filesize = file.size;
+
+        // var storeAs = file.name;
+        var val = $(this).val();
+        var suffix = val.substr(val.indexOf("."));
+        var obj = timestamp(); // 这里是生成文件名
+        var storeAs = 'upload-file/' + "/" + obj + suffix; //命名空间
+        console.log(' => ' + storeAs);
+        console.log(type, size, suffix, obj);
+        if ($.inArray(filetype, type) == -1) {
+            alert('请选择图片格式为：' + type.join(',') + '的图片上传');
+            return false;
+        }
+
+        if (filesize > size * 1024 * 1024) {
+            alert('请选择3Mb之内的图片上传');
+            return false;
+        }
+
+        //读取
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+        fileReader.onload = function() {
+            // console.log(this.result);
+            var img = new Image();
+            img.src = this.result;
+            $(img).appendTo($('body'));
+            var client = new OSS.Wrapper({
+                region: 'oss-cn-beijing',
+                accessKeyId: 'STS.JQgePGyxEKu8gsnGxhnAqnHLb',
+                accessKeySecret: 'EvDv6okdp5tMTUVSLXiBP8aJyUMYZbaMbyQxkQyH1yME',
+                bucket: 'ttresource',
+                stsToken: "CAIS9AF1q6Ft5B2yfSjIq5LSLurzlKdk/LfTZVXfo3g9Ys5dgY3ngDz2IHtMdHRgAukcsfgwmG5Z6Pwclq1vRoRZHa1bzgSrqsY5yxioRqacke7XhOV2pf/IMGyXDAGBr622Su7lTdTbV+6wYlTf7EFayqf7cjPQND7Mc+f+6/hdY88QQxOzYBdfGd5SPXECksIBMmbLPvvfWXyDwEioVRox4Vsl1TIhtf3nkpzBuyCz1gOqlrUnwK3qOYWhYsVWO5Nybsy4xuQedNCai3YAtkgRrf0p0PMYp2aZ5I+HekVN+RidNPfO+dAqMxV4eqUgC1nhHnh7SgkTGoABN6P/loZxCKY8zb77tXYgIUVzjYmWYX+M6ldYytj31cLveHD6HW5Wi8QAuUWg7wXq1ZH0ZsFwbCPNcypLUW/KtgeQH8KpUFpvyV801ABrYBDpbNUheG1UQzDmFheMqtbOOLrcwoExaSG3ZiFqCvXn1VASRyiBW8pha4LgmX2HsB0=",
+
+            });
+            // headers['Access-Control-Allow-Origin'] = "*";
+            // client.setRequestHeader('Access-Control-Allow-Origin', '*');
+            console.log();
+            client.multipartUpload(file.name, file).then(function(result) {
+                console.log(result);
+            }).catch(function(err) {
+                console.log(err);
+            });
+        }
+    });
+
+
+    // var file = opt.fileList[0];
+    // var storeAs = file.name;
+    // var val = file.val();
+    // var suffix = val.substr(val.indexOf("."));
+    // var obj = timestamp(); // 这里是生成文件名
+
+    // var storeAs = 'upload-file/' + "/" + obj + suffix; //命名空间
+    // console.log(' => ' + storeAs);
+    // var client = new OSS.Wrapper({
+    //     region: 'oss-cn-beijing',
+    //     accessKeyId: 'STS.EnHRKKQAmAhMXH9n3TYSLQwTf',
+    //     accessKeySecret: 'Dc8gHZDsCkm9X8tUqLEa2Dtr5SGH2xQB49qtN7ofB7W2',
+    //     bucket: 'ttresource',
+    //     stsToken: "CAIS9AF1q6Ft5B2yfSjIpK39GfH/vJ5M9qqmWm6IijMBVdxgvrL/hDz2IHtMdHRgAukcsfgwmG5Z6Pwclq1vRoRZHfFX2garqsY5yxioRqacke7XhOV2pf/IMGyXDAGBr622Su7lTdTbV+6wYlTf7EFayqf7cjPQND7Mc+f+6/hdY88QQxOzYBdfGd5SPXECksIBMmbLPvvfWXyDwEioVRox4Vsl1TIhtf3nkpzBuyCz1gOqlrUnwK3qOYWhYsVWO5Nybsy4xuQedNCai3YAtkgRrf0p0PMYp2aZ5I+HekVN+RidNPfO+dAqMxV4eqUgC1nhHnh7SgkTGoABSu3hfGTc9unikZcdnWEdfmm6lHVUMIxx23uuWzIu29LFlM6Cp7l6it7sCzaWUhI+Zel1u7newkFKxrbkjZXnuIV5CqEKW0PK5zmEgvUnjI9S6PnAMni+mcs+Akvn0xn0aQzV67E7E/ePedfP6CDAXFqxc0ebSYs6fCJe1TJY9FE=",
+    // });
+    // console.log(client.multipartUpload);
+    //   client.multipartUpload(storeAs, file).then(function (result) {
+    //     console.log(result);
+    //   }).catch(function (err) {
+    //     console.log(err);
+    //   });
+
+
+    // $('#file').Upload({
+    //     type: ["jpeg", "jpg", "png", "gif", "bmp", "svg"],
+    //     size: 3
+    // });
+
+    //  $('#file').on('change', function () {
+    //     var file = this.files;
+    //     console.log(file.length);
+    //     for (var i = 0; i < file.length; i++) {
+    //         var fileReader = new FileReader();
+    //         fileReader.readAsDataURL(file[i]);
+    //         fileReader.onload = function () {
+    //             console.log(this.result);
+    //             var img = new Image();
+    //             img.src = this.result;
+    //             $(img).appendTo($('body'));
+    //         }
+    //     }
+    // }); multiple
+</script>
+
+</html>

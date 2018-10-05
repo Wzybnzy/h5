@@ -1,0 +1,24 @@
+音频、视频
+
+
+方法
+load()  重新加载视频或者音频
+play()  开始播放
+pause()  暂停播放
+
+
+
+属性
+autoplay  自动播放
+controls  是否显示控件（暂停、播放）
+ended     是否播放结束
+loop      循环播放
+paused    是否暂停 （布尔值，true代表暂停，false代表播放）
+src       音频或者视频的路径 或者用source标签来显示路径
+volume    控制视频或者音频的一个音量（0-1） 0.5
+
+
+事件
+ended     播放完之后的事件
+pause
+play

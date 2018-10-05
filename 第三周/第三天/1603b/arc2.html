@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style="border:1px solid #ccc;"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var deg = Math.PI / 180;
+    var arr = [{
+        color: 'red',
+        ang: 30,
+        title: '今天'
+    }, {
+        color: 'blue',
+        ang: 80,
+        title: '昨天'
+    }, {
+        color: 'pink',
+        ang: 100,
+        title: '明天'
+    }, {
+        color: 'yellow',
+        ang: 70,
+        title: '后天'
+    }, {
+        color: '#abcdef',
+        ang: 80,
+        title: '前天'
+    }];
+
+    ctx.translate(300, 300);
+    // ctx.beginPath();
+
+    // ctx.arc(0, 0, 100, 0, 30 * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'red';
+    // ctx.fill();
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, 30 * deg, (30 + 80) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'blue';
+    // ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, (30 + 80) * deg, (30 + 80 + 100) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'pink';
+    // ctx.fill();
+
+    var start = 0,
+        end = 0;
+    arr.map(function(v, i) {
+        end = start + v.ang;
+        ctx.beginPath();
+        ctx.arc(0, 0, 100, start * deg, end * deg);
+        ctx.lineTo(0, 0);
+        ctx.fillStyle = v.color;
+        ctx.fill();
+
+        var c_deg = v.ang / 2 + start;
+        // var x = Math.cos(c_deg * deg) * 60;
+        // var y = Math.sin(c_deg * deg) * 60;
+        // ctx.fillStyle = '#fff';
+        // ctx.fillText(v.title, x, y);
+
+        var x1 = Math.cos(c_deg * deg) * 100;
+        var y1 = Math.sin(c_deg * deg) * 100;
+
+
+        var x2 = Math.cos(c_deg * deg) * 120;
+        var y2 = Math.sin(c_deg * deg) * 120;
+
+        if (x2 > 0) {
+            x3 = x2 + 60;
+            ctx.fillText(v.title, x2 + 20, y2 - 10);
+        } else {
+            x3 = x2 - 60;
+            ctx.fillText(v.title, x2 - 40, y2 - 10);
+        }
+
+
+        y3 = y2;
+
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineTo(x3, y3);
+
+        ctx.strokeStyle = v.color;
+        ctx.stroke();
+        ctx.closePath();
+
+        // ctx.beginPath();
+
+
+        start = end;
+    });
+</script>
+
+</html>

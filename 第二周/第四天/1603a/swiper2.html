@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/swiper-4.1.6.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .page-container {
+        position: relative;
+    }
+    
+    .page-container,
+    .page-container .swiper-wrapper,
+    .page-container .swiper-wrapper .swiper-slide {
+        height: auto;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+    }
+    
+    .page-container .page-pagination {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+        height: 40px;
+        width: 40px;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 100%;
+        z-index: 99;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    .page-container .page-pagination span {
+        color: #fff;
+    }
+    
+    .page-container .page-pagination span:nth-child(1) {
+        font-size: 14px;
+        margin-right: -3px;
+    }
+    
+    .page-container .page-pagination span:nth-child(2) {
+        font-size: 12px;
+    }
+    
+    .page-container .page-pagination span:nth-child(3) {
+        font-size: 12px;
+        margin-left: -3px;
+    }
+    
+    .page-container .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+    
+    .look-container,
+    .look-container .swiper-wrapper,
+    .look-container .swiper-wrapper .swiper-slide {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .look-container {
+        display: none;
+    }
+    
+    .look-container .swiper-wrapper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .look-container .swiper-wrapper .swiper-slide img {
+        width: 100%;
+        display: block;
+    }
+    
+    .look-container .look-pagination {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 44px;
+        width: 100%;
+        line-height: 44px;
+        color: #000;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="swiper-container page-container" id="page-container">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../img/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="page-pagination">
+            <span class="inds">1</span>
+            <span>/</span>
+            <span>5</span>
+        </div>
+    </div>
+    <div class="swiper-container look-container" id="look-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../img/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="swiper-pagination look-pagination"></div>
+    </div>
+</body>
+<script src="../js/zepto.js"></script>
+<script src="../js/swiper-4.1.6.min.js"></script>
+<script>
+    var ind = 0;
+    var nums = document.querySelector('.inds');
+    var mySwiper = new Swiper('.page-container', {
+        //配置项
+        // initialSlide: 1,
+        // direction: 'vertical',
+        // init: false,
+        on: {
+            slideChange: function() {
+                nums.innerHTML = mySwiper.activeIndex + 1;
+                console.log(mySwiper.activeIndex);
+            }
+        }
+    });
+
+    // mySwiper.slideTo(2, 300, true);
+    $('#swiper-wrapper').on('click', '.swiper-slide', function() {
+        console.log($(this).index());
+        ind = $(this).index();
+        $('#look-container').show();
+        $('#page-container').hide();
+        mySwiper1.params.initialSlide = ind;
+        mySwiper1.init();
+        // mySwiper1.slideTo(ind, 300, false);
+    });
+
+    var mySwiper1 = new Swiper('.look-container', {
+        //配置项
+        init: false,
+        // initialSlide: ind,
+        // direction: 'vertical',
+        on: {
+            slideChange: function() {
+                // nums.innerHTML = mySwiper1.activeIndex + 1;
+                console.log(mySwiper1.activeIndex);
+            }
+        },
+        pagination: {
+            el: '.look-pagination',
+            type: 'fraction' //分式的分页器
+        },
+    });
+</script>
+
+</html>

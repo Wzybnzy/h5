@@ -1,0 +1,9 @@
+ @media only screen and (orientation: landscape) {
+        /* 横屏代码 */
+
+    }
+    
+    @media only screen and (orientation: portrait) {
+        /* 竖屏代码 */
+        
+    }

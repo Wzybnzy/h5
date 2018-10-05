@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0068-移动开发15</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、（网站）以下不属于JS源生事件，需要第三方函数库支持的是？来源：历史题</pre></h3>
+					<p>A:touchmove</p>
+					<p>B:touchstart</p>
+					<p>C:swipe</p>
+					<p>D:touchend</p>
+			
+				<h3><pre>2、（网站）var async;
+var result = async?”异步”:”同步”;
+console.log(result); 打印结果是（）？来源：历史题</pre></h3>
+					<p>A:同步</p>
+					<p>B:异步</p>
+					<p>C:程序报错</p>
+					<p>D:undefined</p>
+			
+				<h3><pre>3、(网站）在扩展插件时，需要用传入的参数opt来扩展默认的参数def（这些参数都是对象），以下哪些语句可以实现该需求？来源：网络</pre></h3>
+					<p>A:$.extend({},def,opt)</p>
+					<p>B:$.extend(opt,def)</p>
+					<p>C:$.extend({},opt,def)</p>
+					<p>D:以上说法都不正确</p>
+			
+				<h3><pre>4、（网站）通过height()这个方法设置段落的高度为20px的正确写法是（）? 知识点：DOM操作，来源：练习手册DOM模块</pre></h3>
+					<p>A:$(&quot;p&quot;).height(20)</p>
+					<p>B:$(&quot;p&quot;).height(20px)</p>
+					<p>C:$(&quot;p&quot;).css(&quot;height&quot;,20px)</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>5、(网站）jquery中什么方法可以去空格？知识点：DOM，来源：练习手册15单元</pre></h3>
+					<p>A:$.trim()</p>
+					<p>B:$.break()</p>
+					<p>C:$.val()</p>
+					<p>D:$.html()</p>
+			
+				<h3><pre>6、（网站）原生JS通过style属性来操作行内样式，那么jQuery中的什么方法用来操作行内样式？来源：日考历史题</pre></h3>
+					<p>A:attr()</p>
+					<p>B:css()</p>
+					<p>C:style()</p>
+					<p>D:text()</p>
+			多选题  每道题（5分）
+				<h3><pre>7、（网站）以下哪些方法可以实现canvas渐变？来源：网络</pre></h3>
+					<p>A:createLinearGradient</p>
+					<p>B:createRadialGradient</p>
+					<p>C:addColorStop</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>8、（网站）绘制线段要设置起点和终点，以下哪些方法可以实现？来源：网络</pre></h3>
+					<p>A:lineTo</p>
+					<p>B:beginPath</p>
+					<p>C:moveTo</p>
+					<p>D:closePath</p>
+			
+				<h3><pre>9、（网站）怎么创建图片对象？来源：网络</pre></h3>
+					<p>A:new Image()</p>
+					<p>B:new Img()</p>
+					<p>C:document.createImage()</p>
+					<p>D:document.createElement('img')</p>
+			判断题  每道题（5分）
+				<h3><pre>10、（网站）SVG就是可缩放矢量图形Scalable Vector Graphics。来源：网络</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、 （网站）Cookies客户端和服务端都能访问数据。来源：网络</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、 （网站）在视频组件中control 属性供添加播放、暂停和音量控件。来源：网络</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、（网站）canvas（）方法用来绘制图片。来源：网络</pre></h3>
+			
+			
+				<h3><pre>14、（网站）canvas（）方法导出图片，返回base64格式的编码格式。来源：网络</pre></h3>
+			
+			
+				<h3><pre>15、（网站）剪裁画布使用（）方法。来源：网络</pre></h3>
+			
+			
+				<h3><pre>16、（网站）（）方法拷贝了画布指定矩形区域的像素数据。来源：网络</pre></h3>
+			
+			
+				<h3><pre>17、（网站）transform:rotate的单位是（）。来源：网络</pre></h3>
+			
+			
+				<h3><pre>18、（网站）canvas.fillRect(a,b,c,d);a参数代表什么意思？来源：网络</pre></h3>
+			
+			
+				<h3><pre>19、（网站）canvas.arc(a,b,c,d，e);c参数代表什么意思？来源：网络</pre></h3>
+			
+			
+				<h3><pre>20、（网站）canvas设置渐变使用哪个方法添加颜色值？来源：网络</pre></h3>
+			
+</div>
+</body>
+</html>

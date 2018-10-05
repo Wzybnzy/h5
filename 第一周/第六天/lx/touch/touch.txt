@@ -1,0 +1,35 @@
+touch事件
+touchstart  当触点与触控设备表面接触时触发  --------> mousedown
+touchmove  当触控点在触控设备上移动时触发  ---------> mousemove
+touchend   当触控点离开接触平面时触发    ---------->  mouseout
+
+使用dom2级事件绑定   dom0事件，有些浏览器不支持获取手指位置
+
+移动浏览器有一个双击放大的效果（douple tap）
+不能用click ,因为click有300ms的延迟。用户点击页面之后，浏览器要判断用户是单击还是双击，而不是立即执行单击事件。这个等待的时间大约是300ms。
+
+
+touches   获取当前屏幕上所以手指的列表
+
+clientX：触摸目标在视口中的x坐标。
+
+
+clientY：触摸目标在视口中的y坐标。
+
+
+identifier：标识触摸的唯一ID。
+
+
+pageX：触摸目标在页面中的x坐标。
+
+
+pageY：触摸目标在页面中的y坐标。
+
+
+screenX：触摸目标在屏幕中的x坐标。
+
+
+screenY：触摸目标在屏幕中的y坐标。
+
+
+target：触摸的DOM节点目标。

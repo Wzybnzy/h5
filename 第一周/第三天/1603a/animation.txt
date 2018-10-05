@@ -1,0 +1,13 @@
+animation
+1、@keyframes name{
+    0%/from{
+        每一帧要执行的动画
+    }
+    100%/to{
+        每一帧要执行的动画
+    }
+}
+2、调用关键帧
+div{
+    animation:name 动画执行的时间  动画运行的曲线  播放次数  延迟；
+}

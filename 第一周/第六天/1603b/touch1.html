@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box {
+        height: 200px;
+        width: 200px;
+        background: red;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+</body>
+
+<script>
+    var box = document.querySelector('.box'),
+        startX, stratY, moveY, moveX;
+    box.addEventListener('touchstart', touchstart, false);
+    box.addEventListener('touchmove', touchmove, false);
+    box.addEventListener('touchend', touchend, false);
+
+    function touchstart(e) {
+        startX = e.touches[0].clientX - this.offsetLeft;
+        startY = e.touches[0].clientY - this.offsetTop;
+        console.log(e.touches[0]);
+        // console.log(startX, startY);
+    }
+
+    function touchmove(e) {
+        moveX = e.touches[0].clientX - startX;
+        moveY = e.touches[0].clientY - startY;
+        this.style.left = moveX + 'px';
+        this.style.top = moveY + 'px';
+        // console.log(moveX, moveY);
+    }
+
+    function touchend() {
+
+    }
+</script>
+
+</html>

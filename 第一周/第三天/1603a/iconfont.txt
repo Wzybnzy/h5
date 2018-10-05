@@ -1,0 +1,11 @@
+iconfont
+1、先登陆（github）
+2、图标管理----- 我的图标（上传的图标都在我的图标里面）  我的收藏  我的项目
+3、下载svg图片（点击图标库，自己去下载）
+4、上传（点击屏幕右上角的上传图标，只能svg图片，），点击保存。
+5、在我上传的icon,选择需要icon,划过点击购物车图标，把它添加到购物车里面。
+6、点击屏幕右上角的购物车，点击添加到项目。（如果没有新建项目的话，点击加入项目后边的图标，新建项目。点击确定）
+7、我的项目   选择中间的fontclass  ，点击后边下载到本地。
+8、download文件iconfont.css
+9、引入  <link rel="stylesheet" href="./css/iconfont.css">
+10、使用  <i class="iconfont icon-yixihuan"></i>  第一个类iconfont  第二个类是创建图标的时候自动生成的一个类

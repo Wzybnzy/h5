@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas height="600" width="600" style="border:1px solid #000;" id="mycanvas"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('mycanvas');
+    var ctx = canvas.getContext('2d');
+    var arr = [90, 180, 100, 200];
+    var offserX = offsetY = 100;
+    ctx.beginPath();
+    ctx.moveTo(80, 100);
+    ctx.lineTo(80, 510);
+    ctx.lineTo(490, 510);
+    // ctx.strokeStyle = 
+    ctx.stroke();
+
+    //x轴
+    for (var i = 0; i <= arr.length; i++) {
+        ctx.beginPath();
+        ctx.moveTo(80 + i * offserX, 510);
+        ctx.lineTo(80 + i * offserX, 520);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(i * offserX, 80 + i * offserX, 530);
+        ctx.stroke();
+    }
+    // ctx.beginPath();
+    // ctx.moveTo(20, 510);
+    // ctx.lineTo(20, 520);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.moveTo(120, 510);
+    // ctx.lineTo(120, 520);
+    // ctx.stroke();
+
+    //y轴
+    for (var i = 0; i <= arr.length; i++) {
+        ctx.beginPath();
+        ctx.moveTo(80, 510 - i * offsetY);
+        ctx.lineTo(70, 510 - i * offsetY);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(i * offserX, 60, 510 - i * offsetY);
+        ctx.stroke();
+    }
+    // ctx.beginPath();
+    // ctx.moveTo(80, 510);
+    // ctx.lineTo(70, 510);
+    // ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.moveTo(80, 410);
+    // ctx.lineTo(70, 410);
+    // ctx.stroke();
+
+
+    //折线
+    ctx.beginPath();
+    ctx.moveTo(80, 510);
+    ctx.lineTo(180, 510 - 180);
+    ctx.lineTo(280, 510 - 90);
+    ctx.lineTo(380, 510 - 100);
+    ctx.lineTo(480, 510 - 200);
+    ctx.stroke();
+    // ctx.beginPath();
+    // arr.map(function(v, i) {
+
+    //     if (i == 0) {
+    //         ctx.moveTo(80 + i * offserX, 510 - v);
+    //     } else {
+    //         ctx.lineTo(80 + i * offserX, 510 - v);
+    //     }
+
+    // });
+    // ctx.stroke();
+</script>
+
+</html>

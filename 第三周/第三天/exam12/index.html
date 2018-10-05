@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas class="ctx" width="800" height="600" style="border: 1px solid #000;"></canvas>
+    <script src="js/data.js"></script>
+    <script>
+        var ctx = document.querySelector('.ctx').getContext('2d');
+        // 描边函数
+        function strokes(x1, x2, y1, y2, c) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = c;
+            ctx.closePath();
+            ctx.stroke();
+        }
+        strokes(50, 50, 50, 550, "#000"); // y
+        strokes(50, 750, 550, 550, "#000"); // x
+        // 剩余x y
+        var h = 600 - 50 * 2,
+            w = 800 - 50 * 2,
+            // 每份x y
+            eh = h / 7,
+            ew = w / 6;
+        // 标准
+        for (var i = 0; i < 7; i++) {
+            strokes(50, 40, 50 + eh * i, 50 + eh * i, "#444");
+            ctx.strokeText(data1[i], 20, 50 + eh / 2 + eh * i);
+        }
+        for (var i = 0; i <= 6; i++) {
+            strokes(50 + ew * i, 50 + ew * i, 50, 560, "#444");
+            ctx.strokeText(data2[i], 50 + ew * i, 580);
+            ctx.textAlign = "center";
+        }
+        // 数据
+
+        data3.map(function(v, i) {
+            var fen = 0,
+                start = 50,
+                end = 0;
+            v.map(function(n, m) {
+                fen = n / 500 * ew;
+                end = fen;
+                ctx.fillStyle = colors[m];
+                ctx.fillRect(start, 25 + eh / 2 + eh * i, end, 50);
+                ctx.fillStyle = "#000";
+                ctx.textAlign = "right";
+                ctx.textBaseLine = "moddle";
+                ctx.fillText(n, start + fen, 50 + eh / 2 + eh * i);
+                ctx.closePath();
+                ctx.fill();
+                start += end;
+            })
+
+        })
+        console.log(ctx)
+    </script>
+</body>
+
+</html>

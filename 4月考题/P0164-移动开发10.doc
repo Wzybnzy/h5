@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0164-移动开发10</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、zepto的$.ajax()中“dataType”属性应存放什么值？</pre></h3>
+					<p>A:服务器数据接口地址</p>
+					<p>B:报错回调函数</p>
+					<p>C:获取数据类型</p>
+					<p>D:请求方式</p>
+			
+				<h3><pre>2、zepto的$.ajax()中“url”属性应存放什么值？</pre></h3>
+					<p>A:报错回调函数</p>
+					<p>B:请求方式</p>
+					<p>C:获取数据类型</p>
+					<p>D:服务器数据接口地址</p>
+			
+				<h3><pre>3、以下伪类选择器哪个是用来选择父元素下的最后一个子元素的？</pre></h3>
+					<p>A::first-child</p>
+					<p>B::last-child</p>
+					<p>C::only-child</p>
+					<p>D:::nth-child(2)</p>
+			
+				<h3><pre>4、localStorage['name']='marry'，这句话等价于使用了localStorage的（   ）方法？</pre></h3>
+					<p>A:key()</p>
+					<p>B:setItem()</p>
+					<p>C:removeItem()</p>
+					<p>D:getItem()</p>
+			
+				<h3><pre>5、rgba中a的取值范围是？</pre></h3>
+					<p>A:0-1</p>
+					<p>B:1-100</p>
+					<p>C:0-F</p>
+					<p>D:0-255</p>
+			
+				<h3><pre>6、模拟滑动事件时，如何判断手指滑动的方向？</pre></h3>
+					<p>A:通过手机内置陀螺仪来判断</p>
+					<p>B:通过touchend时的手指坐标减去touchstart时的手指坐标结果的正负值来判断。</p>
+					<p>C:通过GPS系统判断</p>
+					<p>D:通过移动的距离来判断</p>
+			多选题  每道题（5分）
+				<h3><pre>7、在swiper插件中，初始化Swiper时 new Swiper包含哪两个参数</pre></h3>
+					<p>A:父容器</p>
+					<p>B:子元素</p>
+					<p>C:配置项</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>8、移动端轮播通过手指滑动方向判断左右，以下哪个事件可以实现轮播？</pre></h3>
+					<p>A:touchstart</p>
+					<p>B:touchmove</p>
+					<p>C:touchend</p>
+					<p>D:swipe</p>
+			
+				<h3><pre>9、设置自动轮播，默认是3000ms切换，autopaly相当于哪三个属性综合？</pre></h3>
+					<p>A:delay: 3000</p>
+					<p>B:disableOnInteraction: true</p>
+					<p>C:stopOnLastSlide: false</p>
+					<p>D:reverseDirection: true</p>
+			判断题  每道题（5分）
+				<h3><pre>10、tap事件的实现原理是通过判断一次短促touchstart和touchend的完整操作，来模拟的轻击事件。</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、tap事件是触控事件，是JS源生事件，不需要加载第三方函数库，可以直接使用</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、CSS动画animation需要先通过keyframes关键字设置动画，在通过animation调用设置好的动画</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、swiper4里（）事件当slide滑块发生改变时transition动画执行前触发？</pre></h3>
+			
+			
+				<h3><pre>14、swiper4里自动轮播加（）属性？</pre></h3>
+			
+			
+				<h3><pre>15、无缝轮播属性为？</pre></h3>
+			
+			
+				<h3><pre>16、swiper结构父元素要加（）类</pre></h3>
+			
+			
+				<h3><pre>17、swiper分页器加（）类？</pre></h3>
+			
+			
+				<h3><pre>18、每一个swiper滑块要加（）类？</pre></h3>
+			
+			
+				<h3><pre>19、swiper插件中，slides的滑动方向，可设置垂直（）</pre></h3>
+			
+			
+				<h3><pre>20、swiper插件中（）类名代表包裹slide的父元素</pre></h3>
+			
+</div>
+</body>
+</html>

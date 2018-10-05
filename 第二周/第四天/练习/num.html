@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+<link rel="stylesheet" href="./css/num.css">
+<script src="./js/flexible.js"></script>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">slide1</div>
+            <div class="swiper-slide">slide2</div>
+            <div class="swiper-slide">slide3</div>
+        </div>
+        <div class="page-num" id="page-num">
+            <span>1</span>
+            <span>/</span>
+            <span>3</span>
+        </div>
+    </div>
+</body>
+<script src="./js/swiper-4.1.6.min.js"></script>
+<script src="./js/zepto.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        on:{
+            slideChangeTransitionEnd:function(){
+                console.log(this.activeIndex);
+                $('#page-num').find('span').eq(0).html(this.activeIndex+1);
+            }
+        }
+    });
+    console.log(mySwiper.slides.length);
+</script>
+</html>

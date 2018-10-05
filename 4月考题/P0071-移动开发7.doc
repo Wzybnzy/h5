@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0071-移动开发7</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、localStorage['name']='marry'，这句话等价于使用了localStorage的（   ）方法</pre></h3>
+					<p>A:setItem()</p>
+					<p>B:getItem()</p>
+					<p>C:removeItem()</p>
+					<p>D:key()</p>
+			
+				<h3><pre>2、var obj1 = {name:zs,age:12};
+var obj2 = {name:ls,age:21};
+var settings = $.extend(obj1,obj2);
+console.log(obj1)打印结果是？</pre></h3>
+					<p>A:{name:ls,age:21}</p>
+					<p>B:{name:zs,age:12}</p>
+					<p>C:{name:zs,age:21}</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>3、for (var i = 0; i &lt; 5; i++) {
+ setTimeout(function() {
+  console.log(i);
+ }, 1000);
+}
+ 
+console.log(i);打印结果是？</pre></h3>
+					<p>A:0,1,2,3,4</p>
+					<p>B:报错</p>
+					<p>C:5,5,5,5,5</p>
+					<p>D:undefined</p>
+			
+				<h3><pre>4、localStorage与sesstionStorage的区别</pre></h3>
+					<p>A:一个存储于用户本地，一个存储于服务器</p>
+					<p>B:没有区别</p>
+					<p>C:一个是window对象属性，一个是document属性</p>
+					<p>D:一个是长时间存储，一个是临时存储</p>
+			
+				<h3><pre>5、浏览器中下列程序输出：
+var foo = 1;
+function main() {
+    console.log(foo);
+    var foo = 2;
+    console.log(this.foo)
+    this.foo = 3;
+    console.log(this.foo)
+}
+var m1 = main();
+console.log(this.foo)？</pre></h3>
+					<p>A:undefined 1 3 3</p>
+					<p>B:2 1 3 1</p>
+					<p>C:2 1 3 3</p>
+					<p>D:undefined 2 3 3</p>
+			
+				<h3><pre>6、off（）的作用是？</pre></h3>
+					<p>A:删除通过on方法添加的事件</p>
+					<p>B:删除通过bind方法添加的事件</p>
+					<p>C:删除通过delegate方法添加的事件</p>
+					<p>D:以上说法都不对</p>
+			多选题  每道题（5分）
+				<h3><pre>7、设为Flex布局以后，子元素的什么属性会失效？</pre></h3>
+					<p>A:padding</p>
+					<p>B:float</p>
+					<p>C:vertical-align</p>
+					<p>D:？clear</p>
+			
+				<h3><pre>8、jquery中有哪些方法可以实现ajax请求？</pre></h3>
+					<p>A:$.ajax()</p>
+					<p>B:$.get()</p>
+					<p>C:$.get()</p>
+					<p>D:$.getJSON()</p>
+			
+				<h3><pre>9、dataType是用于设置服务器返回的数据类型的，它的值可以是以下哪些？</pre></h3>
+					<p>A:xml</p>
+					<p>B:json</p>
+					<p>C:html</p>
+					<p>D:jsonp</p>
+			判断题  每道题（5分）
+				<h3><pre>10、jQuery插件有对象插件和全局插件两种</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、$(&quot;div&quot;).data(&quot;key&quot;,&quot;n123&quot;)只是用于给div元素存储一个key属性供后期使用，该属性不会显示到html结构中。</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、获取一个元素的宽度使用width（）函数</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、本地存储获取对应属性使用（）方法</pre></h3>
+			
+			
+				<h3><pre>14、（）语句可以正确绑定touchstart事件</pre></h3>
+			
+			
+				<h3><pre>15、（）是HTML5新增语义化标签代表侧边栏</pre></h3>
+			
+			
+				<h3><pre>16、（）用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的</pre></h3>
+			
+			
+				<h3><pre>17、webStorage只能存储一种类型的数据，那就是（），所以任何格式存储的时候都会被自动转为（）</pre></h3>
+			
+			
+				<h3><pre>18、（）用于本地存储一个会话中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁</pre></h3>
+			
+			
+				<h3><pre>19、（）哪个方法等价于sessionStorage.time =2018;</pre></h3>
+			
+			
+				<h3><pre>20、哪个方法清空所有本地存储的值？</pre></h3>
+			
+</div>
+</body>
+</html>

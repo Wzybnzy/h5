@@ -1,0 +1,17 @@
+自适应的页面
+
+
+1、引入flexible.js(可以直接引入线上的地址)
+2、引入css文件
+css文件:
+@import 'common.scss';
+@import '_mixin.scss';
+
+
+写自己的样式
+
+怎么把px转化成rem  自己封装的一个css函数（pxTorem(px)）
+
+引用minxi封装的函数
+
+

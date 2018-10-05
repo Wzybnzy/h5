@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" id="file">
+</body>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<script>
+    var type = ["jpeg", "jpg", "png", "gif", "bmp", "svg"];
+    var size = 3;
+    $('#file').on('change', function() {
+        console.log(this.files[0]);
+        var file = this.files[0];
+        var filesize = file.size;
+        var filetype = file.type.split('/')[1];
+        console.log(name, type);
+        if ($.inArray(filetype, type) == -1) {
+            alert('请上传图片格式为' + type.join(','));
+            return false;
+        }
+        if (filesize > size * 1024 * 1024) {
+            alert('请上传大小为3Mb的图片');
+            return false;
+        }
+        var filereader = new FileReader(); //new()
+        filereader.readAsDataURL(file);
+        filereader.onload = function() {
+            console.log(this.result);
+            var img = new Image();
+            img.src = this.result;
+            $(img).appendTo($('body'));
+        }
+    });
+</script>
+
+</html>

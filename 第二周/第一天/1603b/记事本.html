@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="textarea" cols="60" rows="10" id="text"></textarea>
+    <button id="btn">按钮</button>
+</body>
+<script>
+    var textarea = document.getElementById('text');
+    var btn = document.getElementById('btn');
+    var local = window.localStorage;
+    var values = local.getItem('val') || '暂无';
+    textarea.value = values;
+    btn.onclick = function() {
+            var val = textarea.value;
+            textarea.value = '';
+            local.setItem('val', val);
+        }
+        // local.removeItem('val');
+</script>
+
+</html>

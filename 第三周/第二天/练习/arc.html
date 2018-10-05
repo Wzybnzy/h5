@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style="border:1px solid #ccc;"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var deg = Math.PI / 180;
+    var arr = [{
+        color: 'pink',
+        title: '缝纫机1',
+        ang: 60
+    }, {
+        color: 'red',
+        title: '缝纫机2',
+        ang: 80
+    }, {
+        color: '#abcdef',
+        title: '缝纫机3',
+        ang: 100
+    }, {
+        color: 'yellow',
+        title: '缝纫机4',
+        ang: 30
+    }, {
+        color: '#f36',
+        title: '缝纫机5',
+        ang: 90
+    }];
+    ctx.translate(300, 300);
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, 0, 60 * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'pink';
+    // ctx.fill();
+    // var x1 = Math.cos(60 / 2 * deg) * 100;
+    // var y1 = Math.sin(60 / 2 * deg) * 100;
+    // var x2 = Math.cos(60 / 2 * deg) * 120;
+    // var y2 = Math.sin(60 / 2 * deg) * 120;
+    // console.log(x1, y1);
+    // ctx.moveTo(x1, y1);
+    // ctx.lineTo(x2, y2);
+    // ctx.lineTo(x2 + 60, y2);
+    // ctx.strokeStyle = 'pink';
+    // ctx.stroke();
+    // ctx.fillText('缝纫机', x2 + 20, y2 - 10);
+
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, 60 * deg, (60 + 60) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'red';
+    // ctx.fill();
+    // var x1 = Math.cos((60 + (60 / 2)) * deg) * 100;
+    // var y1 = Math.sin((60 + (60 / 2)) * deg) * 100;
+    // var x2 = Math.cos((60 + (60 / 2)) * deg) * 120;
+    // var y2 = Math.sin((60 + (60 / 2)) * deg) * 120;
+    // console.log(x1, y1, x2, y2);
+    // ctx.moveTo(x1, y1);
+    // ctx.lineTo(x2, y2);
+    // ctx.lineTo(x2 + 60, y2);
+    // ctx.strokeStyle = 'red';
+    // ctx.stroke();
+    // // ctx.fillText('缝纫机', x2 + 20, y2 - 10);
+
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, (60 + 60) * deg, (60 + 60 + 120) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = '#abcdef';
+    ctx.fill();
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, (60 + 60 + 120) * deg, (60 + 60 + 120 + 30) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = 'yellow';
+    // ctx.fill();
+
+    // ctx.beginPath();
+    // ctx.arc(0, 0, 100, (60 + 60 + 120 + 30) * deg, (60 + 60 + 120 + 30 + 90) * deg);
+    // ctx.lineTo(0, 0);
+    // ctx.fillStyle = '#f36';
+    // ctx.fill();
+
+    var start = 0,
+        end = 0;
+    arr.map(function(v, i) {
+        end = start + v.ang;
+        ctx.beginPath();
+        ctx.arc(0, 0, 100, start * deg, end * deg);
+        ctx.lineTo(0, 0);
+        ctx.fillStyle = v.color;
+        ctx.fill();
+
+        // ctx.arc(0,0,100,(start + v.ang/2)*deg);
+        var x1 = Math.cos((start + v.ang / 2) * deg) * 100;
+        var y1 = Math.sin((start + v.ang / 2) * deg) * 100;
+        var x2 = Math.cos((start + v.ang / 2) * deg) * 120;
+        var y2 = Math.sin((start + v.ang / 2) * deg) * 120;
+
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        console.log(x2, y2);
+        if (x2 < 0) {
+            ctx.lineTo(x2 - 60, y2);
+
+            ctx.fillText(v.title, x2 - 40, y2 - 10);
+        } else {
+            ctx.lineTo(x2 + 60, y2);
+            ctx.fillText(v.title, x2 + 30, y2 - 10);
+        }
+
+        ctx.strokeStyle = v.color;
+        ctx.stroke();
+
+
+
+        start = end;
+    });
+</script>
+
+</html>

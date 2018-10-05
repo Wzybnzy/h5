@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="1200" style="border:1px solid #ccc;"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+    var offsetY = 40,
+        w = 30,
+        offsetX = 20;
+    var arr = [60, 90, 150, 130, 170, 190, 125, 175, 155, 165, 155, 145];
+
+
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80);
+    // ctx.lineTo(300, 480);
+    // ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.moveTo(900, 80);
+    // ctx.lineTo(900, 480);
+    // ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80);
+    // ctx.lineTo(900, 80);
+    // ctx.stroke();
+
+
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80 + 40);
+    // ctx.lineTo(900, 80 + 40);
+    // ctx.stroke();
+
+    for (var i = 0; i < 11; i++) {
+        // ctx.beginPath();
+        // ctx.moveTo(300, 80 + offsetY * i);
+        // ctx.lineTo(900, 80 + offsetY * i);
+        // ctx.stroke();
+        line(300, 80 + offsetY * i, 900, 80 + offsetY * i);
+
+        filltext(200 - 20 * i, 280, 80 + offsetY * i);
+    }
+
+
+    function line(x1, y1, x2, y2) {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+    }
+
+    line(300, 80, 300, 480);
+    line(900, 80, 900, 480);
+
+    function filltext(text, x, y) {
+        ctx.beginPath();
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = '#abcdef';
+        ctx.fillText(text, x, y);
+
+    }
+
+    // ctx.fillText('200',290,);
+
+    // ctx.beginPath();
+    // ctx.fillRect(310, 480, 30, -60 * 2);
+
+    // ctx.beginPath();
+    // ctx.fillRect(310 + 30 + 20, 480, 30, -90 * 2); // 310 + w*i + offsetX *i ,480,w, -v*2
+
+    arr.map(function(v, i) {
+        rect(310 + w * i + offsetX * i, 480, w, v * 2);
+        filltext(v, 320 + w * i + offsetX * i, 480 - v * 2 - 10);
+        filltext((i + 1) + '月', 320 + w * i + offsetX * i, 490);
+    });
+
+    // filltext('1月', 320, 490);
+    // filltext('2月', 320 + 30 + 20, 490);
+
+    // filltext('60', 320, 480 - 60 * 2 - 10);
+    // filltext('90', 320 + 30 + 20, 480 - 90 * 2 - 10);
+
+    function rect(x, y, w, h) {
+        ctx.beginPath();
+        ctx.fillRect(x, y, w, -h);
+    }
+</script>
+
+</html>

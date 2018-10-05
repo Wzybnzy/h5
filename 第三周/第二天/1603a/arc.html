@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style=" border:1px solid #ccc;"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var deg = Math.PI / 180;
+    var arr = [{
+        color: 'red',
+        ang: 30,
+        title: '今天'
+    }];
+
+    // ctx.beginPath();
+    // ctx.arc(300, 300, 100, 0, 360);
+    // ctx.fillStyle = 'pink';
+    // ctx.fill();
+
+    ctx.translate(300, 300);
+    ctx.beginPath();
+    ctx.arc(0, 0, 100, 0, 30 * deg);
+    ctx.lineTo(0, 0);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 100, 30 * deg, (30 + 80) * deg);
+    ctx.lineTo(0, 0);
+    ctx.fillStyle = 'blue';
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 100, (30 + 80) * deg, (30 + 80 + 100) * deg);
+    ctx.lineTo(0, 0);
+    ctx.fillStyle = 'pink';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 100, (30 + 80 + 100) * deg, (30 + 80 + 100 + 70) * deg);
+    ctx.lineTo(0, 0);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 100, (30 + 80 + 100 + 70) * deg, (30 + 80 + 100 + 70 + 80) * deg);
+    ctx.lineTo(0, 0);
+    ctx.fillStyle = '#abcdef';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 80, 0, 360);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+</script>
+
+</html>

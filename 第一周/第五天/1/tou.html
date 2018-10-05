@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        height: 300px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 100px;
+        /* background: red; */
+        position: relative;
+    }
+    
+    .person {
+        position: absolute;
+        left: 80px;
+        top: 59px;
+        /* animation: sprint 5s infinite ease-in; */
+    }
+    
+    .header {
+        height: 30px;
+        width: 30px;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .header:after {
+        content: "";
+        position: absolute;
+        left: -3px;
+        top: 0;
+        height: 3px;
+        width: 35px;
+        border-radius: 100%;
+        background: #fff;
+    }
+    
+    .header::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: -10px;
+        height: 13px;
+        width: 15px;
+        border-radius: 50%;
+        background: #fff;
+    }
+    
+    .todo {
+        height: 60px;
+        width: 0;
+        border: 1px solid #fff;
+        position: absolute;
+        left: 15px;
+        top: 46px;
+    }
+    
+    .arm {
+        height: 49px;
+        width: 35px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        left: 15px;
+        top: 46px;
+        transform-origin: 0% 0%;
+        animation: arms 1s infinite ease-in-out;
+    }
+    
+    .arm.left {
+        transform: rotateZ(-90deg);
+    }
+    
+    .arm.right {
+        transform: rotateZ(-90deg);
+        animation-delay: 0.5s;
+    }
+    
+    @keyframes arms {
+        0% {
+            transform: rotateZ(80deg);
+        }
+        50% {
+            transform: rotateZ(-70deg);
+        }
+        100% {
+            transform: rotateZ(80deg);
+        }
+    }
+    
+    .leg {
+        height: 57px;
+        width: 60px;
+        position: absolute;
+        left: 15px;
+        top: 108px;
+        border-right: 1px solid #fff;
+        border-top: 1px solid #fff;
+        transform-origin: 0% 0%;
+        animation: leg 1s infinite;
+    }
+    
+    .leg.one {
+        transform: rotateZ(90deg);
+    }
+    
+    .leg.two {
+        transform: rotateZ(80deg);
+        animation-delay: 0.5s;
+    }
+    
+    @keyframes leg {
+        0% {
+            transform: rotateZ(-5deg);
+        }
+        50% {
+            transform: rotateZ(150deg);
+        }
+        100% {
+            transform: rotateZ(-5deg);
+        }
+    }
+    
+    @keyframes sprint {
+        0% {
+            transform: translate(-500px);
+        }
+        100% {
+            transform: translate(500px);
+        }
+    }
+</style>
+
+<body style="background:#000;">
+    <div class="container">
+        <div class="person">
+            <div class="header"></div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="todo"></div>
+            <div class="leg one"></div>
+            <div class="leg two"></div>
+        </div>
+    </div>
+</body>
+
+</html>

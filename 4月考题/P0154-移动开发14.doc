@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0154-移动开发14</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、（网站）canvas中给绘制图形描边颜色使用哪个属性？来源：网络</pre></h3>
+					<p>A:shadowColor</p>
+					<p>B:fillStyle</p>
+					<p>C:strokeStyle</p>
+					<p>D:shadowBlur</p>
+			
+				<h3><pre>2、（网站）canvas获取绘图对象的方法是？来源：网络</pre></h3>
+					<p>A:getContext('1d')</p>
+					<p>B:getContext('3d')</p>
+					<p>C:getContext('2d')
+</p>
+					<p>D:getContext('4d')</p>
+			
+				<h3><pre>3、（网站）以下哪个是text-overflow属性的默认值（）来源：网络</pre></h3>
+					<p>A:clip</p>
+					<p>B:ellipsis</p>
+					<p>C:auto</p>
+					<p>D:hidden</p>
+			
+				<h3><pre>4、（网站）Math.cos()方法以（）为单位？来源：网络</pre></h3>
+					<p>A:角度</p>
+					<p>B:弧度</p>
+					<p>C:deg</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>5、（网站）以下哪个方法监听关键帧动画开始执行？来源：网络</pre></h3>
+					<p>A:webkitAnimationStart</p>
+					<p>B:webkitAnimationIteration</p>
+					<p>C:webkitAnimationEnd</p>
+					<p>D:webkitTransitionEnd</p>
+			
+				<h3><pre>6、（网站）实现canvas动画必须要使用以下哪个方法清除画布?来源：网络</pre></h3>
+					<p>A:clearRect</p>
+					<p>B:fillRect</p>
+					<p>C:strokeRect</p>
+					<p>D:rect</p>
+			多选题  每道题（5分）
+				<h3><pre>7、（网站）以下哪些方法可以实现绘制文字？来源：网络</pre></h3>
+					<p>A:fillText()</p>
+					<p>B:strokeText（）</p>
+					<p>C:text（）</p>
+					<p>D:font（）</p>
+			
+				<h3><pre>8、（网站）创建animation动画需要以下那几个步骤。来源：网络</pre></h3>
+					<p>A:通过JS调用设计好的动画</p>
+					<p>B:在animation属性中设置动画总体执行时间，以及动画类型</p>
+					<p>C:通过animation:调用设置好的动画</p>
+					<p>D:通过keyframes关键字设置动画具体内容</p>
+			
+				<h3><pre>9、（网站）以下box-shadow的属性，可以设置成负值的有？来源：网络</pre></h3>
+					<p>A:阴影外延值</p>
+					<p>B:水平偏移值</p>
+					<p>C:垂直偏移值</p>
+					<p>D:阴影模糊值</p>
+			判断题  每道题（5分）
+				<h3><pre>10、（网站）canvas可以直接在style里设置宽高没有影响。来源：网络</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、（网站）canvas画布设置文字垂直方向对齐方式使用textBaseline。来源：网络</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、（网站）移动画布原点使用scale方法。来源：网络</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、（网站）touchstart和pc端（）事件功能相同。来源：网络</pre></h3>
+			
+			
+				<h3><pre>14、（网站）获取手指位置需要获取（）对象。来源：网络</pre></h3>
+			
+			
+				<h3><pre>15、（网站）绘制一个100度的扇形起始角度在60度终止角度为（）度。来源：网络</pre></h3>
+			
+			
+				<h3><pre>16、（网站）canvas画布旋转使用（）方法。来源：网络</pre></h3>
+			
+			
+				<h3><pre>17、（网站）canvas旋转单位是（）。来源：网络</pre></h3>
+			
+			
+				<h3><pre>18、（网站）浏览器用来实现动画的方法是？来源：网络</pre></h3>
+			
+			
+				<h3><pre>19、（网站）正确定义每隔1000毫秒调用一次show函数。来源：网络</pre></h3>
+			
+			
+				<h3><pre>20、（网站）数学对象（）方法用来四舍五入取整。来源：网络</pre></h3>
+			
+</div>
+</body>
+</html>

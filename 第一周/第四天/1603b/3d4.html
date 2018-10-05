@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    .wrap {
+        height: 300px;
+        width: 300px;
+        perspective: 1600px;
+        margin: 100px auto;
+    }
+    
+    .list {
+        height: 300px;
+        width: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 20s;
+    }
+    
+    .wrap:hover .list {
+        transform: rotateY(360deg);
+    }
+    
+    .list li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 36px;
+        color: #fff;
+        line-height: 300px;
+        text-align: center;
+        opacity: 0.5;
+    }
+    /* 前面 */
+    
+    .list li:nth-child(1) {
+        background: brown;
+        transform: translateZ(150px);
+    }
+    /* 后面 */
+    
+    .list li:nth-child(2) {
+        background: chartreuse;
+        transform: rotateY(180deg) translateZ(150px);
+    }
+    /*  */
+    
+    .list li:nth-child(3) {
+        background: cornflowerblue;
+        transform: rotateY(-90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(4) {
+        background: crimson;
+        transform: rotateY(90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(5) {
+        background: darkblue;
+        transform: rotateX(-90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(6) {
+        background: darkgoldenrod;
+        transform: rotateX(90deg) translateZ(150px);
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+
+</html>

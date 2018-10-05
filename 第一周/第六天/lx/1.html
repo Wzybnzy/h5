@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+    }
+    
+    .wrap {
+        height: 2.5rem;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid #000;
+    }
+    
+    .list {
+        height: 2.5rem;
+        width: 100%;
+        display: flex;
+    }
+    
+    .list li {
+        height: 2.5rem;
+        width: 3.75rem;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.documentElement.style.fontSize = window.innerWidth / 375 * 100 + 'px';
+    var liW = window.innerWidth,
+        len = document.getElementsByTagName('li').length;
+    var list = document.querySelector('.list'),
+        wrap = document.querySelector('.wrap');
+    list.style.width = (liW * len) / 100 + 'rem';
+    console.log(list.style.width);
+    wrap.addEventListener('touchstart', touchstart, false);
+    wrap.addEventListener('touchmove', touchmove, false);
+    wrap.addEventListener('touchend', touchend, false);
+    var startX, startY, endX, endY;
+
+    function touchstart(e) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        console.log(e.touches[0]);
+    }
+</script>
+
+</html>

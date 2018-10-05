@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var deg = Math.PI / 180;
+
+    function draw() {
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        hour = hour + min / 60;
+        hour = hour > 12 ? (hour - 12) : hour;
+        //圆
+        ctx.beginPath();
+        ctx.arc(300, 300, 200, 0, 360);
+        ctx.lineWidth = 20;
+        ctx.stroke();
+        ctx.closePath();
+
+
+        //时针刻度
+        // ctx.save();
+        // ctx.translate(300, 300);
+        // ctx.beginPath();
+        // ctx.moveTo(0, -190);
+        // ctx.lineTo(0, -160);
+        // ctx.strokeStyle = 'red';
+        // ctx.lineWidth = 8;
+        // ctx.stroke();
+        // ctx.closePath();
+        // ctx.restore();
+
+
+        // ctx.save();
+        // ctx.translate(300, 300);
+        // ctx.beginPath();
+        // ctx.rotate(90 * deg);
+        // ctx.moveTo(0, -190);
+        // ctx.lineTo(0, -160);
+        // ctx.strokeStyle = 'red';
+        // ctx.lineWidth = 8;
+        // ctx.stroke();
+        // ctx.closePath();
+        // ctx.restore();
+
+        // ctx.save();
+        // ctx.translate(300, 300);
+        // ctx.beginPath();
+        // ctx.rotate(180 * deg);
+        // ctx.moveTo(0, -190);
+        // ctx.lineTo(0, -160);
+        // ctx.strokeStyle = 'red';
+        // ctx.lineWidth = 8;
+        // ctx.stroke();
+        // ctx.closePath();
+        // ctx.restore();
+
+        for (var i = 0; i < 12; i++) {
+            ctx.save();
+            ctx.translate(300, 300);
+            ctx.beginPath();
+            ctx.rotate((30 * i) * deg);
+            ctx.moveTo(0, -190);
+            ctx.lineTo(0, -160);
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+        }
+
+        for (var j = 0; j < 60; j++) {
+            ctx.save();
+            ctx.translate(300, 300);
+            ctx.beginPath();
+            ctx.rotate((6 * j) * deg);
+            ctx.moveTo(0, -190);
+            ctx.lineTo(0, -175);
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+        }
+
+
+        //时针
+
+        ctx.beginPath();
+        ctx.save();
+        ctx.translate(300, 300);
+        ctx.rotate(hour * 30 * deg);
+        ctx.moveTo(0, -80);
+        ctx.lineTo(0, 10);
+        ctx.lineWidth = 7;
+        ctx.strokeStyle = 'red';
+        ctx.stroke();
+        ctx.closePath();
+        ctx.restore();
+
+
+        ctx.beginPath();
+        ctx.save();
+        ctx.translate(300, 300);
+        ctx.rotate(min * 6 * deg);
+        ctx.moveTo(0, -90);
+        ctx.lineTo(0, 15);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'red';
+        ctx.stroke();
+        ctx.closePath();
+        ctx.restore();
+
+
+
+        ctx.beginPath();
+        ctx.save();
+        ctx.translate(300, 300);
+        ctx.rotate(sec * 6 * deg);
+        ctx.moveTo(0, -100);
+        ctx.lineTo(0, 20);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = 'red';
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(0, 0, 5, 0, 360);
+        ctx.fillStyle = 'pink';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(0, -80, 5, 0, 360);
+        ctx.fillStyle = 'pink';
+        ctx.fill();
+        ctx.restore();
+    }
+
+    draw();
+    // setInterval(draw, 1000);
+</script>
+
+</html>

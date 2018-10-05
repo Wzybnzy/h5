@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas height="600" width="600" id="myCanvas"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+    var init = 0;
+    var deg = Math.PI / 180;
+    drawrect();
+
+    function drawrect() {
+        init++;
+        if (init < 300) {
+            requestAnimationFrame(drawrect);
+        } else {
+            cancelAnimationFrame(drawrect);
+        }
+        ctx.fillRect(10, 10, init, 10);
+    }
+</script>
+
+</html>

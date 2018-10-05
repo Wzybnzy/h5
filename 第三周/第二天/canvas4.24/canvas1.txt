@@ -1,0 +1,18 @@
+fillText()
+strokeText(text,x,y)
+textAlign = "start|center|end|(left)|right"
+textBaseline ="middle|top|(bottom)"
+
+
+
+arc(x,y,radius,start,end,fasle|true)
+x:圆心点x轴的位置
+y:圆心点y轴的位置
+radius:半径
+start:起始弧度
+end：终止弧度
+false：顺时针（默认）  true：逆时针
+
+var deg = Math.PI / 180 
+一度等于多少弧度
+

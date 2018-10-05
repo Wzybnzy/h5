@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    
+    a,
+    button {
+        text-decoration: none;
+        color: #000;
+        display: inline-block;
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 10px;
+    }
+    
+    .bot {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .bot-btn {
+        display: inline-block;
+    }
+    
+    .paused {
+        animation-play-state: paused;
+    }
+    
+    .xfast {
+        animation-duration: 200ms;
+        -webkit-animation-duration: 200ms;
+    }
+    
+    .fast {
+        animation-duration: 500ms;
+        -webkit-animation-duration: 500ms;
+    }
+    
+    .normal {
+        animation-duration: 800ms;
+        -webkit-animation-duration: 800ms;
+    }
+    
+    .slow {
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+    }
+    
+    .wrap {
+        width: 100%;
+    }
+    
+    .box {
+        height: 300px;
+        width: 180px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+        background: url(img/charector.png) no-repeat 0 0;
+        animation: runing_girl 1s infinite step-start;
+    }
+    
+    @keyframes runing_girl {
+        0% {
+            background-position: 0 0;
+        }
+        14.3% {
+            background-position: -180px 0;
+        }
+        28.6% {
+            background-position: -360px 0;
+        }
+        42.9% {
+            background-position: -540px 0;
+        }
+        57.2% {
+            background-position: -720px 0;
+        }
+        71.5% {
+            background-position: -900px 0;
+        }
+        85.8% {
+            background-position: -1080px 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+</style>
+<script src="js/jquery-1.7.2.min.js"></script>
+
+
+<body>
+    <div class="wrap">
+        <div class="box" id="box">
+
+        </div>
+    </div>
+    <div class="bot">
+        <div class="bot-btn">
+            <a class="runing-xfast" href="javascript:">最快</a>
+            <a class="runing-fast" href="javascript:">快</a>
+            <a class="runing-normal" href="javascript:">正常</a>
+            <a class="runing-slow" href="javascript:">慢</a>
+            <button class="btn-paused">暂停</button>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $(function() {
+        $('.btn-paused').on('click', function() {
+            $('#box').addClass('paused');
+        });
+        $('a').on('click', function() {
+            $('#box').removeClass('paused');
+            $('#box').attr('class', 'box ' + $(this).attr('class').split('-')[1])
+        })
+    })
+</script>
+
+</html>

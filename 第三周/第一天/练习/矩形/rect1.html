@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.fillStyle = 'pink';
+    ctx.fillRect(100, 100, 160, 100);
+    ctx.clearRect(110, 110, 50, 50);
+    ctx.strokeStyle = 'pink';
+    ctx.lineWidth = 10;
+    ctx.strokeRect(300, 100, 160, 100);
+    ctx.stroke();
+
+    ctx.translate(0, 600);
+    // ctx.beginPath();
+    // ctx.fillStyle = 'blue';
+    // ctx.fillRect(10, 0, 30, -60); 10 + 0 * 30
+    // ctx.closePath();
+
+    // ctx.beginPath();
+    // ctx.fillStyle = 'red';
+    // ctx.fillRect(50, 0, 30, -160); 10*2 + 1 * w
+    // ctx.closePath();
+
+    // ctx.beginPath();
+    // ctx.fillStyle = 'yellow';
+    // ctx.fillRect(90, 0, 30, -100); 10*3 + 2 * w
+    // ctx.closePath();
+
+
+    var arr = [{
+        color: 'red',
+        h: 100
+    }, {
+        color: 'blue',
+        h: 160
+    }, {
+        color: 'pink',
+        h: 40
+    }, {
+        color: 'yellow',
+        h: 200
+    }];
+    var offsetX = 10,
+        w = 30;
+    arr.map(function(v, i) {
+        console.log(v, i);
+        ctx.beginPath();
+        ctx.fillStyle = v.color;
+        ctx.fillRect(offsetX * (i + 1) + w * i, 0, w, -v.h);
+        ctx.closePath();
+    });
+</script>
+
+</html>

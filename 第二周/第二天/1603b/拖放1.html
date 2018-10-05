@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrap {
+        display: flex;
+    }
+    
+    .wrap div {
+        height: 300px;
+        width: 400px;
+        border: 1px solid#ccc;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="left" ondragover="dragover(event)" ondrop="drop(event)">
+            <img src="./img/libco.png" alt="" draggable="true" ondragstart="dragstart(event)" id="imgs">
+        </div>
+        <div class="right" ondragover="dragover(event)" ondrop="drop(event)"></div>
+    </div>
+</body>
+<script>
+    var draggable;
+
+    function dragstart(e) {
+        console.log(e.target.id);
+        draggable = e.target;
+        // e.dataTransfer.setData('id', e.target.id); // 类似于setItem，要存的值 ，2个参数
+    }
+
+    function dragover(e) {
+        e.preventDefault();
+    }
+
+    function drop(e) {
+        // var id = e.dataTransfer.getData('id'); // 1个参数，参数名字是-----存的时候的名字
+        // console.log(id);
+        // e.target.appendChild(document.getElementById(id));
+        e.target.appendChild(draggable);
+    }
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+拖放
+
+给可拖放的元素 添加 draggable = true 
+
+方法：
+源对象：
+ondragstart  //源对象被拖动的时候
+ondrag // 源对象在移动的过程中触发的
+ondragend  //源对象移动结束的时候触发的
+
+目标对象：
+ondragenter // 源对象进入目标对象的时候
+ondragover // 源对象在目标对象里面移动的时候
+ondragleave //源对象离开目标对象的时候触发的
+ondrop   //源对象在目标对象上松手的时触发
+
+
+源对象上的数据和目标对象上的数据传递的时候
+e.dataTransfer {}      
+
+源对象上设置
+e.dataTransfer.setData('key','val');
+
+目标对象上取值
+e.dataTransfer.getData('key);
+
+
+

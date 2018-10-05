@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0376-移动开发2周考</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（2分）
+				<h3><pre>1、以下哪个方法是用来一次性清除所有的键值队的（    ）</pre></h3>
+					<p>A:key()</p>
+					<p>B:setItem(null)</p>
+					<p>C:clear()</p>
+					<p>D:removeItem()</p>
+			
+				<h3><pre>2、canvas获取绘图对象的方法是？</pre></h3>
+					<p>A:getContext('1d')</p>
+					<p>B:getContext('3d')</p>
+					<p>C:getContext('2d')</p>
+					<p>D:getContext('4d')</p>
+			
+				<h3><pre>3、以下canvas方法中哪个是用来绘制矩形的？</pre></h3>
+					<p>A:arc()</p>
+					<p>B:drawImage()</p>
+					<p>C:fillText()</p>
+					<p>D:fillRect()</p>
+			
+				<h3><pre>4、swiper中设置分页器使用哪个组件？</pre></h3>
+					<p>A:pagination</p>
+					<p>B:effect</p>
+					<p>C:autoplay</p>
+					<p>D:以上不对</p>
+			
+				<h3><pre>5、webStorage只能存储一种类型的数据，以下哪个符合要求？</pre></h3>
+					<p>A:string</p>
+					<p>B:boolean</p>
+					<p>C:null</p>
+					<p>D:unfiend</p>
+			
+				<h3><pre>6、）用于本地存储一个会话中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁？</pre></h3>
+					<p>A:cookie</p>
+					<p>B:localStoage</p>
+					<p>C:sessionStorage</p>
+					<p>D:session</p>
+			
+				<h3><pre>7、（）方法删除通过on方法添加的事件？</pre></h3>
+					<p>A:off（）</p>
+					<p>B:unbind（）</p>
+					<p>C:delete（）</p>
+					<p>D:以上都不是</p>
+			
+				<h3><pre>8、jquery中ajax哪个属性向后台发送数据？</pre></h3>
+					<p>A:async</p>
+					<p>B:dataType</p>
+					<p>C:success</p>
+					<p>D:data</p>
+			
+				<h3><pre>9、通过new FileReader（）获取文件，得到什么格式的字符串？</pre></h3>
+					<p>A:base64</p>
+					<p>B:utf-8</p>
+					<p>C:gbk</p>
+					<p>D:string</p>
+			
+				<h3><pre>10、在input标签中添加哪个属性可以上传多个文件？</pre></h3>
+					<p>A:accept</p>
+					<p>B:multiple</p>
+					<p>C:files</p>
+					<p>D:placeholder</p>
+			
+				<h3><pre>11、for(var i=0;i&lt;10;i++){}console.log(i)以上代码运行结果为？</pre></h3>
+					<p>A:10</p>
+					<p>B:9</p>
+					<p>C:报错</p>
+					<p>D:undefined</p>
+			
+				<h3><pre>12、var person = {
+    run: function () {console.log(this)}
+}
+person.run() ;</pre></h3>
+					<p>A:function(){}</p>
+					<p>B:person</p>
+					<p>C:window</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>13、（）样式可以将元素设置为弹性盒布局方式显示？</pre></h3>
+					<p>A:display:flex</p>
+					<p>B:display:box</p>
+					<p>C:display:table</p>
+					<p>D:以上都不对</p>
+			
+				<h3><pre>14、下列哪个属性会将相邻的多个元素按照出现的顺序排列在同一行（         ）？</pre></h3>
+					<p>A:padding</p>
+					<p>B:float</p>
+					<p>C:margin</p>
+					<p>D:align</p>
+			
+				<h3><pre>15、CSS中，盒模型的基本属性不包括？</pre></h3>
+					<p>A:padding</p>
+					<p>B:border</p>
+					<p>C:font</p>
+					<p>D:margin</p>
+			多选题  每道题（3分）
+				<h3><pre>16、（） 元素和()元素都默认设置了 draggable 属性为 true</pre></h3>
+					<p>A:a</p>
+					<p>B:div</p>
+					<p>C:img</p>
+					<p>D:p</p>
+			
+				<h3><pre>17、以下哪些属于拖放源对象的事件？</pre></h3>
+					<p>A:dragstart</p>
+					<p>B:drag</p>
+					<p>C:dragend</p>
+					<p>D:drop</p>
+			
+				<h3><pre>18、在js中改变函数内部this指向的方法有哪些？</pre></h3>
+					<p>A:bind</p>
+					<p>B:call</p>
+					<p>C:apply</p>
+					<p>D:arguments</p>
+			
+				<h3><pre>19、以下box-shadow的属性，可以设置成负值的有（）?</pre></h3>
+					<p>A:阴影外延值</p>
+					<p>B:水平偏移值</p>
+					<p>C:垂直偏移值</p>
+					<p>D:阴影模糊值</p>
+			
+				<h3><pre>20、canvas元素本身提供了二个属性？</pre></h3>
+					<p>A:size</p>
+					<p>B:width</p>
+					<p>C:height</p>
+					<p>D:position</p>
+			判断题  每道题（2分）
+				<h3><pre>21、JSON.stringify()函数的作用是将json对象转换成字符串</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>22、Canvas 元素用于在网页上绘制图形，该元素标签可以直接在 HTML 上进行图形操作</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>23、在定义了动画的元素上定义backface-visibility:hidden，目的是在手机上不会出现闪屏现象</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>24、模拟滑动事件时，通过手机内置陀螺仪来判断手指滑动的方向</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>25、想要拖放某个元素，必须设置该元素的 draggable 属性为true</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（3分）
+				<h3><pre>26、要触发drop事件必须要阻止事件默认行为（）阻止事件默认行为</pre></h3>
+			
+			
+				<h3><pre>27、怎么创建上传文件对象？</pre></h3>
+			
+			
+				<h3><pre>28、在js中变量的查找，是沿着作用域链向（）作用域进行查找的</pre></h3>
+			
+			
+				<h3><pre>29、:before选择器必须配合什么属性？</pre></h3>
+			
+			
+				<h3><pre>30、（）是实现文字或图像的缩放处理的。</pre></h3>
+			
+			
+				<h3><pre>31、zepto和以下哪个框架的API很类似？</pre></h3>
+			
+			
+				<h3><pre>32、var arr=[1,4,8,9],$.inArray(5,arr)的返回结果是？</pre></h3>
+			
+			
+				<h3><pre>33、canvas方法中哪个是用来绘制矩形的？</pre></h3>
+			
+			
+				<h3><pre>34、如何绘制一个圆角元素，需要CSS的哪个属性？</pre></h3>
+			
+			
+				<h3><pre>35、如果手势是定义在整个页面上的，则touchstart、touchmove这些事件应绑定在（   ）对象上</pre></h3>
+			
+			
+				<h3><pre>36、如果想使用触控事件swipeLeft，至少需要加载哪个函数库？</pre></h3>
+			
+			
+				<h3><pre>37、Better-scroll的方法中以下哪个是用于改变滚动条位置的？</pre></h3>
+			
+			
+				<h3><pre>38、实例化Better-scroll时，它的第一个参数是（）</pre></h3>
+			
+			
+				<h3><pre>39、html5表单中input输入类型number的作用是？</pre></h3>
+			
+			
+				<h3><pre>40、（）的设计目的是提供 jQuery 的类似的API，但并不是100%覆盖</pre></h3>
+			
+</div>
+</body>
+</html>

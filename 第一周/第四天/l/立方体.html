@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrap {
+        perspective: 1600px;
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+    }
+    
+    .list {
+        height: 300px;
+        width: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateY(0);
+        transition: all 20s linear 0s;
+    }
+    
+    .wrap:hover .list {
+        transform: rotateY(360deg);
+    }
+    
+    .list li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 82px;
+        opacity: 0.6;
+        color: #fff;
+        line-height: 300px;
+    }
+    
+    .list li:nth-child(1) {
+        background: #000;
+        transform: translateZ(150px);
+    }
+    
+    .list li:nth-child(2) {
+        background: cadetblue;
+        transform: rotateY(180deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(3) {
+        /* 左边 */
+        background: coral;
+        transform: rotateY(-90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(4) {
+        /* 右边 */
+        background: cornflowerblue;
+        transform: rotateY(90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(5) {
+        /* 上边 */
+        background: coral;
+        transform: rotateX(90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(6) {
+        /* 下边 */
+        background: cornflowerblue;
+        transform: rotateX(-90deg) translateZ(150px);
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+
+</html>

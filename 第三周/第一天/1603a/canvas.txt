@@ -1,0 +1,58 @@
+1、
+canavs  创建标签
+2、取上下文   myCanvas.getContext('2d');
+
+
+
+
+1、画线
+    ctx.beginPath();  //开始路径
+    ctx.moveTo(x,y);
+    ctx.lineTo(x,y);
+    ctx.stroke();
+   ctx.closePath();  //闭合路径
+2、画闭合路径（三角形）
+    ctx.beginPath();  //开始路径
+    ctx.moveTo(x,y);
+    ctx.lineTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.closePath();  //闭合路径
+    ctx.stroke(); //描边  （描边之前要闭合路径）
+    ctx.fill();填充 
+3、 ctx.strokeStyle = '样式';   //要在描边之前
+    ctx.fillStyle = '样式';   //要在填充之前
+
+4、移动画布（0,0）的位置
+ctx.translate(x,y); 
+
+5、矩形
+
+ctx.rect(x,y,w,h);
+ctx.fillRect(x,y,w,h); //填充
+ctx.strokeRect(x,y,w,h); // 描边矩形
+ctx.clearRect(x,y,w,h);
+
+6、角度转弧度
+degrees*Math.PI/180
+
+ctx.rotate(ang * Math.PI / 180);
+
+7、文本
+fillText(text,x,y,maxWidth);
+strokeTetx(text,x,y,maxWidth);
+
+8\、文本的样式
+ctx.font = '40px  normal'; // 设置字体大小
+ctx.textAlign = 'center'; // start end  left right
+ctx.textBaseline  = 'middle'; 
+
+
+9、圆
+arc(x,y,r,startang,endang,counterclockwise);  counterclockwise:默认值false(顺时针)  true（逆时针）
+
+10、获取canvas里面的图片
+canavs.toDataURL(type,options);  options  0-1   以base64格式返回一个路径
+
+
+11、
+ctx.globalCompositeOperation   

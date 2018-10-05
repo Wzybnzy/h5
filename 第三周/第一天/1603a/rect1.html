@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas height="600" width="1200" style="border:1px solid #ccc;" id="myCanvas"></canvas>
+</body>
+
+<script>
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+    var offsetY = 40,
+        w = 30,
+        offsetX = 20;
+    var arr = [60, 90, 150, 130, 170, 190, 125, 175, 155, 165, 155, 145];
+
+
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80);
+    // ctx.lineTo(300, 480);
+    // ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.moveTo(900, 80);
+    // ctx.lineTo(900, 480);
+    // ctx.stroke();
+
+
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80);
+    // ctx.lineTo(900, 80);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.moveTo(300, 120);
+    // ctx.lineTo(900, 120);
+    // ctx.stroke();
+
+    function line(x1, y1, x2, y2) {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+    }
+
+    line(300, 80, 300, 480);
+    line(900, 80, 900, 480);
+
+    for (var i = 0; i < 11; i++) {
+        filltext(200 - 20 * i, 280, 80 + offsetY * i);
+        line(300, 80 + offsetY * i, 900, 80 + offsetY * i);
+    }
+
+
+    function filltext(text, x, y) {
+        ctx.beginPath();
+        ctx.fillStyle = '#abcdef';
+        ctx.fillText(text, x, y);
+    }
+
+    // y轴
+    // ctx.beginPath();
+    // ctx.fillText(200, 280, 80);
+    // 200 - i * 0
+
+    // ctx.beginPath();
+    // ctx.fillText(180, 280, 80 + 40);
+    // 200 - 20 * 1
+
+
+    // ctx.beginPath();
+    // ctx.fillText(160, 280, 80 + 40);
+    // 200 - 20 * 2
+
+
+    // 矩形
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#abcdef';
+    // ctx.fillRect(310, 480, 30, -60 * 2);
+
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#abcdef';
+    // ctx.fillRect(310 + 30 + 20, 480, 30, -90 * 2);
+
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#abcdef';
+    // ctx.fillRect(310 + 30 * 2 + 20 * 2, 480, 30, -150 * 2);
+
+    arr.map(function(v, i) {
+        filltext(v, 320 + w * i + offsetX * i, 480 - v * 2 - 5);
+        filltext((i + 1) + '月', 315 + w * i + offsetX * i, 500);
+        rect(310 + w * i + offsetX * i, 480, 30, -v * 2);
+    });
+
+    function rect(x, y, w, h) {
+        ctx.beginPath();
+        ctx.fillStyle = '#abcdef';
+        ctx.fillRect(x, y, w, h);
+    }
+
+    // 矩形上的文字
+    // ctx.beginPath();
+    // ctx.fillText('60', 320, 480 - 60 * 2 - 5);
+
+
+
+    // ctx.beginPath();
+    // ctx.fillText('90', 320 + 30 + 20, 480 - 90 * 2 - 5);
+
+
+    // x轴刻度
+    //     ctx.beginPath();
+    //     ctx.fillText('1月', 315, 500);
+
+    //     ctx.beginPath();
+    //     ctx.fillText('2月', 315 + 30 + 20, 500);
+    //
+</script>
+
+</html>

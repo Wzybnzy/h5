@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/swiper-4.1.6.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .page-container,
+    .page-container .swiper-wrapper,
+    .page-container .swiper-wrapper .swiper-slide {
+        height: 300px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="swiper-container page-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:red;"></div>
+            <div class="swiper-slide" style="background:blue;"></div>
+            <div class="swiper-slide" style="background:pink;"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+<script src="../js/swiper-4.1.6.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        //配置项
+        // initialSlide: 1,
+        // direction: 'vertical',
+        init: false,
+        on: {
+            slideChange: function() {
+                console.log(mySwiper.activeIndex);
+            }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            renderBullet: function(index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        }
+    });
+    mySwiper.init();
+    // mySwiper.slideTo(2, 300, true);
+</script>
+
+</html>

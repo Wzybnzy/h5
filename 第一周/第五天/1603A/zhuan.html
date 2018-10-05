@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .wrap {
+        height: 100%;
+        width: 100%;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    @media only screen and (orientation: portrait) {
+        /* 竖屏代码 */
+        .wrap {
+            background: #999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            display: block;
+            transform: rotate(90deg);
+        }
+        .content {
+            display: none;
+        }
+    }
+    
+    @media only screen and (orientation: landscape) {
+        /* 横屏代码 */
+        .box {
+            display: none;
+        }
+        .content {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        .toutiao {
+            height: 54px;
+            width: 120px;
+            display: block;
+            margin-top: 20px;
+            animation: toutiao 0.8s linear;
+        }
+        @keyframes toutiao {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+        .list {
+            height: 80px;
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .list li {
+            height: 60px;
+            width: 60px;
+            float: left;
+            opacity: 0;
+        }
+        .list li:nth-child(1) {
+            background: url(../img/jin.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 0.8s forwards;
+        }
+        .list li:nth-child(2) {
+            background: url(../img/tian.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 1.1s forwards;
+        }
+        .list li:nth-child(3) {
+            background: url(../img/lao.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 1.4s forwards;
+        }
+        .list li:nth-child(4) {
+            background: url(../img/shi.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 1.7s forwards;
+        }
+        .list li:nth-child(5) {
+            background: url(../img/jiu.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 2s forwards;
+        }
+        .list li:nth-child(6) {
+            background: url(../img/shi1.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 2.3s forwards;
+        }
+        .list li:nth-child(7) {
+            background: url(../img/tou.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 2.6s forwards;
+        }
+        .list li:nth-child(8) {
+            background: url(../img/tiao.png) no-repeat center center;
+            background-size: 60px 60px;
+            animation: move1 0.8s linear 2.9s forwards;
+        }
+        @keyframes move1 {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .jiaoyu {
+            height: 48px;
+            width: 80%;
+            opacity: 0;
+            margin-left: 20px;
+            margin-top: 20px;
+            animation: toutiao 1s linear 3s forwards;
+        }
+        .left {
+            height: 34px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .left img {
+            display: block;
+        }
+        .left img:nth-child(1) {
+            height: 30px;
+            width: 84px;
+            opacity: 0;
+            animation: move2 1s linear 4s forwards;
+        }
+        .left img:nth-child(2) {
+            height: 34px;
+            width: 114px;
+            opacity: 0;
+            animation: move3 1s linear 4s forwards;
+        }
+        @keyframes move2 {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(240%);
+                opacity: 1;
+            }
+        }
+        @keyframes move3 {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-220%);
+                opacity: 1;
+            }
+        }
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="box">
+            <img src="../img/pingmu.png" alt="">
+            <img src="../img/wenzi.png" alt="">
+        </div>
+        <div class="content">
+            <img src="../img/toutiao.png" alt="" class="toutiao">
+            <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <img src="../img/jiaoyu.png" alt="" class="jiaoyu">
+            <div class="left">
+                <img src="../img/9.png" alt="">
+                <img src="../img/today.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

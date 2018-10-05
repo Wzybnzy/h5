@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        display: flex;
+    }
+    
+    .left,
+    .right {
+        height: 300px;
+        width: 400px;
+        border: 1px solid #ccc;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <img src="./img/libco.png" alt="" draggable="true" ondragstart="dragstart(event)">
+        </div>
+        <div class="right" ondragover="dragover(event)" ondrop="drop(event)"></div>
+    </div>
+</body>
+<script>
+    var draggable;
+
+    function dragstart(e) {
+        console.log(e.target);
+        draggable = e.target;
+    }
+
+    function dragover(e) {
+        e.preventDefault();
+    }
+
+    function drop(e) {
+        e.target.appendChild(draggable);
+        console.log(draggable);
+    }
+</script>
+
+</html>

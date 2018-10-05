@@ -1,0 +1,21 @@
+改变scss编译的目录
+
+1、文件----首选项   ---- 设置
+
+2、搜素easy scss 
+在右侧编辑需要修改的内容
+//需要修改的路径
+
+"easysass.targetDir": "../css", // 把我们scss下边的.scss文件编译到css文件下。
+
+//编译后的文件格式
+ "easysass.formats": [
+    {  // 正常格式
+      "format": "expanded",
+      "extension": ".css"
+    },
+    { // 压缩格式
+      "format": "compressed",
+      "extension": ".min.css"
+    }
+  ],

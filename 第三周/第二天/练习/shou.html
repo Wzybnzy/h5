@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="color">
+    <button id="save" onclick="save()">保存</button>
+    <button id="clear" onclick="clearCanvas()">清除</button>
+    <button id="resetBtn" onclick="Canvas()">橡皮擦</button>
+    <canvas id="myCanvas" height="600" width="600" style="background:#000;"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d');
+    var input = document.querySelector('input');
+    var resetBtn = document.getElementById('resetBtn');
+    input.onchange = function() {
+        console.log(this.value);
+        ctx.strokeStyle = this.value;
+    }
+    myCanvas.onmousedown = function(e) {
+
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+        console.log(e.offsetX, e.offsetY);
+        myCanvas.onmousemove = function(e) {
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+        }
+    }
+
+    myCanvas.onmouseup = function() {
+        myCanvas.onmousemove = null;
+    }
+
+    function save() {
+        var url = myCanvas.toDataURL();
+        console.log(url);
+        var img = new Image();
+        img.src = url;
+        document.body.appendChild(img);
+    }
+
+    function clearCanvas() {
+        ctx.clearRect(0, 0, 600, 600);
+    }
+
+    function Canvas() {
+        resetBtn.classList.toggle('active');
+        if (resetBtn.classList.contains('active')) {
+            ctx.globalCompositeOperation = 'destination-out';
+        } else {
+            ctx.globalCompositeOperation = 'source-over';
+        }
+    }
+</script>
+
+</html>

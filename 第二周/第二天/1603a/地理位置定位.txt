@@ -1,0 +1,10 @@
+1、navigator.geolocation  使用它判断是否支持地理位置定位
+2、如果支持的话，运行该方法 getCurrentPosition() 
+navigator.geolocation.getCurrentPosition(function(position){
+   // coordinates   取经度和纬度
+   position.coords.latitude  //纬度
+   position.coords.longitude  //经度
+});
+
+
+3、不支持的话，给个提示

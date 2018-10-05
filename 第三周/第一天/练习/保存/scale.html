@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scale</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000;"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // ctx.beginPath();
+    // ctx.strokeRect(5,5,50,25);
+    // ctx.scale(2,2);
+    // ctx.strokeRect(5,5,50,25);
+
+
+    // ctx.beginPath();
+    // ctx.rotate(20 * Math.PI / 180);
+    // ctx.fillRect(100,150, 100,50);
+    // ctx.closePath();
+
+
+    // 360 / 5  =  72
+    ctx.translate(200,200);
+
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#000';
+    // ctx.rotate(72 * Math.PI / 180);
+    // ctx.moveTo(40,0);
+    // ctx.lineTo(0,-20);
+    // ctx.lineTo(0,20);
+    // ctx.closePath();
+    // ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#000';
+    // ctx.rotate(72 * Math.PI / 180);
+    // ctx.moveTo(40,0);
+    // ctx.lineTo(0,-20);
+    // ctx.lineTo(0,20);
+    // ctx.closePath();
+    // ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#000';
+    // ctx.rotate(72 * Math.PI / 180);
+    // ctx.moveTo(40,0);
+    // ctx.lineTo(0,-20);
+    // ctx.lineTo(0,20);
+    // ctx.closePath();
+    // ctx.fill();
+    
+
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#000';
+    // ctx.rotate(72 * Math.PI / 180);
+    // ctx.moveTo(40,0);
+    // ctx.lineTo(0,-20);
+    // ctx.lineTo(0,20);
+    // ctx.closePath();
+    // ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.fillStyle = '#000';
+    // ctx.rotate(72 * Math.PI / 180);
+    // ctx.moveTo(40,0);
+    // ctx.lineTo(0,-20);
+    // ctx.lineTo(0,20);
+    // ctx.closePath();
+    // ctx.fill();
+    draw();
+    function draw () {
+        for (var i = 0; i < 5; i++) {
+            ctx.save();
+            // ctx.translate(200,200);
+            ctx.beginPath();
+            ctx.fillStyle = '#000';
+            ctx.rotate(i*72 * Math.PI / 180);
+            ctx.moveTo(40,0);
+            ctx.lineTo(0,-20);
+            ctx.lineTo(0,20);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+
+    
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,17 @@
+easy 编译路径
+1、文件  ----- 首选项  ---- 设置
+2、搜素easyscss 
+3、在右边覆盖编辑需要改变的内容（比如默认编译的.min.css和路径）
+4、
+{
+    /** Easy Sass 插件 **/
+    "easysass.compileAfterSave": true,
+    "easysass.formats": [
+        { // 正常的编译
+            "format": "compact",  // compact 没有压缩的、compressed压缩的
+            "extension": ".css"
+        }
+    ],
+    "easysass.targetDir": "../css", // 设置编译之后的路径
+    "window.zoomLevel": 1
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        section {
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+            -webkit-perspective: 800px;
+        }
+        
+        div {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            transition: 1s all ease;
+            -webkit-transform-style: preserve-3d;
+        }
+        
+        img {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            border-radius: 50%;
+            backface-visibility: hidden;
+        }
+        
+        img:nth-child(1) {
+            transform: rotateY(180deg);
+        }
+        
+        img:nth-child(2) {}
+        
+        div:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <img src="images/1.jpg" />
+            <img src="images/0.jpg" />
+        </div>
+    </section>
+</body>
+
+</html>

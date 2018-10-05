@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrap {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .box {
+        height: 50px;
+        width: 48px;
+        background: url(img/z-tutu.png) no-repeat 0 0;
+        border: 1px solid #000;
+        animation: z_tuing 0.3s infinite steps(12);
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .box2 {
+        height: 90px;
+        width: 90px;
+        background: url(img/z-runing.png) no-repeat center center;
+        border: 1px solid #000;
+        float: left;
+        animation: z_runing 0.5s infinite steps(6);
+    }
+    
+    @keyframes z_runing {
+        0% {
+            background-position: 0 center;
+        }
+        100% {
+            background-position: -450px center;
+        }
+    }
+    
+    @keyframes z_tuing {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -576px 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

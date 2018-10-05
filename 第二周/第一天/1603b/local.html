@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>1</div>
+</body>
+<script>
+    var box = document.querySelector('div');
+    var local = window.localStorage;
+    var val = local.getItem('aa') || 1; //获取的键名要和设置的键名一样
+    console.log(val);
+    box.innerHTML = val * 1 + 1;
+    var text = box.innerHTML;
+    local.setItem('aa', text); //key自己定义的
+</script>
+
+</html>

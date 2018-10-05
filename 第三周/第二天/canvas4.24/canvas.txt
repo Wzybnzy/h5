@@ -1,0 +1,16 @@
+
+innerWidth => window 
+
+width height => img canvas (可以设置可以获取)
+
+style.width => "100px" (获取行内样式并且可以设置 )
+offsetWidth => div (获取不能设置)
+
+
+
+requestAnimationFrame(函数)
+    浏览器专门用来做动画的API 原理递归
+    通知浏览器开始动画
+
+cancelAnimationFrame()
+     通知浏览器关闭动画

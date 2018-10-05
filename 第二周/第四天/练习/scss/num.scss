@@ -1,0 +1,29 @@
+@import 'common.scss';
+@import '_minix.scss';
+
+.swiper-container{
+    height: pxTorem(200px);
+    width: 100%;
+    position: relative;
+}
+.swiper-slide{
+    @include box_flex;
+    @include justify;
+    @include align;
+}
+.swiper-slide:nth-child(1){
+    background: cadetblue;
+}
+.swiper-slide:nth-child(2){
+    background:pink;
+}
+.swiper-slide:nth-child(3){
+    background:gold;
+}
+.page-num{
+    position: absolute;
+    bottom: 0;
+    right: pxTorem(10px);
+   
+    z-index: 999;
+}

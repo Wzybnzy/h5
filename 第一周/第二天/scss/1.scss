@@ -1,0 +1,32 @@
+$color:red; // $属性名
+@mixin box_flex {
+    display: flex;
+}
+
+@mixin direction($dir:row) {
+    -webkit-flex-direction: $dir;
+}
+
+@function wid($n) {
+    // 自定义的函数
+    @return $n * 10;
+}
+
+// @import "_mixin.scss";  引入外部文件
+div {
+    color: $color;
+    @include box_flex;
+    @include direction;
+    width: wid(10);
+    h2 {
+        background: red;
+        @include direction(column);
+    }
+}
+
+// 单行注释
+
+/*多行注释 头部样式*/
+
+
+/**/

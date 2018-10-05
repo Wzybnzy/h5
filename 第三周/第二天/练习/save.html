@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var deg = Math.PI / 180;
+
+    ctx.save();
+    ctx.translate(100, 100);
+    ctx.beginPath();
+    ctx.rotate(30 * deg);
+    ctx.fillStyle = 'pink';
+    ctx.fillRect(10, 10, 30, 100);
+    ctx.closePath();
+    ctx.restore();
+
+
+    ctx.beginPath();
+    ctx.fillRect(60, 10, 100, 30);
+</script>
+
+</html>

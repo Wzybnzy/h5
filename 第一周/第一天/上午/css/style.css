@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    height: 44px;
+    width: 100%;
+    background: cadetblue;
+}
+
+.menu {
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+    text-align: center;
+    display: none;
+}
+
+h1 {
+    float: left;
+    padding-left: 80px;
+}
+
+.list {
+    float: right;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.list li {
+    float: left;
+    height: 44px;
+    padding: 0 80px;
+    line-height: 44px;
+}
+
+img {
+    display: block;
+}
+
+.top_bg {
+    width: 100%;
+}
+
+.top_bg img {
+    display: block;
+    width: 100%;
+    /* height: 245px; */
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 12px;
+}
+
+.content .left {
+    width: 48%;
+}
+
+.content .left img {
+    width: 100%;
+}
+
+.content .right {
+    width: 48%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content .right div {
+    width: 48%;
+}
+
+.content .right div img {
+    width: 100%;
+}
+
+.listimg {
+    margin-top: 16px;
+}
+
+.listimg div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.listimg div dl {
+    border: 1px solid #ccc;
+    width: 23%;
+    margin-bottom: 16px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+}
+
+.listimg div dl dt {
+    width: 100%;
+}
+
+.listimg div dl dt img {
+    width: 100%;
+    padding: 5px;
+}
+
+.listimg div dl dd p {
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.listimg div dl dd time {
+    float: left;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.listimg div dl dd author {
+    float: right;
+    padding: 5px;
+    font-size: 12px;
+}
+
+@media (max-width: 980px) {
+    .menu {
+        display: block;
+    }
+    h1 {
+        display: none;
+    }
+    .list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.5);
+        height: 0;
+        transition: all 2s;
+    }
+    .list li {
+        float: none;
+    }
+    .header:hover ul {
+        height: 176px;
+    }
+    .content {
+        flex-wrap: wrap;
+    }
+    .content .left {
+        width: 96%;
+        margin-bottom: 10px;
+    }
+    .content .right {
+        width: 96%;
+    }
+    .listimg div dl {
+        width: 46%;
+    }
+}

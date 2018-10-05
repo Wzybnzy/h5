@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .active {
+        display: none;
+    }
+    
+    .btn {
+        display: none;
+    }
+</style>
+
+<body>
+    <canvas id="myCanvas"></canvas>
+    <input type="file" id="file">
+    <img src="watermark.png" alt="">
+    <button id="btn" class="btn" onclick="sure()">确定</button>
+    <img src="" alt="" class="imgs">
+    <!-- <img src="4.jpg" alt="" id="imgs"> -->
+</body>
+<script src="script.js"></script>
+<script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d');
+    var input = document.querySelector('input[type=file]');
+    var btn = document.querySelector('.btn');
+    var watermark = document.querySelector('img');
+    var imgs = document.querySelector('.imgs');
+    // ctx.drawImage(imgs, 100, 100);
+    // var url = getFileUrl('file');
+    // console.log(url);
+    input.onchange = function() {
+        var file = this.files[0];
+        console.log(this.files);
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+        fileReader.onload = function() {
+            // var canvas = document.createElement('canvas');
+            // console.dir(canvas);
+            // canvas.height = 180;
+            // canvas.width = 180;
+            // var ctx = canvas.getContext('2d');
+            // console.log(this.result);
+            // var img = new Image();
+            // img.crossOrigin = '';
+            // // img.setAttribute("crossOrigin", 'Anonymous');
+            // img.onload = function() {
+            //     ctx.drawImage(img, 10, 10, 180, 180);
+            //     ctx.drawImage(watermark, 10, 10, 180, 180);
+            //     // image();
+            //     input.classList.add('active');
+            //     btn.classList.remove('btn');
+            // }
+            imgs.src = this.result;
+            ctx.drawImage(imgs, 10, 10, 180, 180);
+            ctx.drawImage(watermark, 10, 10, 180, 180);
+        }
+    }
+
+    function sure() {
+        var url = myCanvas.toDataURL();
+        document.body.innerHTML = '<img src="' + url + '">';
+        console.log(myCanvas.toDataURL('image/png'));
+    }
+</script>
+
+</html>

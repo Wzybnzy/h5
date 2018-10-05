@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style="border:1px solid #ccc"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    // var deg = Math.PI / 180;
+    var init = 0;
+    var max = 300;
+
+    function rect() {
+        init++;
+        if (init < 300) {
+            requestAnimationFrame(rect); // 开启动画
+        } else {
+            cancelAnimationFrame(rect); // 关闭动画
+        }
+        ctx.beginPath();
+        ctx.fillRect(10, 10, init, 10);
+
+    }
+
+    rect();
+</script>
+
+</html>

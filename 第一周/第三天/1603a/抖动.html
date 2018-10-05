@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抖动</title>
+</head>
+<style>
+    .box {
+        height: 100px;
+        width: 100px;
+        background: pink;
+        margin: 200px auto;
+        border-radius: 100%;
+        animation: move 2s linear infinite both;
+    }
+    
+    @keyframes move {
+        0% {
+            transform: translateX(100px);
+        }
+        10% {
+            transform: translateX(-100px);
+        }
+        20% {
+            transform: translateX(100px);
+        }
+        30% {
+            transform: translateX(-100px);
+        }
+        40% {
+            transform: translateX(100px);
+        }
+        50% {
+            transform: translateX(-100px);
+        }
+        60% {
+            transform: translateX(100px);
+        }
+        70% {
+            transform: translateX(-100px);
+        }
+        80% {
+            transform: translateX(100px);
+        }
+        90% {
+            transform: translateX(-100px);
+        }
+        100% {
+            transform: translateX(100px);
+        }
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

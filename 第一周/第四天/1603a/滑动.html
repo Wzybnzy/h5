@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .list {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .list li {
+        height: 30px;
+        width: 125%;
+        display: flex;
+        border-bottom: 1px solid #000;
+        line-height: 30px;
+        transform: translateX(0);
+        transition: all 1s;
+    }
+    
+    .list li.active {
+        transform: translateX(-20%);
+    }
+    
+    .content {
+        flex: 4;
+    }
+    
+    .del {
+        flex: 1;
+        background: red;
+    }
+</style>
+
+<body>
+    <ul class="list" id="list">
+        <li>
+            <div class="content">1603</div>
+            <div class="del">删除</div>
+        </li>
+        <li>
+            <div class="content">1603</div>
+            <div class="del">删除</div>
+        </li>
+        <li>
+            <div class="content">1603</div>
+            <div class="del">删除</div>
+        </li>
+    </ul>
+</body>
+<script src="./zepto.js"></script>
+<script>
+    $('#list').on('swipeLeft', 'li', function() {
+        console.log('left');
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    $('#list').on('swipeRight', 'li', function() {
+        console.log('left');
+        $(this).removeClass('active');
+    });
+</script>
+
+</html>

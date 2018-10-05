@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .menu {
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+    }
+    
+    .header {
+        height: 44px;
+        width: 100%;
+        background: paleturquoise;
+    }
+    
+    .list li {
+        padding: 0 80px;
+        line-height: 44px;
+        text-align: center;
+    }
+    
+    img {
+        display: block;
+        width: 100%;
+    }
+    
+    .content {
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 16px;
+    }
+    
+    .content .right {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .content .right div:nth-child(1) {
+        margin-right: 10px;
+    }
+    
+    .contentlist {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .contentlist dl {
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        margin: 10px;
+    }
+    
+    .contentlist dl dt {
+        width: 100%;
+    }
+    
+    .contentlist dl dt img {
+        padding: 5px;
+    }
+    
+    .contentlist dl dd {
+        width: 100%;
+    }
+    
+    .contentlist dl dd p {
+        width: 100%;
+        font-size: 12px;
+        padding-left: 5px;
+        line-height: 36px;
+    }
+    
+    .contentlist dl dd div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    
+    .contentlist dl dd div span {
+        flex: 1;
+    }
+    
+    .contentlist dl dd div span:nth-child(2) {
+        text-align: right;
+    }
+    
+    @media screen and (min-width: 980px) {
+        li {
+            list-style: none;
+        }
+        .menu {
+            display: none;
+        }
+        h1 {
+            float: left;
+            padding-left: 80px;
+        }
+        .list {
+            float: right;
+        }
+        .list li {
+            float: left;
+        }
+        .top_bg img {
+            width: 100%;
+        }
+        .content {
+            height: 260px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .content .left,
+        .content .right {
+            flex: 1;
+        }
+        .content .left {
+            margin-right: 10px;
+        }
+        .content .left img {
+            width: 100%;
+        }
+        .content .right div {
+            flex: 1;
+        }
+        .content .right div img {
+            width: 100%;
+        }
+        .contentlist dl {
+            width: 23%;
+        }
+    }
+    
+    @media screen and (max-width: 980px) {
+        .menu {
+            display: block;
+        }
+        h1 {
+            display: none;
+        }
+        .list {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 0;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 2s;
+        }
+        .list li {
+            float: none;
+        }
+        .header:hover .list {
+            height: 176px;
+        }
+        .left,
+        .right {
+            width: 100%;
+        }
+        .left {
+            margin-bottom: 10px;
+        }
+        .contentlist dl {
+            width: 46%;
+        }
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="menu">menu</div>
+        <h1>logo</h1>
+        <ul class="list">
+            <li>文章</li>
+            <li>素材</li>
+            <li>活动</li>
+            <li>更多</li>
+        </ul>
+    </header>
+
+    <section>
+        <div class="top_bg">
+            <img src="./images/top-bg.png" alt="">
+        </div>
+        <div class="content">
+            <div class="left">
+                <img src="./images/swiper1.jpeg" alt="">
+            </div>
+            <div class="right">
+                <div>
+                    <img src="./images/1.png" alt="">
+                </div>
+                <div>
+                    <img src="./images/2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="contentlist">
+            <dl>
+                <dt>
+                    <img src="./images/1.jpg" alt="">
+                </dt>
+                <dd>
+                    <p>迷你微型摄影展</p>
+                    <div>
+                        <span>2018-4-9</span>
+                        <span>作者：小红</span>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./images/1.jpg" alt="">
+                </dt>
+                <dd>
+                    <p>迷你微型摄影展</p>
+                    <div>
+                        <span>2018-4-9</span>
+                        <span>作者：小红</span>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./images/1.jpg" alt="">
+                </dt>
+                <dd>
+                    <p>迷你微型摄影展</p>
+                    <div>
+                        <span>2018-4-9</span>
+                        <span>作者：小红</span>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./images/1.jpg" alt="">
+                </dt>
+                <dd>
+                    <p>迷你微型摄影展</p>
+                    <div>
+                        <span>2018-4-9</span>
+                        <span>作者：小红</span>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./images/1.jpg" alt="">
+                </dt>
+                <dd>
+                    <p>迷你微型摄影展</p>
+                    <div>
+                        <span>2018-4-9</span>
+                        <span>作者：小红</span>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./images/1.jpg" alt="">
+                </dt>
+                <dd>
+                    <p>迷你微型摄影展</p>
+                    <div>
+                        <span>2018-4-9</span>
+                        <span>作者：小红</span>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas class="can" style="border:1px solid #000" width="400" height="400"></canvas>
+
+    <script>
+        var can = document.querySelector('.can').getContext('2d');
+        var getRandom = function(max, min) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+        var count = 0;
+
+        function drawLine() {
+            count++;
+            if (count < 10) {
+                requestAnimationFrame(drawLine);
+            } else {
+                cancelAnimationFrame(drawLine);
+            }
+            can.beginPath();
+            can.moveTo(getRandom(0, 400), getRandom(0, 400));
+            can.lineTo(getRandom(0, 400), getRandom(0, 400));
+            can.strokeStyle = "rgb(" + getRandom(0, 255) + "," + getRandom(0, 255) + "," + getRandom(0, 255) + ")";
+            can.stroke();
+        };
+
+        drawLine();
+    </script>
+</body>
+
+</html>

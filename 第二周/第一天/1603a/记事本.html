@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="textarea" id="textarea" cols="60" rows="10" id="textarea"></textarea>
+    <button id="btn">提交</button>
+</body>
+<script>
+    var textarea = document.getElementById('textarea');
+    var btn = document.getElementById('btn');
+    var local = window.localStorage;
+    // local.clear();
+    var text = local.getItem('text') || '暂无';
+    textarea.value = text;
+    btn.onclick = function() {
+        var value = textarea.value;
+        console.log(value);
+        local.setItem('text', value);
+        textarea.value = '';
+    }
+</script>
+
+</html>

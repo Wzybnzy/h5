@@ -1,0 +1,14 @@
+@import 'common.scss';
+@import '_mixin.scss';
+.box1 {
+    height: 100%;
+    width: 100%;
+    padding-left: pxTorem(10px);
+    @include sizing;
+    li {
+        padding-top: pxTorem(15px);
+        padding-bottom: pxTorem(15px);
+        padding-right: pxTorem(10px);
+        border-bottom: 1px solid #ccc;
+    }
+}

@@ -1,0 +1,38 @@
+结构：
+<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:red;"></div>
+            <div class="swiper-slide" style="background:blue;"></div>
+            <div class="swiper-slide" style="background:pink;"></div>
+        </div>
+    </div>
+
+
+一个页面中引用多个Swiper，可以给每个容器加上ID或Class区分，要保留默认的类名swiper-container
+
+initialSlide  设置初始化时生成的索引
+direction   设置swiper滑动的方向（horizontal、vertical）
+speed  切换速度
+on事件：   on:{
+    slideChange:function(){
+
+    }
+}
+init()  当创建一个swiper的时候，是否立即执行
+
+
+
+loop 是否无缝切换  默认false，不能无缝
+事件：
+slideChangeTransitionStart  从一页开始过度到另一页的时候
+slideChangeTransitionEnd  从一页过度到另一页的时候结束的时候
+slideChange  当前Slide切换时执行(activeIndex发生改变)
+
+
+mySwiper.activeIndex当前活动块的参数
+mySwiper.slideNext()  设置当前滑块滑动到下一页
+mySwiper.slidePrev()  设置当前滑块滑动到上一页
+mySwiper.slideTo(index, speed, runCallbacks)
+
+
+autoplay:true

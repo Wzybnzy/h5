@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .wrapper {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .content {
+        width: 100%;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    .content li {
+        height: 44px;
+        width: 100%;
+        line-height: 44px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <ul class="content">
+                <li>
+                    <h3>A</h3>
+                    <ol>
+                        <li>北京</li>
+                        <li>天津</li>
+                        <li>河北</li>
+                        <li>河南</li>
+                        <li>海南</li>
+                    </ol>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+<script src="zepto.js"></script>
+<script src="better-scroll.js"></script>
+<script>
+    // var wrap = document.querySelector('.wrapper');
+    var Bscroll = new BScroll('.wrapper', {
+        scrollbar: true
+    });
+</script>
+
+</html>

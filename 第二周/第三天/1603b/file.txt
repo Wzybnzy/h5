@@ -1,0 +1,26 @@
+图片上传
+1、input
+type  : file
+
+2、图片信息
+this.files []
+单张图片的时候
+this.files[0]
+
+
+3、
+file.lastModified  毫秒数（图片上传的时间）
+file.lastModifiedDate  时间对象
+file.name  图片的名称
+file.size  图片的大小 (字（b）节为单位  ) // 1MB = 1024 KB  1KB = 1024B  3MB
+file.type  图片的类型  
+
+
+4、读取图片信息
+new FileReader();
+filereader.readAsDataURL(file); // 读取
+filereader.onload = function(){
+    this.result(返回结果)
+}
+
+5、multiple多选属性

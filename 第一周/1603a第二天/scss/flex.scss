@@ -1,0 +1,11 @@
+@import "common.scss";
+@import "_mixin.scss";
+.box {
+    height: pxTorem(200px);
+    width: pxTorem(200px);
+    background: red;
+    @include box_flex;
+    h1 {
+        @include center(center);
+    }
+}

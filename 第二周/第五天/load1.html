@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .wrapper {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .container {
+        width: 100%;
+    }
+    
+    ul li {
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .pulldown,
+    .pullup {
+        position: absolute;
+        left: 0;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    .pulldown {
+        top: -60px;
+    }
+    
+    .pullup {
+        bottom: -60px;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="pulldown" id="pulldown">下拉刷新</div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+            </ul>
+            <div class="pullup" id="pullup">上拉加载</div>
+        </div>
+    </div>
+</body>
+<script src="zepto.js"></script>
+<script src="better-scroll.js"></script>
+<script>
+    var BScroll = new BScroll('.wrapper', {
+        scrollbar: true,
+        probeType: 2
+    });
+
+    BScroll.on('scroll', function() {
+        // console.log(this.y, this.maxScrollY);
+        if (this.y < this.maxScrollY - 50) {
+            $('#pullup').html('释放加载更多...').addClass('flip');
+        } else if (this.y < this.maxScrollY - 10) {
+            $('#pullup').html('上拉加载').removeClass('flip');
+        } else if (this.y > 50) {
+            $('#pulldown').html('释放刷新...').addClass('flip');
+        } else if (this.y > 10) {
+            $('#pulldown').html('下拉刷新').removeClass('flip');
+        }
+    });
+
+    BScroll.on('scrollEnd', function() {
+        if ($('#pullup').hasClass('flip')) {
+            console.log(2222);
+            $('#pullup').html('上拉加载').removeClass('flip');
+            pullup();
+        } else if ($('pulldown').hasClass('flip')) {
+            console.log(11111);
+            $('#pulldown').html('下拉刷新').removeClass('flip');
+            pulldown();
+        }
+    });
+
+    function pullup() {
+        console.log('pullup');
+    }
+
+    function pulldown() {
+        console.log('pulldown');
+    }
+</script>
+
+</html>

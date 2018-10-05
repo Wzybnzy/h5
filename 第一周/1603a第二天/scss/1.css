@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*这是一个多行注释*/
+.div {
+  height: 100%;
+  width: 100%;
+  color: pink;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.div h1 {
+  background: red;
+  width: 100;
+  color: red;
+}

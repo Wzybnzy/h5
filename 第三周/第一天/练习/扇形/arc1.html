@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000;"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var deg = Math.PI / 180;
+    // ctx.beginPath();
+    // ctx.arc(300, 300, 100, 0, 60 * deg);
+    // ctx.lineTo(300, 300);
+    // ctx.fillStyle = 'pink';
+    // ctx.fill();
+
+    // ctx.beginPath();
+    // ctx.arc(300, 300, 100, 60 * deg, 180 * deg);
+    // ctx.lineTo(300, 300);
+    // ctx.fillStyle = 'blue';
+    // ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.arc(300, 300, 100, 180 * deg, 290 * deg);
+    // ctx.lineTo(300, 300);
+    // ctx.fillStyle = 'red';
+    // ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.arc(300, 300, 100, 290 * deg, 360 * deg);
+    // ctx.lineTo(300, 300);
+    // ctx.fillStyle = 'yellow';
+    // ctx.fill();
+
+    var arr = [{
+        angle: 45,
+        color: 'red',
+        text: "今天"
+    }, {
+        angle: 60,
+        color: 'yellow',
+        text: "昨天"
+    }, {
+        angle: 75,
+        color: 'blue',
+        text: "明天"
+    }, {
+        angle: 50,
+        color: 'limegreen',
+        text: "后天"
+    }, {
+        angle: 130,
+        color: 'skyblue',
+        text: "前天"
+    }];
+
+    var start = 0,
+        end = 0;
+    ctx.translate(300, 300);
+    arr.map(function(v, i) {
+        end = start + v.angle;
+        ctx.beginPath();
+        ctx.arc(0, 0, 100, start * deg, end * deg);
+        ctx.lineTo(0, 0);
+        ctx.fillStyle = v.color;
+        ctx.fill();
+
+        var c_deg = start + v.angle / 2;
+        var x = Math.cos(c_deg * deg) * 60;
+        var y = Math.sin(c_deg * deg) * 60;
+
+        ctx.fillStyle = '#fff';
+        ctx.fillText(v.text, x, y);
+        start = end;
+    });
+</script>
+
+</html>

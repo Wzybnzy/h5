@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas height="600" width="600" style="border:1px solid #ccc;" id="myCanvas"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(500, 100);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(200, 200);
+    ctx.lineTo(150, 300);
+    ctx.lineTo(250, 300);
+    ctx.closePath();
+    ctx.strokeStyle = 'pink';
+    ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.moveTo(200, 200);
+    // ctx.lineTo(150, 300);
+    // ctx.lineTo(250, 300);
+    // ctx.fillStyle = 'red';
+    // ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.fillRect(300, 300, 150, 100);
+    ctx.clearRect(310, 310, 50, 50);
+    ctx.fill();
+
+
+    // ctx.clearRect(0, 0, 600, 600);
+
+
+    ctx.translate(0, 600);
+    ctx.beginPath();
+    ctx.rect(10, 0, 30, -100);
+    ctx.fillStyle = 'pink';
+    ctx.fill();
+    ctx.closePath();
+</script>
+
+</html>

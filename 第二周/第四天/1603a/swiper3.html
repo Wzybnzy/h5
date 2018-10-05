@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/swiper-4.1.6.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .page-container,
+    .page-container .swiper-wrapper,
+    .page-container .swiper-wrapper .swiper-slide {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .page-container .swiper-wrapper .swiper-slide:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .page-pagination {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 44px;
+        width: 100%;
+        background: cadetblue;
+        display: flex;
+    }
+    
+    .swiper-pagination-bullet {
+        flex: 1;
+        height: 44px;
+        border-radius: 0;
+        opacity: 1;
+        background: cadetblue;
+        line-height: 44px;
+        text-align: center;
+    }
+    
+    .swiper-pagination-bullet-active {
+        border-bottom: 3px solid yellow;
+    }
+    
+    .content-container,
+    .content-container .swiper-wrapper,
+    .content-container .swiper-wrapper .swiper-slide {
+        height: 300px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="swiper-container page-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:red;"></div>
+            <div class="swiper-slide" style="background:blue;">
+                <div class="swiper-container content-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background:chocolate;"></div>
+                        <div class="swiper-slide" style="background:chartreuse;">
+
+                        </div>
+                        <div class="swiper-slide" style="background:cornflowerblue;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background:pink;"></div>
+        </div>
+        <!-- <div class="swiper-pagination page-pagination"></div> -->
+    </div>
+</body>
+<script src="../js/swiper-4.1.6.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.page-container', {
+        //配置项
+        // initialSlide: 1,
+        direction: 'vertical',
+        init: false,
+        on: {
+            slideChange: function() {
+                console.log(mySwiper.activeIndex);
+            }
+        }
+    });
+    var mySwiper1 = new Swiper('.content-container', {
+        //配置项
+        on: {
+            slideChange: function() {
+                console.log(mySwiper.activeIndex);
+            }
+        }
+    });
+    mySwiper.init();
+</script>
+
+</html>

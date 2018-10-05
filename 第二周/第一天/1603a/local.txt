@@ -1,0 +1,25 @@
+webstorage本地存储
+
+localstorage  除非手动清楚，否则永远存在
+sessionstorage   浏览器窗口关闭，或者浏览器关闭，才会清楚
+
+
+localstorage、sessionstorage方法：
+
+
+存值：  localstorage.setItem('key','value');  //存入的值是一个字符串
+取值：  localstorage.getItem('key');
+删除值： localstorage.removerItem('key');
+全部删除：  localstorage.clear();
+          localstorage.key(i);  // 取第i个的值
+          localstorage.length  //长度
+
+存值量:5MB
+
+cookie   没有以上的方法，要自己封装。 区别：主要的区别是，cookie可以设置过期时间
+
+
+字符串转json对象
+JSON.parse()
+对象转字符串
+JSON.stringify();

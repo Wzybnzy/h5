@@ -1,0 +1,23 @@
+webstorage
+h5的存储方式2种：
+localstorage  // 除非手动清除、否则永远存在
+sessionstorage //当会话窗口关闭，或者浏览器关闭的，就清除了
+
+
+方法：
+存值：localstorage.setItem('key','value'); //2个参数 只能是字符串
+取值：localstorage.getItem('key'); // 1个参数
+删除：localstorage.removeItem('key'); // 1个参数
+清除：localstorage.clear();
+localstorage.key(i)  // 取第i个值
+localstorage.length // 长度
+
+
+
+cookie 没有以上的这些方法，要自己封装。区别：cookie是可以设置过期时间的（多少天之后自动删除）。webstorage不能设置过期时间。
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas class="can" width="300" height="200" style="background:#eee"></canvas>
+    <script src="js/script.js"></script>
+    <script>
+        var data = {
+            name: "司振雷",
+            data: [90, 95, 60, 100, 50, 97.5],
+            x: ["周一", "周二", "周三", "周四", "周五", "周六"],
+            y: [0, 20, 40, 60, 80, 100],
+            offset: [20, 20, 50, 50] //四边边距
+        }
+        new DrawLine(document.querySelector('.can'), data);
+    </script>
+</body>
+
+</html>

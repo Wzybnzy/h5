@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0053-移动开发2</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、下列哪个选项设置视窗宽度为设备宽度?</pre></h3>
+					<p>A:minimum-scale=1.0</p>
+					<p>B:width=750</p>
+					<p>C:width=device-width</p>
+					<p>D:initial-scale=1.0</p>
+			
+				<h3><pre>2、rem与%适用于流式布局，那么rem是一个（）单位？</pre></h3>
+					<p>A:计算单位</p>
+					<p>B:绝对单位</p>
+					<p>C:固定单位</p>
+					<p>D:相对单位</p>
+			
+				<h3><pre>3、当更改表单元素的样式后可能会导致在各别手机端无法正常使用表单元素，解决方式是？</pre></h3>
+					<p>A:text-justify:normal</p>
+					<p>B:appearance:none</p>
+					<p>C:aspect-ratio：&lt;ratio&gt;</p>
+					<p>D:scrollbar-arrow-color:rgba(0,0,0,.5)</p>
+			
+				<h3><pre>4、通过（）语句可以禁止用户选中文本？</pre></h3>
+					<p>A:user-select:normal;</p>
+					<p>B:user-select:yes</p>
+					<p>C:user-select:none;</p>
+					<p>D:user-select:no;</p>
+			
+				<h3><pre>5、Input 的placeholder会出现文本位置偏上的情况，如何解决？</pre></h3>
+					<p>A:display:block;</p>
+					<p>B:line-height:height</p>
+					<p>C:设置line-height：normal;</p>
+					<p>D:以上写法都不正确</p>
+			
+				<h3><pre>6、justify-content设置子元素沿主轴方向的对齐方式默认值为？</pre></h3>
+					<p>A:flex-start</p>
+					<p>B:flex-end</p>
+					<p>C:space-around</p>
+					<p>D:space-evenly</p>
+			多选题  每道题（5分）
+				<h3><pre>7、以下哪个标签属于html5新增标签？</pre></h3>
+					<p>A:&lt;p&gt;&lt;/p&gt;</p>
+					<p>B:&lt;header&gt;&lt;/header&gt;</p>
+					<p>C:&lt;section&gt;&lt;/section&gt;</p>
+					<p>D:&lt;main&gt;&lt;/main&gt;</p>
+			
+				<h3><pre>8、关于sass描述正确的有？</pre></h3>
+					<p>A:SASS不允许使用变量</p>
+					<p>B:SASS是一种CSS的开发工具</p>
+					<p>C:SASS允许选择器但属性不可以嵌套</p>
+					<p>D:SASS允许选择器嵌套</p>
+			
+				<h3><pre>9、关于混合宏说法正确的是？</pre></h3>
+					<p>A:可以通过@mixin来定义一个混合宏</p>
+					<p>B:可以通过@include来调用混合宏</p>
+					<p>C:通过$mixin来定义混合宏</p>
+					<p>D:需要重复使用的样式可以定义为一个混合宏</p>
+			判断题  每道题（5分）
+				<h3><pre>10、想要让一个网页在移动端和PC端显示不同的样式，可以通过流式布局实现</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、响应式布局代码简洁，加载时间短。</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、translate3d()可以开启手机硬件加速</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、rem相对于（）元素计算？</pre></h3>
+			
+			
+				<h3><pre>14、.box{width:100px;border:2px solid red;padding:10px;margin:10px;}
+console.log($('.box').width())的结果为？</pre></h3>
+			
+			
+				<h3><pre>15、box-sizing属性值为（）修改盒模型？</pre></h3>
+			
+			
+				<h3><pre>16、transform:rotate3d(  )括号中的第几个参数用来指定旋转的角度？</pre></h3>
+			
+			
+				<h3><pre>17、jquery里（）方法可以便利对象或数组？</pre></h3>
+			
+			
+				<h3><pre>18、jquery里（）方法可以获取该标签的标准属性？</pre></h3>
+			
+			
+				<h3><pre>19、HTML5新增的（）标签用来表示来自论坛或者博客的一篇独立的文章</pre></h3>
+			
+			
+				<h3><pre>20、HTML5中新增的（）标签用于书写导航</pre></h3>
+			
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*@media (width:414px){
+				在6plus
+				 布局视口  414
+				 设计图   750
+				 
+				html{font-size:55.2px;}
+			}
+			@media (width:375px){
+				/*在6下
+				html{font-size:50px;}
+			}*/
+			
+			.box{
+				width:7.5rem;
+				
+				height:0.94rem;
+				background-color: #fa3432;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			
+		</div>
+		
+		<script type="text/javascript">
+			var plan=750;
+			var oHtml=document.getElementsByTagName('html')[0];//获取html标签
+			//计算字体大小   布局视口除以设计图的大小
+			//html标签的字体一般设置小于10 都不会生效；
+			var fz=document.documentElement.clientWidth/plan*100;
+			//给html标签设置字号
+			oHtml.style.fontSize=fz+'px';
+			
+		</script>
+	</body>
+</html>

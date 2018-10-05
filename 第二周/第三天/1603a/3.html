@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .wrap {
+        height: 100%;
+        width: 100%;
+        background: #2b2938;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box {
+        height: 196px;
+        width: 196px;
+        background: url(./img/btnPlay.png) no-repeat center center;
+        background-size: cover;
+    }
+    
+    .active {
+        background: url(./img/btnPause.png) no-repeat center center;
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="box">
+            <audio src="./mp3.mp3"></audio>
+        </div>
+    </div>
+</body>
+<script>
+    var box = document.querySelector('.box');
+    var audio = document.querySelector('audio');
+
+    audio.onended = function() {
+        // box.classList.remove('active');
+        // audio.pause();
+        audio.loop = true;
+        audio.play();
+    }
+
+    box.onclick = function() {
+        if (audio.paused) {
+            this.classList.add('active');
+            audio.play();
+        } else {
+            this.classList.remove('active');
+            audio.pause();
+        }
+
+    }
+</script>
+
+</html>

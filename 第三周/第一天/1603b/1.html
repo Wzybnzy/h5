@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style="border:1px solid #ccc"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+
+
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(200, 100);
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    ctx.closePath();
+
+    // ctx.beginPath();
+    // ctx.moveTo(260, 260);
+    // ctx.lineTo(240, 280);
+    // ctx.lineTo(280, 280);
+    // // ctx.lineTo(260, 260);
+    // ctx.closePath();
+    // ctx.stroke();
+
+
+    ctx.beginPath();
+    ctx.moveTo(260, 260);
+    ctx.lineTo(240, 280);
+    ctx.lineTo(280, 280);
+    ctx.fillStyle = 'pink';
+    ctx.fill();
+
+
+    // ctx.beginPath();
+    // ctx.rect(270, 160, 160, 100);
+    // ctx.stroke();
+
+
+    // ctx.beginPath();
+    // ctx.strokeRect(270, 160, 160, 100);
+
+
+    ctx.beginPath();
+    ctx.fillRect(270, 160, 160, 100);
+    ctx.clearRect(280, 170, 50, 50);
+
+    // ctx.clearRect(0, 0, 600, 600);
+    ctx.translate(0, 600);
+
+    var offsetX = 20,
+        w = 30;
+    // ctx.beginPath();
+    // ctx.fillRect(20, 0, 30, -60);
+
+    // ctx.beginPath();
+    // ctx.fillRect(70, 0, 30, -120);
+    // //20 + 20 * 1 + 30
+
+    // ctx.beginPath();
+    // ctx.fillRect(120, 0, 30, -180);
+
+    // 20 + 20 * 2 + 30 * 2
+    var arr = [{
+        color: 'blue',
+        h: 60
+    }, {
+        color: 'pink',
+        h: 120
+    }, {
+        color: 'red',
+        h: 180
+    }, {
+        color: 'yellow',
+        h: 100
+    }];
+
+    arr.map(function(v, i) {
+        ctx.beginPath();
+        ctx.fillStyle = v.color;
+        ctx.fillRect(20 + offsetX * i + w * i, 0, w, -v.h);
+    });
+</script>
+
+</html>

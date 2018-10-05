@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0109-移动开发4</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（5分）
+				<h3><pre>1、var a=[1,2,3],b=[1,2,3];console.log(a==b)的打印结果是?</pre></h3>
+					<p>A:false</p>
+					<p>B:true</p>
+					<p>C:报错</p>
+					<p>D:0</p>
+			
+				<h3><pre>2、下列哪个属性会将相邻的多个元素按照出现的顺序排列在同一行（         ）？</pre></h3>
+					<p>A:padding</p>
+					<p>B:float</p>
+					<p>C:margin</p>
+					<p>D:align</p>
+			
+				<h3><pre>3、实现导航的背景图水平平铺的属性值是？</pre></h3>
+					<p>A:repeat-x</p>
+					<p>B:repeat-xy</p>
+					<p>C:repeat-y</p>
+					<p>D:no-repeat</p>
+			
+				<h3><pre>4、CSS中，盒模型的基本属性不包括？</pre></h3>
+					<p>A:padding</p>
+					<p>B:border</p>
+					<p>C:font</p>
+					<p>D:margin</p>
+			
+				<h3><pre>5、关于样式表的优先级说法不正确的是？</pre></h3>
+					<p>A:外部样式表级别最低</p>
+					<p>B:内部样式表次之</p>
+					<p>C:当样式中属性重复时，先设的属性起作用</p>
+					<p>D:直接定义在标记上的css样式级别最高</p>
+			
+				<h3><pre>6、:before选择器必须配合什么属性？</pre></h3>
+					<p>A:content</p>
+					<p>B:background</p>
+					<p>C:color</p>
+					<p>D:width</p>
+			多选题  每道题（5分）
+				<h3><pre>7、var obj1={name:'zs',age:20}
+      obj2={name:'ww'}；
+以下哪个语句可以到得到{neme:'ww',age:20}这个对象？</pre></h3>
+					<p>A:$.extend({},obj1,obj2)</p>
+					<p>B:$.extend(obj1,obj2)</p>
+					<p>C:$.extend(obj2,obj1)</p>
+					<p>D:$.extend({},obj2,obj1)</p>
+			
+				<h3><pre>8、以下对媒体查询使用正确的是？</pre></h3>
+					<p>A:&lt;link href=&quot;style.css&quot; media=&quot;screen&quot;&gt;</p>
+					<p>B:@import url(&quot;style.css&quot;) screen;</p>
+					<p>C:@media and (min-width:320px){声明}</p>
+					<p>D:@media screen and (max-width:414px),handheld and (max-width:768px){声明}</p>
+			
+				<h3><pre>9、移动端布局哪些布局更有优势？</pre></h3>
+					<p>A:浮动布局</p>
+					<p>B:双飞翼布局</p>
+					<p>C:流式布局</p>
+					<p>D:无衬线布局</p>
+			判断题  每道题（5分）
+				<h3><pre>10、touch-callout: none;样式可以禁止长按链接与图片弹出菜单？</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>11、scale( )是实现文字或图像的缩放处理的。</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>12、tap-highlight-color:rgba(0,0,0,0);属性可以解决点击A超链接的兼容问题。</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（5分）
+				<h3><pre>13、两种访问js对象属性的方法，（   ）的形式主要是为了解决属性名不是合法的标识符</pre></h3>
+			
+			
+				<h3><pre>14、transform:rotate3d(0,0,1,60deg);其中第三个参数是用来设置什么的？</pre></h3>
+			
+			
+				<h3><pre>15、flex-direction：______;设置了主轴为垂直方向,子元素排列顺序是从上到下排列</pre></h3>
+			
+			
+				<h3><pre>16、animation-iteration-count:______;设置动画为无限循环</pre></h3>
+			
+			
+				<h3><pre>17、align-items指的是设置（）方向上的对齐方式?</pre></h3>
+			
+			
+				<h3><pre>18、( )属性设置子元素沿主轴方向的对齐方式</pre></h3>
+			
+			
+				<h3><pre>19、flex-direction及 flex-wrap可以通过一个（）复合属性来同时设置？</pre></h3>
+			
+			
+				<h3><pre>20、（）样式可以将元素设置为弹性盒布局方式显示？</pre></h3>
+			
+</div>
+</body>
+</html>

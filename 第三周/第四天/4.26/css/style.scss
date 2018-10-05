@@ -1,0 +1,176 @@
+@import "common.scss";
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    height: pxTorem(84px);
+    color: #FFF;
+    background: #46D265;
+    position: relative;
+    .top {
+        width: 100%;
+        height: pxTorem(40px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >i.iconfont {
+            font-size: pxTorem(22px);
+            margin-left: pxTorem(10px);
+        }
+        >p {
+            font-size: pxTorem(14px);
+            margin-right: pxTorem(10px);
+        }
+        >h2 {
+            font-size: pxTorem(18px);
+            color: #FFF;
+        }
+    }
+}
+
+section {
+    flex: 1;
+}
+
+.box1 {
+    width: 100%;
+    height: 100%;
+}
+
+.big {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.li {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: pxTorem(40px);
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    line-height: pxTorem(40px);
+    >ul {
+        display: flex;
+        text-align: center;
+        background: #FFF;
+        >li {
+            flex: 1;
+            font-size: pxTorem(15px);
+            color: #000;
+        }
+        .active {
+            border-bottom: pxTorem(3px) solid green;
+        }
+    }
+}
+
+.form {
+    width: 100%;
+    background: #eee;
+    padding: pxTorem(20px) 0;
+    >form {
+        width: 90%;
+        height: pxTorem(40px);
+        margin: 0 auto;
+        background: #FFF;
+        position: relative;
+        >i.iconfont {
+            font-size: pxTorem(20px);
+            position: absolute;
+            left: 30%;
+            top: pxTorem(8px);
+        }
+        >input {
+            width: 100%;
+            height: 100%;
+            font-size: pxTorem(14px);
+            text-align: center;
+        }
+    }
+}
+
+.list {
+    width: 100%;
+    >dl {
+        padding: pxTorem(20px);
+        display: flex;
+        border-bottom: pxTorem(2px) solid #ccc;
+        dt {
+            width: 23%;
+            >img {
+                width: 100%;
+            }
+        }
+        dd {
+            flex: 1;
+            margin-left: pxTorem(10px);
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            h2 {
+                font-size: pxTorem(18px);
+                margin-bottom: pxTorem(5px);
+            }
+            .p {
+                width: pxTorem(50px);
+                padding: pxTorem(4px);
+                background: red;
+                color: #FFF;
+                margin-bottom: pxTorem(5px);
+            }
+            h3 {
+                font-size: pxTorem(12px);
+                margin-bottom: pxTorem(5px);
+                color: #CCC;
+            }
+            h6 {
+                color: #CCC;
+                >b {
+                    font-size: pxTorem(16px);
+                    color: orange;
+                }
+                >i.iconfont {
+                    margin-left: pxTorem(20px);
+                    font-size: pxTorem(18px);
+                }
+            }
+            .buy {
+                position: absolute;
+                right: 0;
+                top: 45%;
+                color: #CCC;
+                >p {
+                    margin-left: pxTorem(10px);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(44px);
+    background: yellow;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrap {
+        display: flex;
+    }
+    
+    .wrap div {
+        height: 300px;
+        width: 400px;
+        border: 1px solid #ccc;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="left" ondragover="dragover(event)" ondrop="drop(event)">
+            <img src="./img/libco.png" alt="" draggable="true" ondragstart="dragstart(event)" id="img" ondrag="drag()">
+        </div>
+        <div class="right" ondragover="dragover(event)" ondrop="drop(event)"></div>
+    </div>
+</body>
+<script>
+    var draggable;
+
+    function dragstart(e) { //源对象
+        // draggable = e.target; //图片
+        console.log(e.target.id);
+        e.dataTransfer.setData('id', e.target.id);
+    }
+
+    function dragover(e) {
+        e.preventDefault();
+    }
+
+    function drag() {
+        console.log('r13432');
+    }
+
+    function drop(e) {
+        console.log(e.target); //右边的盒子
+        // e.target.appendChild(draggable);
+        var id = e.dataTransfer.getData('id');
+        e.target.appendChild(document.getElementById(id));
+        // console.log();
+
+    }
+</script>
+
+</html>

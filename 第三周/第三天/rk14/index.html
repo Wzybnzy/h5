@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <canvas width="800" height="600" style="border: 1px solid #ccc;"></canvas>
+    <script>
+        var myCanvas = document.querySelector('canvas');
+        var ctx = myCanvas.getContext('2d');
+        var offset = 100,
+            offsetX = 75;
+        var start = end = 0;
+        ctx.beginPath();
+        ctx.moveTo(100, 550);
+        ctx.lineTo(100, 25);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(100, 550);
+        ctx.lineTo(700, 550);
+        ctx.stroke();
+
+        for (var i = 0; i < 7; i++) {
+            ctx.beginPath();
+            ctx.moveTo(100 + offset * i, 100);
+            ctx.lineTo(100 + offset * i, 550);
+            ctx.stroke();
+        }
+
+        for (var i = 0; i < 8; i++) {
+            ctx.beginPath();
+            ctx.moveTo(100 + offset * i, 550);
+            ctx.lineTo(100 + offset * i, 560);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(100, 550 - offsetX * i);
+            ctx.lineTo(90, 550 - offsetX * i);
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        $.ajax({
+            url: 'data.json',
+            success: function(data) {
+                renderX(data[0].week);
+                renderY(data[1].value);
+                //1
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day1[0].color;
+                ctx.fillRect(100, 490, data[2].days[0].day1[0].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day1[1].color;
+                ctx.fillRect(100 + data[2].days[0].day1[0].v / 5, 490, data[2].days[0].day1[1].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day1[2].color;
+                ctx.fillRect(100 + data[2].days[0].day1[0].v / 5 + data[2].days[0].day1[1].v / 5, 490, data[2].days[0].day1[2].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day1[3].color;
+                ctx.fillRect(100 + data[2].days[0].day1[0].v / 5 + data[2].days[0].day1[1].v / 5 + data[2].days[0].day1[2].v / 5, 490, data[2].days[0].day1[3].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day1[4].color;
+                ctx.fillRect(100 + data[2].days[0].day1[0].v / 5 + data[2].days[0].day1[1].v / 5 + data[2].days[0].day1[2].v / 5 + data[2].days[0].day1[3].v / 5, 490, data[2].days[0].day2[4].v / 5, 40);
+                ctx.closePath();
+                //2
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day2[0].color;
+                ctx.fillRect(100, 490 - offsetX, data[2].days[0].day2[0].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day2[1].color;
+                ctx.fillRect(100 + data[2].days[0].day2[0].v / 5, 490 - offsetX, data[2].days[0].day2[1].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day2[2].color;
+                ctx.fillRect(100 + data[2].days[0].day2[0].v / 5 + data[2].days[0].day2[1].v / 5, 490 - 75, data[2].days[0].day2[2].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day2[3].color;
+                ctx.fillRect(100 + data[2].days[0].day2[0].v / 5 + data[2].days[0].day2[1].v / 5 + data[2].days[0].day2[2].v / 5, 490 - 75, data[2].days[0].day2[3].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day2[4].color;
+                ctx.fillRect(100 + data[2].days[0].day2[0].v / 5 + data[2].days[0].day2[1].v / 5 + data[2].days[0].day2[2].v / 5 + data[2].days[0].day2[3].v / 5, 490 - 75, data[2].days[0].day2[4].v / 5, 40);
+                ctx.closePath();
+                //3
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day3[0].color;
+                ctx.fillRect(100, 490 - offsetX * 2, data[2].days[0].day3[0].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day3[1].color;
+                ctx.fillRect(100 + data[2].days[0].day3[0].v / 5, 490 - offsetX * 2, data[2].days[0].day3[1].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day3[2].color;
+                ctx.fillRect(100 + data[2].days[0].day3[0].v / 5 + data[2].days[0].day3[1].v / 5, 490 - 75 * 2, data[2].days[0].day3[2].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day3[3].color;
+                ctx.fillRect(100 + data[2].days[0].day3[0].v / 5 + data[2].days[0].day3[1].v / 5 + data[2].days[0].day3[2].v / 5, 490 - 75 * 2, data[2].days[0].day3[3].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day3[4].color;
+                ctx.fillRect(100 + data[2].days[0].day3[0].v / 5 + data[2].days[0].day3[1].v / 5 + data[2].days[0].day3[2].v / 5 + data[2].days[0].day3[3].v / 5, 490 - 75 * 2, data[2].days[0].day2[4].v / 5, 40);
+                ctx.closePath();
+                //4
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day4[0].color;
+                ctx.fillRect(100, 490 - offsetX * 3, data[2].days[0].day4[0].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day4[1].color;
+                ctx.fillRect(100 + data[2].days[0].day4[0].v / 5, 490 - 75 * 3, data[2].days[0].day4[1].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day4[2].color;
+                ctx.fillRect(100 + data[2].days[0].day4[0].v / 5 + data[2].days[0].day4[1].v / 5, 490 - 75 * 3, data[2].days[0].day4[2].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day4[3].color;
+                ctx.fillRect(100 + data[2].days[0].day4[0].v / 5 + data[2].days[0].day4[1].v / 5 + data[2].days[0].day4[2].v / 5, 490 - 75 * 3, data[2].days[0].day4[3].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day4[4].color;
+                ctx.fillRect(100 + data[2].days[0].day4[0].v / 5 + data[2].days[0].day4[1].v / 5 + data[2].days[0].day4[2].v / 5 + data[2].days[0].day4[3].v / 5, 490 - 75 * 3, data[2].days[0].day2[4].v / 5, 40);
+                ctx.closePath();
+                //5
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day5[0].color;
+                ctx.fillRect(100, 490 - offsetX * 4, data[2].days[0].day5[0].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day5[1].color;
+                ctx.fillRect(100 + data[2].days[0].day5[0].v / 5, 490 - 75 * 4, data[2].days[0].day5[1].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day5[2].color;
+                ctx.fillRect(100 + data[2].days[0].day5[0].v / 5 + data[2].days[0].day5[1].v / 5, 490 - 75 * 4, data[2].days[0].day5[2].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day5[3].color;
+                ctx.fillRect(100 + data[2].days[0].day5[0].v / 5 + data[2].days[0].day5[1].v / 5 + data[2].days[0].day5[2].v / 5, 490 - 75 * 4, data[2].days[0].day5[3].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day5[4].color;
+                ctx.fillRect(100 + data[2].days[0].day5[0].v / 5 + data[2].days[0].day5[1].v / 5 + data[2].days[0].day5[2].v / 5 + data[2].days[0].day5[3].v / 5, 490 - 75 * 4, data[2].days[0].day2[4].v / 5, 40);
+                ctx.closePath();
+                //6
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day6[0].color;
+                ctx.fillRect(100, 490 - offsetX * 5, data[2].days[0].day6[0].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day6[1].color;
+                ctx.fillRect(100 + data[2].days[0].day6[0].v / 5, 490 - 75 * 5, data[2].days[0].day6[1].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day6[2].color;
+                ctx.fillRect(100 + data[2].days[0].day6[0].v / 5 + data[2].days[0].day6[1].v / 5, 490 - 75 * 5, data[2].days[0].day6[2].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day6[3].color;
+                ctx.fillRect(100 + data[2].days[0].day6[0].v / 5 + data[2].days[0].day6[1].v / 5 + data[2].days[0].day6[2].v / 5, 490 - 75 * 5, data[2].days[0].day6[3].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day6[4].color;
+                ctx.fillRect(100 + data[2].days[0].day6[0].v / 5 + data[2].days[0].day6[1].v / 5 + data[2].days[0].day6[2].v / 5 + data[2].days[0].day6[3].v / 5, 490 - 75 * 5, data[2].days[0].day2[4].v / 5, 40);
+                ctx.closePath();
+                //7
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day7[0].color;
+                ctx.fillRect(100, 490 - offsetX * 6, data[2].days[0].day7[0].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day7[1].color;
+                ctx.fillRect(100 + data[2].days[0].day7[0].v / 5, 490 - 75 * 6, data[2].days[0].day7[1].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day7[2].color;
+                ctx.fillRect(100 + data[2].days[0].day7[0].v / 5 + data[2].days[0].day7[1].v / 5, 490 - 75 * 6, data[2].days[0].day7[2].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day7[3].color;
+                ctx.fillRect(100 + data[2].days[0].day7[0].v / 5 + data[2].days[0].day7[1].v / 5 + data[2].days[0].day7[2].v / 5, 490 - 75 * 6, data[2].days[0].day7[3].v / 5, 40);
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = data[2].days[0].day7[4].color;
+                ctx.fillRect(100 + data[2].days[0].day7[0].v / 5 + data[2].days[0].day7[1].v / 5 + data[2].days[0].day7[2].v / 5 + data[2].days[0].day7[3].v / 5, 490 - 75 * 6, data[2].days[0].day2[4].v / 5, 40);
+                ctx.closePath();
+
+            }
+        })
+
+        function　 renderX(week) {
+            week.map(function(v, i) {
+                ctx.fillText(v, 50, 520 - offsetX * i);
+            })
+        }
+
+        function　 renderY(value) {
+            value.map(function(v, i) {
+                ctx.fillText(v, 90 + offset * i, 580);
+            })
+        }
+
+
+
+
+        // function　 renderC(days) {
+        //     days.map(function(val, i) {
+        //         ctx.beginPath();
+        //         ctx.fillStyle = val.day2[0].color;
+        //         ctx.fillRect(100, 380, val.day2[0].v / 5, 40);
+        //     })
+        // }
+    </script>
+</body>
+
+</html>

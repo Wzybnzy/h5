@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>radial</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000;"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var grd = ctx.createRadialGradient(300,300,50,300,300,100);
+        grd.addColorStop(0, 'pink');
+        grd.addColorStop(1, 'red');
+    
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,600,600);
+</script>
+</html>

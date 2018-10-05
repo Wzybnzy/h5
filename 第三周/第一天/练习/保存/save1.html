@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById("canvas").getContext("2d");
+    ctx.beginPath();
+    ctx.fillStyle = 'pink';
+    ctx.shadowBlur = 4;
+    ctx.shadowOffsetX = 5;
+    ctx.shadowOffsetY = 5;
+    ctx.shadowColor = 'rgba(204,204,204,0.5)';
+    ctx.fillRect(10, 10, 20, 160);
+    ctx.fill();
+    ctx.save();
+
+    ctx.beginPath();
+    ctx.fillStyle = '#f36';
+    ctx.shadowOffsetX = 10;
+    ctx.shadowOffsetY = 10;
+    ctx.shadowBlur = 4;
+    ctx.fillRect(60, 10, 10, 130);
+    ctx.fill();
+    ctx.save();
+
+
+    ctx.restore();
+    ctx.beginPath();
+    ctx.arc(110, 30, 20, 0, 360);
+    ctx.fill();
+
+    ctx.restore();
+    ctx.beginPath();
+    ctx.arc(160, 30, 20, 0, 360);
+    ctx.fill();
+</script>
+
+</html>

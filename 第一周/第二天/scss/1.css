@@ -1,0 +1,15 @@
+@charset "UTF-8";
+div {
+  color: red;
+  display: flex;
+  -webkit-flex-direction: row;
+  width: 100;
+}
+
+div h2 {
+  background: red;
+  -webkit-flex-direction: column;
+}
+
+/*多行注释 头部样式*/
+/**/

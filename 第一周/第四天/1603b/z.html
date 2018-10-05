@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrap {
+        height: 300px;
+        width: 300px;
+        perspective: 1600px;
+        margin: 100px auto;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    .list {
+        height: 300px;
+        width: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 20s;
+    }
+    
+    .list:hover {
+        /* transform: rotateY(360deg); */
+    }
+    
+    .list li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        line-height: 300px;
+        text-align: center;
+        font-size: 36px;
+        color: #fff;
+        opacity: 0.5;
+    }
+    
+    .list li:nth-child(1) {
+        background: red;
+        transform: translateZ(150px);
+    }
+    
+    .list li:nth-child(2) {
+        background: chartreuse;
+        transform: rotateY(180deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(3) {
+        background: cornflowerblue;
+        transform: rotateY(-90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(4) {
+        background: darkgoldenrod;
+        transform: rotateY(90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(5) {
+        background: darkkhaki;
+        transform: rotateX(-90deg) translateZ(150px);
+    }
+    
+    .list li:nth-child(6) {
+        background: darkolivegreen;
+        transform: rotateX(90deg) translateZ(150px);
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+自适应页面
+
+1、引入flexible.js (可以直接引入线上的地址) 建议本地引入
+2、引入css样式
+css样式：
+
+@import "文件名";  需要注意路径
+引入全局的scss文件（common.scss）
+引入mixin.scss  
+
+
+单位的转化
+自己封装的函数  pxTorem($px)  //可以直接写如量的尺寸，自动转化成rem;

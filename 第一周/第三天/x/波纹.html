@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .cover {
+        height: 665px;
+        width: 378px;
+        background: #000;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .circle1 {
+        width: 196px;
+        height: 196px;
+        border-radius: 98px;
+        border: 1px #db7417 solid;
+        top: 232px;
+        left: 90px;
+        position: absolute;
+        animation: animation1 1.46s linear 0.6s infinite;
+    }
+    
+    .circle2 {
+        width: 196px;
+        height: 196px;
+        border-radius: 100%;
+        border: 1px #db7417 solid;
+        top: 232px;
+        left: 90px;
+        position: absolute;
+        animation: animation2 1.46s infinite linear;
+    }
+    
+    .circle3 {
+        width: 196px;
+        height: 196px;
+        border-radius: 100%;
+        top: 232px;
+        left: 90px;
+        position: absolute;
+    }
+    
+    .circle4 {
+        width: 196px;
+        height: 196px;
+        border-radius: 100%;
+        top: 232px;
+        left: 90px;
+        border: 1px #db7417 solid;
+        position: absolute;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .circle4 p {
+        color: #ffffff;
+        text-align: center;
+        line-height: 6.3em;
+        font-weight: normal;
+        font-size: 23px;
+    }
+    
+    @keyframes animation2 {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.8);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes animation1 {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.8);
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="cover">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <!-- <div class="circle3"></div> -->
+        <div class="circle4">
+            <p>Search</p>
+        </div>
+    </div>
+</body>
+
+</html>

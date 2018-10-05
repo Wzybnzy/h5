@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas height="600" width="1200" style="border:1px solid #ccc;" id="myCanvas"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+    var offsetY = 40,
+        w = 30,
+        offsetX = 20;
+
+    var arr = [60, 90, 150, 130, 170, 190, 125, 175, 155, 165, 155, 145];
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80);
+    // ctx.lineTo(300, 480);
+    // ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.moveTo(900, 80);
+    // ctx.lineTo(900, 480);
+    // ctx.stroke();
+
+    function line(x1, y1, x2, y2) {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+    }
+    line(300, 80, 300, 480);
+    line(900, 80, 900, 480);
+    // ctx.beginPath();
+    // ctx.moveTo(300, 80 + 40);
+    // ctx.lineTo(900, 80 + 40);
+    // ctx.stroke();
+    for (var i = 0; i < 11; i++) {
+        ctx.beginPath();
+        line(300, 80 + offsetY * i, 900, 80 + offsetY * i);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(200 - 20 * i, 280, 80 + offsetY * i);
+        // ctx.moveTo(300, 80 + offsetY * i);
+        // ctx.lineTo(900, 80 + offsetY * i);
+        ctx.stroke();
+    }
+
+    ctx.beginPath();
+    ctx.fillStyle = '#abcdef';
+    ctx.fillRect(310, 480, w, -60);
+
+
+    // ctx.lineTo(900,80,900,480);
+    arr.map(function(v, i) {
+        ctx.beginPath();
+        x = 310 + w * i + offsetX * i;
+        ctx.fillText(v, x + 10, 480 - v * 2 - 5);
+        ctx.fillText((i + 1) + '月', x + 10, 490);
+        rect(x, 480, w, -v * 2);
+    });
+
+    function rect(x, y, w, h) {
+        ctx.beginPath();
+        ctx.fillStyle = '#abcdef';
+        ctx.fillRect(x, y, w, h);
+        // ctx.fillRect(310 + w + offsetX, 480, w, -90);
+    }
+</script>
+
+</html>

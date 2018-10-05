@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="600" width="600" style="border:1px solid #ccc"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var init = 0;
+    var deg = Math.PI / 180;
+    ctx.translate(300, 300);
+
+    function arc() {
+        init++;
+        if (init < 360) {
+            requestAnimationFrame(arc);
+        } else {
+            cancelAnimationFrame(arc);
+        }
+        // console.log(init);
+        console.log(Math.round(init / 360 * 100));
+        var text = Math.round(init / 360 * 100);
+        ctx.clearRect(-300, -300, 600, 600);
+        ctx.beginPath();
+        ctx.font = '36px normal';
+        ctx.arc(0, 0, 200, 0, init * deg);
+        ctx.lineWidth = 20;
+        ctx.stroke();
+        ctx.lineWidth = 1;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.strokeText(text + '%', 0, 0);
+        // ctx.lineWidth = 2;
+    }
+    arc();
+</script>
+
+</html>

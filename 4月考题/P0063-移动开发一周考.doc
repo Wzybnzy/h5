@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试卷</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<style type="text/css">
+	h3{white-space:pre-wrap}
+	</style>
+</head>
+<body>
+<center>
+<h1>P0063-移动开发一周考</h1>
+<h3>
+学院:_______________ 班级:_______________ 姓名:_______________ 得分:_______________   总分:100分  
+</h3>
+</center>
+<div id="exampaper-body" style="padding: 0px">
+	<!-- 开始加载试卷 -->
+			单选题  每道题（2分）
+				<h3><pre>1、(   )属性的值表示的是当容器有多余的空间时，这些空间在不同条目之间的分配比例</pre></h3>
+					<p>A:flex-direction</p>
+					<p>B:flex-grow</p>
+					<p>C:flex-basis</p>
+					<p>D:flex-shrink</p>
+			
+				<h3><pre>2、（    ）属性在弹性子元素上使用，覆盖容器的 align-items 属性</pre></h3>
+					<p>A:align-self</p>
+					<p>B:order</p>
+					<p>C:flex-flow</p>
+					<p>D:flex</p>
+			
+				<h3><pre>3、关于justify-content属性说法正确的是？</pre></h3>
+					<p>A:设置子元素沿侧轴方向的对齐方式</p>
+					<p>B:当属性值为start是指从开始位置处对齐</p>
+					<p>C:设置子元素沿主轴方向的对齐方式</p>
+					<p>D:center值为它的默认值</p>
+			
+				<h3><pre>4、#demo{transition:width 2s 3s;}其中的（）时间用来设置transition-delay的时间？</pre></h3>
+					<p>A:1s</p>
+					<p>B:3s</p>
+					<p>C:2s</p>
+					<p>D:以上说法都不正确</p>
+			
+				<h3><pre>5、(function(){
+  f1();
+  f2();
+  var f1 = function(){alert('f1')};
+  function f2(){alert('f2')}
+})();</pre></h3>
+					<p>A:程序报错，f1 is not a function</p>
+					<p>B:只弹出f2</p>
+					<p>C:依次弹出f1、f2</p>
+					<p>D:只弹出f1</p>
+			
+				<h3><pre>6、以下关于手指滑动事件，分析正确的是？</pre></h3>
+					<p>A:通过调用HTML5自带的源生事件swipe来实现</p>
+					<p>B:需要通过touchstart,touchmove,touchend三个事件模拟滑动事件</p>
+					<p>C:通过mousedown,mouseup,mousemove来模拟滑动</p>
+					<p>D:mouseover事件就可以代替滑动事件</p>
+			
+				<h3><pre>7、以下获取手指在屏幕上X轴的位置，写法正确的有?</pre></h3>
+					<p>A:e.touches[0].clientX</p>
+					<p>B:e.touches[0].pagex</p>
+					<p>C:e.touches.clientX</p>
+					<p>D:e.touches.pageX</p>
+			
+				<h3><pre>8、切换“active”类可以通过(     )实现?</pre></h3>
+					<p>A:toggleClass(&quot;active&quot;)</p>
+					<p>B:addClass(&quot;active&quot;)</p>
+					<p>C:hasClass(&quot;active&quot;)</p>
+					<p>D:toggle(&quot;active&quot;)</p>
+			
+				<h3><pre>9、jquery中能够获取元素相对于父级定位的方法是（）？</pre></h3>
+					<p>A:position()</p>
+					<p>B:offset()</p>
+					<p>C:clientLeft()</p>
+					<p>D:offsetLeft()</p>
+			
+				<h3><pre>10、获取一个元素的宽度使用（）函数？</pre></h3>
+					<p>A:width()</p>
+					<p>B:getWidth()</p>
+					<p>C:styleWidth()</p>
+					<p>D:cssWidth()</p>
+			
+				<h3><pre>11、（）可以取消元素的默认行为？</pre></h3>
+					<p>A:returnValue =  true;</p>
+					<p>B:e.preventDefault()</p>
+					<p>C:e.stopProgation()</p>
+					<p>D:以上说法都不正确</p>
+			
+				<h3><pre>12、获取一个dom元素相对于浏览器左侧的距离，应该使用的属性是？</pre></h3>
+					<p>A:offsetLeft</p>
+					<p>B:left</p>
+					<p>C:offsetTop</p>
+					<p>D:top</p>
+			
+				<h3><pre>13、call 与 apply 的区别说法正确的是?</pre></h3>
+					<p>A:没有任何区别</p>
+					<p>B:call第二个参数是数组</p>
+					<p>C:apply可以有多个参数</p>
+					<p>D:都是用来修改this指向的</p>
+			
+				<h3><pre>14、将responseText返回的字符串格式的数据转换成原生的JS对象，可以使用的方法有？</pre></h3>
+					<p>A:stringTo()</p>
+					<p>B:JSON.parse()</p>
+					<p>C:JSON.stringify()</p>
+					<p>D:object()</p>
+			
+				<h3><pre>15、data只有两种可能，要么数组，要么对象字面量，以下检测data到底是数组还是对象字面量，方法正确的有()?</pre></h3>
+					<p>A:typeof(data) == Object</p>
+					<p>B:data instanceof Array == true</p>
+					<p>C:data instanceof Object == true</p>
+					<p>D:Object.prototype.toString.call(data) == &quot;[object Array]&quot;</p>
+			多选题  每道题（3分）
+				<h3><pre>16、当滑过当前元素时让该元素背景图由左对齐过渡为右对齐，以下写法正确的是？</pre></h3>
+					<p>A:.box{
+transition:background-position .1s;
+background-position:right 0;
+}</p>
+					<p>B:.box:hover{
+transition:background-position .1s;
+background-position:right 0;
+}</p>
+					<p>C:.box{
+background-position:right 0;
+}
+.box.hover{
+transition:background-position .1s;
+}</p>
+					<p>D:.box{
+transition:background-position .1s;
+}
+.box:hover{
+background-position:right 0;
+}</p>
+			
+				<h3><pre>17、transform-origin默认值为？</pre></h3>
+					<p>A:transform-origin:center center</p>
+					<p>B:transform-origin:50% 50%</p>
+					<p>C:transform-origin:left top</p>
+					<p>D:transform-origin:0 0;</p>
+			
+				<h3><pre>18、将JSON格式的字符串转为JSON对象的方法有哪些？</pre></h3>
+					<p>A:jQuery.parseJSON(json)</p>
+					<p>B:JSON.parse(string)</p>
+					<p>C:eval(&quot;(&quot;+string+&quot;)&quot;);</p>
+					<p>D:jQuery.stringifyJSON(obj)</p>
+			
+				<h3><pre>19、以下哪些属性是可以通过transition来过渡的？</pre></h3>
+					<p>A:content</p>
+					<p>B:opacity</p>
+					<p>C:background</p>
+					<p>D:translate</p>
+			
+				<h3><pre>20、CSS3中的Media Query（媒体查询）说法错误的是？</pre></h3>
+					<p>A:代码简洁，加载时间短</p>
+					<p>B:媒体查询的大部分媒体特性都接受min和max用于表达”大于或等于”和”小于或等于”。</p>
+					<p>C:通过它，我们可以很方便的在不同的设备下实现丰富的界面，特别是移动设备</p>
+					<p>D:它面对不同分辨率设备不够灵活</p>
+			判断题  每道题（2分）
+				<h3><pre>21、ajax请求中的data参数的数据类型只能是string型</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>22、animation动画运行过程中可以暂停运动</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>23、CSS3实现的动画远比使用jQuery框架的animate()方法实现的性能要低</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>24、aside是HTML5新增语义化元素</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			
+				<h3><pre>25、extend()方法的用法是，$.extend({},obj1,obj2)</pre></h3>
+				<p>A:正确</p>
+				<p>B:错误</p>
+			填空题  每道题（3分）
+				<h3><pre>26、（）可以获取当前触发触控事件的手指具体坐标</pre></h3>
+			
+			
+				<h3><pre>27、（）语句可以正确绑定touchstart事件</pre></h3>
+			
+			
+				<h3><pre>28、text-overflow设置为（    ）时表示当对象内文本溢出时显示省略标记？</pre></h3>
+			
+			
+				<h3><pre>29、（）动画类型表示由快到慢。</pre></h3>
+			
+			
+				<h3><pre>30、CSS3中的（ ）它面对不同分辨率设备不够灵活。</pre></h3>
+			
+			
+				<h3><pre>31、通过（）语句可以禁止用户选中文本？</pre></h3>
+			
+			
+				<h3><pre>32、()属性用来改变主轴的方向？</pre></h3>
+			
+			
+				<h3><pre>33、flex-wrap属性中_____可以是子元素（项目）不换行</pre></h3>
+			
+			
+				<h3><pre>34、当手指离开屏幕时触发的事件是 _____</pre></h3>
+			
+			
+				<h3><pre>35、已知变量touchstart和touchend，分别为存放了手指按下和手指抬起时的坐标，(touchend.y-touchstart.y)&gt;0时手指在_____滑动</pre></h3>
+			
+			
+				<h3><pre>36、touches的数据类型是_____</pre></h3>
+			
+			
+				<h3><pre>37、js中像if，for，switch之类的语句，他们包含的代码块里面的变量，在代码块外面也能被读取，所以说，js没有（）作用域</pre></h3>
+			
+			
+				<h3><pre>38、通过html 的font-size来控制大小的单位是（）</pre></h3>
+			
+			
+				<h3><pre>39、设为 Flex 布局以后，子元素默认（）排列</pre></h3>
+			
+			
+				<h3><pre>40、当一个图片在IPHON 4下宽度为280px,在IPHON6下宽度为320px时，我们可以用（）布局实现？</pre></h3>
+			
+</div>
+</body>
+</html>

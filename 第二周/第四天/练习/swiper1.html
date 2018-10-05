@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .swiper-slide {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .swiper-container .swiper-pagination {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 44px;
+        width: 100%;
+        background: palevioletred;
+        display: flex;
+        z-index: 99;
+    }
+    
+    .swiper-pagination-bullet {
+        flex: 1;
+        height: 43px;
+        color: #fff;
+        background: palevioletred;
+        opacity: 1;
+        line-height: 43px;
+        border-radius: 0;
+    }
+    
+    .swiper-pagination-bullet-active {
+        border-bottom: 2px solid #000;
+    }
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:red;"></div>
+            <div class="swiper-slide" style="background:blue;"></div>
+            <div class="swiper-slide" style="background:pink;"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+<script src="./js/swiper-4.1.6.min.js"></script>
+<script>
+    var myswiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        initialSlide: 2,
+        init: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function(index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+        }
+    });
+    myswiper.init();
+</script>
+
+</html>

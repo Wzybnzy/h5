@@ -1,0 +1,45 @@
+@import 'common.scss';
+@import '_minix.scss';
+
+.tab-container{
+    height: 100%;
+    width: 100%;
+    @include box_flex;
+    .tab-pagination{
+        height: pxTorem(44px);
+        width: 100%;
+        line-height: pxTorem(44px);
+        @include box_flex;
+        background: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .swiper-pagination-bullet{
+            height: pxTorem(42px);
+            line-height: pxTorem(42px);
+            @include flex;
+            text-align: center;
+            border-radius: 0;
+            color: #fff;
+            background: red;
+            opacity:1;
+        }
+        .swiper-pagination-bullet-active{
+            border-bottom: pxTorem(2px) solid #000;
+        }
+    }
+    .tab-wrapper{
+        @include flex;
+        width: 100%;
+        margin-top: pxTorem(44px);
+        .swiper-slide:nth-child(1){
+            background: gold;
+        }
+        .swiper-slide:nth-child(2){
+            background: pink;
+        }
+        .swiper-slide:nth-child(3){
+            background: blue;
+        }
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    .conatiner {
+        height: 600px;
+        width: 100%;
+        background: beige;
+    }
+    
+    .cont_left {
+        height: 600px;
+        width: 65%;
+        background: burlywood;
+        float: left;
+    }
+    
+    .cont_left dl {
+        width: 160px;
+        float: left;
+        margin: 10px 15px;
+        background: #fff;
+    }
+    
+    .cont_left dl dt {
+        height: 170px;
+        width: 160px;
+        border: 1px solid darkgreen;
+    }
+    
+    .cont_left dl dd {
+        height: 60px;
+        width: 160px;
+    }
+    
+    .cont_left dl dd span {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        width: 160px;
+        text-align: center;
+        color: darkgreen;
+    }
+    
+    .cont_right {
+        width: 30%;
+        height: 600px;
+        background: cadetblue;
+        float: right;
+    }
+    
+    .cont_list {
+        height: auto;
+        width: 100%;
+        background: darkseagreen;
+    }
+    
+    .cont_list li {
+        height: 44px;
+        width: 100%;
+        line-height: 44px;
+        border-bottom: 1px solid #000;
+    }
+    
+    .cont_list li span {
+        display: inline-block;
+        height: 44px;
+        width: 24%;
+        text-align: center;
+    }
+    
+    h2 {
+        height: 44px;
+        width: 100%;
+        text-align: center;
+        line-height: 44px;
+    }
+    
+    .cont_sum {
+        height: 44px;
+        width: 100%;
+        text-align: right;
+        line-height: 44px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    
+    .cont_text {
+        height: 44px;
+        line-height: 44px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+</style>
+
+<body>
+    <div class="conatiner">
+        <div class="cont_left">
+            <!-- <dl>
+                <dt>
+                    <img src="./img/shirt1.gif" alt="">
+                </dt>
+                <dd>
+                    <span>zara1</span>
+                    <span>价格:￥25.9</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./img/shirt2.gif" alt="">
+                </dt>
+                <dd>
+                    <span>zara2</span>
+                    <span>价格:￥125.9</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./img/shirt3.gif" alt="">
+                </dt>
+                <dd>
+                    <span>zara3</span>
+                    <span>价格:￥29.9</span>
+                </dd>
+            </dl> -->
+        </div>
+        <div class="cont_right">
+            <h2>购物车</h2>
+            <ul class="cont_list">
+                <li>
+                    <span>name</span>
+                    <span>num</span>
+                    <span>price</span>
+                    <span>小计</span>
+                </li>
+                <!-- <li>
+                            <span>zara1</span>
+                            <span>1</span>
+                            <span>25.9</span>
+                            <span>25.9</span>
+                        </li>
+                        <li>
+                            <span>zara2</span>
+                            <span>2</span>
+                            <span>25</span>
+                            <span>50</span>
+                        </li> -->
+            </ul>
+            <div class="cont_sum">
+                <span>总计:￥</span>
+                <span id="sum">1000</span>
+            </div>
+            <div class="cont_text">
+                拖动商品添加到购物车
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/jquery-2.1.1.min.js"></script>
+<script>
+    $.ajax({
+        url: './data/data.json',
+        success: function(data) {
+            console.log(data);
+        }
+    });
+</script>
+
+</html>
